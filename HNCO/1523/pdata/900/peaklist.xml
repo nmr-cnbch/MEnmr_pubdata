@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PeakList modified="2024-01-27T18:31:16">
+  <PeakList1D>
+    <PeakList1DHeader creator="gorka" date="2024-01-27T18:31:16" expNo="1523" name="HNCO" owner="" procNo="900" source="/reference/MENMR/ubiCN/25">
+      <PeakPickDetails>F1=9.218867ppm, F2=9.104919ppm, MI=2.21cm, MAXI=4.69cm, PC=1.000
+      </PeakPickDetails>
+    </PeakList1DHeader>
+    <Peak1D F1="9.185667" intensity="2.997829" type="0"/>
+  </PeakList1D>
+  <PeakList1D>
+    <PeakList1DHeader creator="gorka" date="2024-01-27T18:31:16" expNo="1523" name="HNCO" owner="" procNo="900" source="/reference/MENMR/ubiCN/25">
+      <PeakPickDetails>F1=8.706100ppm, F2=8.565855ppm, MI=12.16cm, MAXI=13.85cm, PC=1.000
+      </PeakPickDetails>
+    </PeakList1DHeader>
+    <Peak1D F1="8.599882" intensity="12.8969" type="0"/>
+  </PeakList1D>
+  <PeakList1D>
+    <PeakList1DHeader creator="gorka" date="2024-01-27T18:31:16" expNo="1523" name="HNCO" owner="" procNo="900" source="/reference/MENMR/ubiCN/25">
+      <PeakPickDetails>F1=8.285367ppm, F2=8.142931ppm, MI=7.78cm, MAXI=9.55cm, PC=1.000
+      </PeakPickDetails>
+    </PeakList1DHeader>
+    <Peak1D F1="8.176874" intensity="8.578516" type="0"/>
+  </PeakList1D>
+  <PeakList1D>
+    <PeakList1DHeader creator="gorka" date="2024-01-27T18:31:16" expNo="1523" name="HNCO" owner="" procNo="900" source="/reference/MENMR/ubiCN/25">
+      <PeakPickDetails>F1=8.094723ppm, F2=7.982965ppm, MI=5.74cm, MAXI=7.07cm, PC=1.000
+      </PeakPickDetails>
+    </PeakList1DHeader>
+    <Peak1D F1="8.020818" intensity="6.204109" type="0"/>
+  </PeakList1D>
+  <PeakList1D>
+    <PeakList1DHeader creator="gorka" date="2024-01-27T18:31:16" expNo="1523" name="HNCO" owner="" procNo="900" source="/reference/MENMR/ubiCN/25">
+      <PeakPickDetails>F1=7.906269ppm, F2=7.781364ppm, MI=2.94cm, MAXI=4.78cm, PC=1.000
+      </PeakPickDetails>
+    </PeakList1DHeader>
+    <Peak1D F1="7.813989" intensity="3.431694" type="0"/>
+  </PeakList1D>
+  <PeakList1D>
+    <PeakList1DHeader creator="gorka" date="2024-01-27T18:31:16" expNo="1523" name="HNCO" owner="" procNo="900" source="/reference/MENMR/ubiCN/25">
+      <PeakPickDetails>F1=7.555658ppm, F2=7.476771ppm, MI=9.76cm, MAXI=10.91cm, PC=1.000
+      </PeakPickDetails>
+    </PeakList1DHeader>
+    <Peak1D F1="7.531368" intensity="10.31674" type="0"/>
+  </PeakList1D>
+  <PeakList1D>
+    <PeakList1DHeader creator="gorka" date="2024-01-27T18:31:16" expNo="1523" name="HNCO" owner="" procNo="900" source="/reference/MENMR/ubiCN/25">
+      <PeakPickDetails>F1=7.310231ppm, F2=7.211622ppm, MI=14.16cm, MAXI=15.35cm, PC=1.000
+      </PeakPickDetails>
+    </PeakList1DHeader>
+    <Peak1D F1="7.300231" intensity="15.0" type="0"/>
+  </PeakList1D>
+  <PeakList1D>
+    <PeakList1DHeader creator="gorka" date="2024-01-27T18:31:16" expNo="1523" name="HNCO" owner="" procNo="900" source="/reference/MENMR/ubiCN/25">
+      <PeakPickDetails>F1=7.187518ppm, F2=7.042891ppm, MI=7.55cm, MAXI=9.11cm, PC=1.000
+      </PeakPickDetails>
+    </PeakList1DHeader>
+    <Peak1D F1="7.127655" intensity="8.809827" type="0"/>
+  </PeakList1D>
+</PeakList>

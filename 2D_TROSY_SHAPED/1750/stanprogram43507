@@ -1,0 +1,909 @@
+# 1 "/opt/wtopspin/gorka/backbone/pp/HNCOCACB"
+; © 2017-2018 Michał Jakub Górka <michal.gorka@fuw.edu.pl> All rights reserved.
+; Do not use without explicit permission.
+
+; zgoptns:
+; -CRUSH: spoil non-H magnetization before each scan.
+; -LABEL_D: decouple 2H from CA.
+
+prosol relations=<triple>
+# 10 "/opt/wtopspin/gorka/backbone/pp/HNCOCACB"
+"l0 = 5"    ; Set experiment dimensionality.
+
+# 1 "/opt/wtopspin/gorka/includes/protein" 1
+; © 2017 Michał Jakub Górka <michal.gorka@fuw.edu.pl> All rights reserved.
+; Do not use without explicit permission.
+
+;l0: experiment dimensionality, must be set before sourcing this file!
+# 1 "/opt/topspin3.5pl7/exp/stan/nmr/lists/pp/Avance.incl" 1
+;Avance3.incl
+;   for AV III
+;
+;avance-version (13/06/17)
+;
+;$CLASS=HighRes Incl
+;$COMMENT=
+
+
+# 169 "/opt/topspin3.5pl7/exp/stan/nmr/lists/pp/Avance.incl"
+;$Id: Avance3.incl,v 1.10.2.2 2013/08/30 09:43:33 ber Exp $
+# 6 "/opt/wtopspin/gorka/includes/protein" 2
+
+# 1 "/opt/topspin3.5pl7/exp/stan/nmr/lists/pp/Grad.incl" 1
+;Grad2.incl  -  include file for Gradient Spectroscopy
+;   for TCU3
+;
+;avance-version (07/01/17)
+;
+;$CLASS=HighRes Incl
+;$COMMENT=
+
+# 27 "/opt/topspin3.5pl7/exp/stan/nmr/lists/pp/Grad.incl"
+define list<gradient> EA=<EA>
+
+
+# 31 "/opt/topspin3.5pl7/exp/stan/nmr/lists/pp/Grad.incl"
+;$Id: Grad2.incl,v 1.14 2012/01/31 17:49:21 ber Exp $
+# 7 "/opt/wtopspin/gorka/includes/protein" 2
+
+
+define list<gradient> EA2=<EA2>
+# 11 "/opt/wtopspin/gorka/includes/protein"
+; Set up chemical shift evolution times:
+"in1 = inf1"
+"in2 = inf2"
+"in3 = inf3"
+"in4 = inf4"
+"in5 = inf5"
+"in6 = inf6"
+"in7 = inf7"
+
+define delay tmax1
+define delay tmax2
+define delay tmax3
+define delay tmax4
+define delay tmax5
+define delay tmax6
+define delay tmax7
+
+define delay T1
+"T1 = 0"
+define delay T2
+"T2 = 0"
+define delay T3
+"T3 = 0"
+define delay T4
+"T4 = 0"
+define delay T5
+"T5 = 0"
+define delay T6
+"T6 = 0"
+define delay T7
+"T7 = 0"
+# 43 "/opt/wtopspin/gorka/includes/protein"
+define delay T1a
+define delay T1H
+define delay T1aN
+define delay T1aNCO
+define delay T1aC
+define delay T1aCA
+define delay T1aCO
+define delay T1aGRAD
+define delay T1b
+define delay T1c
+
+define delay T2a
+define delay T2aH
+define delay T2aN
+define delay T2aNCO
+define delay T2aC
+define delay T2aCA
+define delay T2aCO
+define delay T2aGRAD
+define delay T2b
+define delay T2c
+
+define delay T3a
+define delay T3aH
+define delay T3aN
+define delay T3aNCO
+define delay T3aC
+define delay T3aCA
+define delay T3aCO
+define delay T3aGRAD
+define delay T3b
+define delay T3c
+# 76 "/opt/wtopspin/gorka/includes/protein"
+define delay T4a
+define delay T4aH
+define delay T4aN
+define delay T4aNCO
+define delay T4aC
+define delay T4aCA
+define delay T4aCO
+define delay T4aGRAD
+define delay T4b
+define delay T4c
+
+define delay T5a
+define delay T5aH
+define delay T5aN
+define delay T5aNCO
+define delay T5aC
+define delay T5aCA
+define delay T5aCO
+define delay T5aGRAD
+define delay T5b
+define delay T5c
+
+define delay T6a
+define delay T6aH
+define delay T6aN
+define delay T6aNCO
+define delay T6aC
+define delay T6aCA
+define delay T6aCO
+define delay T6aGRAD
+define delay T6b
+define delay T6c
+# 109 "/opt/wtopspin/gorka/includes/protein"
+define delay T7a
+define delay T7aH
+define delay T7aN
+define delay T7aNCO
+define delay T7aC
+define delay T7aCA
+define delay T7aCO
+define delay T7aGRAD
+define delay T7b
+define delay T7c
+
+
+# 151 "/opt/wtopspin/gorka/includes/protein"
+;d21: time for H -> N evolution [5.4 ms]
+define delay timeHN
+"timeHN = d21"
+;d22: time for N -> H evolution [5.4 ms]
+define delay timeNH
+"timeNH = d22"
+;d23: time for simultaneous H -> N and N -> H evolution [5.4 ms]
+define delay timeHandN
+"timeHandN = d23"
+;d24: time for H -> C evolution [3.5 ms]
+define delay timeHC
+"timeHC = d24"
+;d25: time for C -> H(1/2/3) evolution, prefers CH, 1/(3JCH) [2.6 ms]
+define delay timeCHn
+"timeCHn = d25"
+;d26: time for C -> H(1/2/3) evolution, prefers CH2, 1/(4JCH) [1.8 ms]
+define delay timeCH2
+"timeCH2 = d26"
+;d27: time for C -> H(1/2/3) evolution, prefers CH3, 1/(5JCH) [1.4 ms]
+define delay timeCH3
+"timeCH3 = d27"
+
+define delay GRADCOMP
+"GRADCOMP = p16 + d16"
+
+;d30: time for N -> CO evolution [28 ms]
+define delay timeNCO
+"timeNCO = d30"
+;d31: time for N -> CA evolution [28 ms]
+define delay timeNCA
+"timeNCA = d31"
+;d32: time for CO -> CA evolution [9.1 ms]
+define delay timeCOCA
+"timeCOCA = d32"
+;d33: time for CA -> CO evolution [6.3 ms]
+define delay timeCACO
+"timeCACO = d33"
+;d34: time for CA -> CO evolution in constant time [9.1 ms]
+define delay timeCACOct
+"timeCACOct = d34"
+;d35: time for CA -> CACB evolution or CA constant time evolution [28.6 ms]
+define delay timeCAct
+"timeCAct = d35"
+define delay timeCACB
+"timeCACB = d35"
+;d36: time for NCA -> CAN' evolution [28.6 ms or 54 ms]
+define delay timeNCAN
+"timeNCAN = d36"
+;d37: time for CA -> CACB and CB -> CBCA partial evolution 1/(4JCACB) [7.1 ms]
+define delay timeCACBpartial
+"timeCACBpartial = d37"
+;d38: time for CO -> N evolution [28 ms]
+define delay timeCON
+"timeCON = d38"
+;d39: time for N -> CO and N -> CA evolution [28 ms]
+define delay timeNCACO
+"timeNCACO = d39"
+;d40: time for N -> NCAiCAi-1 evolution [50 ms]
+define delay timeNCACA
+"timeNCACA = d40"
+# 212 "/opt/wtopspin/gorka/includes/protein"
+; Manually set pulses:
+"p51 = 10*p1"
+"p52 = 10*p3"
+
+"p61 = 10*p1"
+"p62 = 10*p3"
+"p63 = 10*p21"
+
+"spw51 = plw1"
+"spw52 = plw2"
+# 223 "/opt/wtopspin/gorka/includes/protein"
+"spw61 = plw1"
+"spw62 = plw2"
+"spw63 = plw3"
+
+; Water flipback and flipdown pulses:
+
+;p48: H2O flipback pulse
+;p49: H2O flipdown pulse
+# 232 "/opt/wtopspin/gorka/includes/protein"
+;sp48: H2O flipback pulse
+;sp49: H2O flipdown pulse
+
+;p50:
+;p51: f1 channel, broadband refocussing pulse [BURBOP 20-200-900]
+;p52: f2 channel, broadband refocussing pulse [BURBOP 20-200-900]
+
+;p61: f1 channel, broadband refocussing pulse [G5]
+;p62: f2 channel, broadband refocussing pulse [G5]
+;p63: f3 channel, broadband refocussing pulse [G5]
+# 243 "/opt/wtopspin/gorka/includes/protein"
+;sp50:
+;sp51: f1 channel, broadband refocussing pulse [BURBOP 20-200-900]
+;sp52: f2 channel, broadband refocussing pulse [BURBOP 20-200-900]
+;sp53: f3 channel, broadband refocussing pulse [BURBOP 20-200-900]
+;sp61: f1 channel, broadband refocussing pulse [G5]
+;sp62: f2 channel, broadband refocussing pulse [G5]
+;sp63: f3 channel, broadband refocussing pulse [G5]
+
+; Offsets:
+
+;cnst2: offset N + NH (with prolines), 127/60 ppm.
+;cnst3: offset NH (without prolines), 117/40 ppm.
+# 256 "/opt/wtopspin/gorka/includes/protein"
+;cnst20: offset C, 93/186 ppm.
+;cnst21: offset CA, 55/35 ppm.
+;cnst22: offset CO, 176.5/16 ppm.
+"cnst23 = (cnst22 + cnst21)/2"    ; Middle between CA and CO.
+;cnst24: offset Cali, 40/80 ppm.
+;cnst25: offset CB (includes CA), 44/65 ppm.
+;cnst26: offset CBaro, 35/25 ppm.
+;cnst27: offset Caro, 125/45 ppm.
+;cnst28: offset Caro (without CG), 127/40 ppm.
+
+;cnst41: offset HN, 8.5/7 ppm.
+;cnst42: offset HAHB, 3.5/7 ppm.
+
+;cnst51: HN bandwidth, 7 ppm.
+# 271 "/opt/wtopspin/gorka/includes/protein"
+; Descriptions of parameters read from prosol:
+
+;p1: f1 channel -  90 degree high power pulse
+;p2: f1 channel - 180 degree high power pulse
+;p3: f2 channel -  90 degree high power pulse
+;p4: f2 channel - 180 degree high power pulse
+;p11: f1 channel -  90 degree shaped pulse
+;p13: f2 channel -  90 Q5 Cali/CO
+;p14: f2 channel - 180 Q3 Cali/CO
+
+;p16: homospoil/gradient pulse  [1 msec]
+# 283 "/opt/wtopspin/gorka/includes/protein"
+;p21: f3 channel -  90 degree high power pulse
+;p22: f3 channel - 180 degree high power pulse
+
+;p53: f4 channel - 90 degree high power pulse
+
+;pcpd1: f1 channel - 90 degree pulse for decoupling sequence
+;pcpd2: f2 channel - 90 degree pulse for decoupling sequence
+;pcpd3: f3 channel - 90 degree pulse for decoupling sequence
+;pcpd4: f4 channel - 90 degree pulse for decoupling sequence
+# 293 "/opt/wtopspin/gorka/includes/protein"
+;pl1: power for 1H  pulses
+;pl2: power for 13C pulses
+;pl3: power for 15N pulses
+;pl4: power for 2H pulses
+
+;pl12: f2 channel - power level for CPD/BB decoupling
+;pl16: f3 channel - power level for CPD/BB decoupling
+
+;cpd1: decoupling according to sequence defined by cpdprg1
+;cpd2: decoupling according to sequence defined by cpdprg2
+;cpd3: decoupling according to sequence defined by cpdprg3
+;cpd4: decoupling according to sequence defined by cpdprg4
+# 306 "/opt/wtopspin/gorka/includes/protein"
+;d1: relaxation delay    [1.2 sec]
+;d11: delay for disk I/O    [30 msec]
+;d13: short delay  [4 usec]
+;d16: delay for homospoil/gradient recovery [200 usec]
+
+;gpnam0: SMSQ10.100
+;gpnam1: SMSQ10.100
+;gpnam2: SMSQ10.100
+;gpnam3: SMSQ10.100
+;gpnam10: SMSQ10.100
+;gpnam11: SMSQ10.100
+;gpnam12: SMSQ10.100
+;gpnam21: SMSQ10.100
+;gpnam22: SMSQ10.100
+
+;gpz0: N and CO homospoil gradient
+;gpz1: Homospoil gradient after H.
+;gpz2: Homospoil gradient after N.
+;gpz3: Homospoil gradient after CO.
+# 326 "/opt/wtopspin/gorka/includes/protein"
+;gpz10: Gradient in H INEPT.
+
+;gpz18: Gradient in first COS-INEPT echo: 5%.
+;gpz19: Gradient in second COS-INEPT echo: 2%.
+
+;gpz21: First coherence selection gradient (on N) - 80%.
+;gpz22: Second coherence selection gradient (on H) - 8.1%.
+# 334 "/opt/wtopspin/gorka/includes/protein"
+;sp1: f1 channel - shaped pulse  90 degree  (H2O on resonance)
+;sp2: f2 channel, 90 Q5 Cali/CO on resonance.
+;sp3: f2 channel, 180 Q3 Cali/CO on resonance.
+;sp5: f2 channel, 180 Q3 Cali off resonance.
+;sp6: f2 channel, 90 Q5 Cali/CO off resonance time reversed.
+;sp7: f2 channel, 180 Q3 CO with off resonance.
+;sp8: f2 channel, 90 Q5 Cali/CO on resonance time reversed.
+
+# 12 "/opt/wtopspin/gorka/backbone/pp/HNCOCACB" 2
+
+# 1 "/opt/wtopspin/gorka/includes/cos_inept_setup" 1
+; COS-INEPT/sensitivity enhanced INEPT pulse train.
+; © 2017 Michał Jakub Górka <michal.gorka@fuw.edu.pl> All rights reserved.
+; Do not use without explicit permission.
+# 5 "/opt/wtopspin/gorka/includes/cos_inept_setup"
+; The "proteins" file must be included before this file.
+; A d16 gradient recovery should follow the block with decoupler power setting and gradient blanking.
+
+define pulse CIdelayHandN ; Delays in the first echo of COS-INEPT.
+"CIdelayHandN = timeHandN/2 - d16"
+
+# 13 "/opt/wtopspin/gorka/includes/cos_inept_setup"
+"cnst17 = 1m/CIdelayHandN"
+
+define pulse CIdelayHandN2 ; Second delay in the first echo of COS-INEPT (optional C purge).
+"CIdelayHandN2 = CIdelayHandN"
+
+# 20 "/opt/wtopspin/gorka/includes/cos_inept_setup"
+"cnst18 = 1m/CIdelayHandN2"
+
+define pulse CIdelayHN
+"CIdelayHN = timeHN/2 - d16"
+
+# 28 "/opt/wtopspin/gorka/includes/cos_inept_setup"
+define pulse CIdelayHN2   ; Delay in the second echo of COS-INEPT.
+"CIdelayHN2 = CIdelayHN"
+
+
+  "CIdelayHN -= p21"   ; Correct for the staggered p21 pulse.
+# 34 "/opt/wtopspin/gorka/includes/cos_inept_setup"
+"cnst19 = 1m/CIdelayHN"  ; Correction factor for gradient gp11 and one of gp19.
+"cnst20 = 1m/CIdelayHN2"
+
+define delay CIechoComp
+"CIechoComp = p21*4/PI"   ; Correct for different evolution in the two pathways for N polarization.
+
+define delay CIechoDelay
+"CIechoDelay = p16 + d16 + de" ; Compensate evolution times for no 1st order phase.
+# 44 "/opt/wtopspin/gorka/includes/cos_inept_setup"
+  "CIechoDelay -= p1*2/PI" ; Compensate for evolution in the excitation pulse.
+
+
+;gpz18: Gradient in first COS-INEPT echo: 5%.
+;gpz19: Gradient in second COS-INEPT echo: 2%.
+# 50 "/opt/wtopspin/gorka/includes/cos_inept_setup"
+;gpz21: First coherence selection gradient (on N): 80%.
+;gpz22: Second coherence selection gradient (on H): 8.1%.
+# 13 "/opt/wtopspin/gorka/backbone/pp/HNCOCACB" 2
+
+
+"tmax3 = td2*in2/2"
+"tmax4 = td3*in3/2"
+"tmax4 = td4*in4/2"
+# 19 "/opt/wtopspin/gorka/backbone/pp/HNCOCACB"
+; Hz -> HzNz:
+define pulse delayHN
+"delayHN = timeHN/2 - d16"
+"cnst11 = 1m/delayHN"
+
+; HzNz -> COzNz:
+define delay delayNCO1
+define delay delayNCO2
+define delay delayNCO3
+"delayNCO1 = timeNH"  ; H refocusing delay in second INEPT
+"delayNCO2= timeNCO/2 - delayNCO1 - p1"    ; Compensated for H 90 pulse.
+"delayNCO3 = timeNCO/2"
+
+define delay delayCACB
+"delayCACB = timeCACB"
+# 35 "/opt/wtopspin/gorka/backbone/pp/HNCOCACB"
+; Offsets:
+"spoff4 = bf2*((cnst22 - cnst23)/1000000)"  ; CO with offset on CA/CO middle.
+"spoff5 = bf2*((cnst21 - cnst22)/1000000)"  ; CA with offset on CO.
+"spoff6 = spoff4"
+"spoff7 = bf2*((cnst22 - cnst25)/1000000)"  ; CO with offset on CAB.
+"spoff62 = bf2*((cnst23 - cnst22)/1000000)" ; CACO with  offset on CO.
+
+; Magic for SSA import - offsets:
+"l10 = 891786288"    ; Magic constant, the following list cnsts for each dimension:
+"l11 = 21"   ; CA
+"l12 = 22"   ; CO
+
+"acqt0 = 0"
+baseopt_echo
+# 1 "mc_line 50 file /opt/wtopspin/gorka/backbone/pp/HNCOCACB exp. def. part of mc cmd. before ze"
+; dimension 5D; AQ_mode  (F4) Echo-Antiecho (F3) States-TPPI (F2) States-TPPI (F1) States-TPPI
+define delay MCWRK
+define delay MCREST
+define delay T1orig
+"T1orig=T1"
+define delay T2orig
+"T2orig=T2"
+define delay T3orig
+"T3orig=T3"
+define delay T4orig
+"T4orig=T4"
+define list<loopcounter> SPARSELIST = <$NUSLIST>
+define loopcounter t4loop
+"t4loop=0"
+define loopcounter t3loop
+"t3loop=0"
+define loopcounter t2loop
+"t2loop=0"
+define loopcounter t1loop
+"t1loop=0"
+define loopcounter ph1loop
+"ph1loop=0"
+define loopcounter ph2loop
+"ph2loop=0"
+define loopcounter ph3loop
+"ph3loop=0"
+define loopcounter ph4loop
+"ph4loop=0"
+define loopcounter STNCNT
+"STNCNT=SPARSELIST.len/4"
+"MCREST = d11 - d11"
+"MCWRK = 0.014286*d11"
+
+    dccorr
+# 50 "/opt/wtopspin/gorka/backbone/pp/HNCOCACB"
+# 50 "/opt/wtopspin/gorka/backbone/pp/HNCOCACB"
+1 ze
+# 1 "mc_line 50 file /opt/wtopspin/gorka/backbone/pp/HNCOCACB exp. def. of mc cmd. after ze"
+LBLAV, MCWRK
+  MCWRK
+  "t4loop = SPARSELIST"
+  MCWRK  SPARSELIST.inc
+  MCWRK
+  "ph4loop = 0"
+  MCWRK
+  "t3loop = SPARSELIST"
+  MCWRK  SPARSELIST.inc
+  MCWRK
+  "ph3loop = 2 * (t3loop % 2)"
+  MCWRK
+  "t2loop = SPARSELIST"
+  MCWRK  SPARSELIST.inc
+  MCWRK
+  "ph2loop = 2 * (t2loop % 2)"
+  MCWRK
+  "t1loop = SPARSELIST"
+  MCWRK  SPARSELIST.inc
+  MCWRK
+  "ph1loop = 2 * (t1loop % 2)"
+      "T1=T1orig + t1loop * in1 "
+      "phval11 = (ph1loop % 4) * 90"
+      MCWRK ip11 + phval11
+      "T2=T2orig + t2loop * in2 "
+      "phval12 = (ph2loop % 4) * 90"
+      MCWRK ip12 + phval12
+      "T3=T3orig + t3loop * in3 "
+      "phval13 = (ph3loop % 4) * 90"
+      MCWRK ip13 + phval13
+      "T4=T4orig + t4loop * in4 "
+      "phval14 = (ph4loop % 2) * 180"
+      MCWRK ip14 + phval14
+      "phval21 = (t4loop * 180)%360"
+      MCWRK ip21 + phval21
+      "phval31 = (t4loop * 180)%360"
+      MCWRK ip31 + phval31
+      MCWRK
+      "phval0 = ph4loop * 1"
+      MCWRK setgrad EA
+# 51 "/opt/wtopspin/gorka/backbone/pp/HNCOCACB"
+
+  d13 fq=cnst3(bf ppm):f3   ; Set f3 to NH.
+
+# 1 "mc_line 60 file /opt/wtopspin/gorka/backbone/pp/HNCOCACB exp. start label for mc cmd."
+2 MCWRK  * 10
+LBLF4, MCWRK  * 12
+LBLF3, MCWRK  * 12
+LBLF2, MCWRK  * 12
+LBLF1, MCWRK  * 23
+LBLSTN, MCWRK
+  MCREST
+# 61 "/opt/wtopspin/gorka/backbone/pp/HNCOCACB"
+# 61 "/opt/wtopspin/gorka/backbone/pp/HNCOCACB"
+; Run-time calculations:
+
+    "T3aN = T3/2"
+    "T3aCA = timeCOCA/2 - p22"	; Compensate for length of N inversion pulse.
+    "T3b = T3*(1 - timeCOCA/tmax3)/2"
+    "if (tmax3 <= timeCOCA) {T3b = 0;}"
+    "T3c = timeCOCA*(1 - T3/tmax3)/2"
+    "if (tmax3 <= timeCOCA) {T3c = (timeCOCA - T3)/2;}"
+
+    "T4aCA = T4/2"
+    "T4aCO = timeNCO/2 - p14"  ; Corrected for CA inversion pulse.
+    "T4aGRAD = 0"
+    "if (T4aCA < (p16 + d16)) {T4aGRAD = T4aCA + p14;}"
+    "T4b = T4*(1 - timeNCO/tmax4)/2"
+    "if (tmax4 <= timeNCO) {T4b = 0;}"
+    "T4c = timeNCO*(1 - T4/tmax4)/2"
+    "if (tmax4 <= timeNCO) {T4c = (timeNCO - T4)/2;}"
+    "T4c += p14"    ; Compensate for length of CO inversion pulse.
+    
+# 85 "/opt/wtopspin/gorka/backbone/pp/HNCOCACB"
+    d1 fq=cnst23(bf ppm):f2 ; Relaxation delay, f2 to CA/CO middle.
+
+
+# 92 "/opt/wtopspin/gorka/backbone/pp/HNCOCACB"
+      d13 setnmr3|0 setnmr0|34|32|33 ctrlgrad 0   ; Unblank gradient amplifier and hold lock.
+
+
+# 105 "/opt/wtopspin/gorka/backbone/pp/HNCOCACB"
+# 106 "/opt/wtopspin/gorka/backbone/pp/HNCOCACB"
+    
+d13 fq=cnst22(bf ppm):f2    ; Switch f2 to CO.
+
+; ***Pulse sequence starts***
+
+; Hz -> HzNz:
+    (p1 ph0 pl1):f1 ; H excitation.
+    delayHN:gp11*cnst11
+    d16
+    (center(p2 ph1 pl1):f1 (p22 ph0 pl3):f3)    ; H refocussing and N inversion.
+    delayHN:gp11*cnst11
+    d16
+    (p1 ph1 pl1):f1 ; H flipback.
+    (p11:sp1 ph2):f1	; Water flipback.
+   
+; Gradient:
+    p16:gp1
+    d16
+# 125 "/opt/wtopspin/gorka/backbone/pp/HNCOCACB"
+; HzNz -> COzNz:
+    (p21 ph0 pl3):f3    ; N excitation.
+    delayNCO1
+    (p1 ph1 pl1):f1 ; H flipdown.
+    (delayNCO2 pl19 cpds1 ph0):f1   ; N decoupling.
+    (center (p14:sp3 ph0):f2 (p22 ph0 pl3):f3)  ; N refocussing and CO inversion.
+    delayNCO3
+    (p21 ph0 pl3):f3    ; N flipback.
+
+; Decoupler OFF/ON and gradient.
+    (p1 ph3 do pl1):f1  ; H decoupler off and flipback.
+    p16:gp2
+    d16
+    (p1 ph1 pl1):f1 ; H excitation.
+    (d13 pl19 ph0 cpds1):f1 ; H decoupler on.
+
+; COzNz -> COzNzCAz:
+    (p13:sp2 ph0):f2    ; CO excitation.
+    timeCOCA*0.5
+    (p52:sp52 ph0):f2   ; CA and CO refocussing;
+    timeCOCA*0.5
+    (p13:sp8 ph1):f2    ; CO flipback.
+# 148 "/opt/wtopspin/gorka/backbone/pp/HNCOCACB"
+; Decoupler OFF/ON and gradient.
+    (p1 ph3 do pl1):f1 (d13 fq=cnst25(bf ppm)):f2 ; H flipback and decoupling, switch f2 to CAB.
+    p16:gp3
+    d16
+    
+
+
+# 157 "/opt/wtopspin/gorka/backbone/pp/HNCOCACB"
+      (p1 ph1 pl1):f1 ; H excitation.
+      (d13 pl19 ph0 cpds1):f1 ; H decoupling on.
+
+
+; NzCAz ->  NzCBzCAt:
+    (p13:sp2 ph0):f2  ; Cali excitation.
+    delayCACB
+    (p14:sp3 ph0):f2  ; Cali refocussing.
+    delayCACB
+    (p13:sp8 ph1):f2  ; CB excitation and CA flipback.
+# 168 "/opt/wtopspin/gorka/backbone/pp/HNCOCACB"
+; NzCAt + NzCAzCBt, CB evolution (T1):
+    T1
+    (p14:sp3 ph0):f2    ; CAB refocussing.
+
+; NzCAt + NzCAzCBt -> NzCAz, CA evolution (T2):
+    (p13:sp2 ph1+ph11):f2  ; CA excitation and CB flipback.
+    delayCACB
+    (p14:sp3 ph0):f2  ; Cali refocussing.
+    delayCACB
+    (p13:sp8 ph11+ph12):f2  ; Cali flipback.
+
+; Decoupler OFF/ON and gradient.
+# 184 "/opt/wtopspin/gorka/backbone/pp/HNCOCACB"
+      (p1 ph3 do pl1):f1    ; H flipback and decoupling off.
+
+
+    (d13 fq=cnst22(bf ppm)):f2 ; Switch f2 to CO.
+    p16:gp4
+    d16
+    (p1 ph1 pl1):f1 ; H excitation.
+    (d13 pl19 ph0 cpds1):f1 ; H decoupling on.
+# 193 "/opt/wtopspin/gorka/backbone/pp/HNCOCACB"
+; CAzCOzNz -> COzNz, CO evolution (T3):
+    (p13:sp2 ph12):f2   ; CO excitation.
+    T3aN
+    (p22 ph0 pl3):f3	; N inversion.
+    T3aCA
+    (p14:sp5 ph0):f2    ; CA inversion.
+    T3b
+    (p14:sp3 ph0):f2	; CO refocussing.
+    T3c
+    (p14:sp5 ph0):f2    ; BSP compensation.
+    (p13:sp8 ph1):f2    ; CO flipback
+
+; Decoupler OFF/ON and gradient.
+    (p1 ph3 do pl1):f1  ; H decoupling off and flipback.
+    p16:gp5
+    d16
+    (p1 ph1 pl1):f1 ; H excitation.
+    (d13 pl19 ph0 cpds1):f1 ; H decoupling on.
+
+; COzNz -> HzNz + HzNx with N evolution (T4):
+    (p21 ph21 pl3):f3   ; N excitation.
+    T4c
+    (p22 ph0 pl3):f3    ; N refocussing.
+    T4b
+    (ralign
+        (p1 ph3 do pl1 timeNH):f1   ; H decoupling off and flipback.
+        (p14:sp3 ph0 T4aCO p14:sp5 ph0 T4aCA):f2    ; CO and CA inversion.
+        (p16:gp21*EA d16 T4aGRAD):f3    ; Coherence selection gradient.
+    )
+    (p21 ph13 pl3):f3    ; N universal rotation.
+    
+# 1 "/opt/wtopspin/gorka/includes/cos_inept" 1
+; © 2017 Michał Jakub Górka <michal.gorka@fuw.edu.pl> All rights reserved.
+; Do not use without explicit permission.
+# 4 "/opt/wtopspin/gorka/includes/cos_inept"
+  CIechoComp    ; HN coupling evolves, in theory should be decoupled by a H inversion pulse...
+  (p1 ph0 pl1):f1   ; H excitation.
+  CIdelayHandN:gp18*cnst17
+  d16
+
+    (p3 ph0 pl2):f2   ; C purge.
+
+  (center (p2 ph0 pl1):f1 (p22 ph0 pl3):f3) ; H and N refocussing.
+  CIdelayHandN2:gp18*cnst18
+  d16
+  (p1 ph1 pl1):f1   ; H universal rotation.
+  
+  (p21 ph1 pl3):f3  ; N flipback.
+  CIdelayHN:gp19*cnst19
+  d16
+  (center (p2 ph2 pl1):f1 (p22 ph2 pl3):f3) ; H refocussing and N inversion.
+  CIdelayHN2:gp19*cnst20
+  d16
+  
+  (p1 ph0 pl1):f1   ; H universal rotation.
+  CIechoDelay  ; Correct delays for no 1st order phase.
+  (p2 ph0 pl1):f1   ; H refocussing.
+  p16:gp22  ; Second coherence selection gradient.
+# 224 "/opt/wtopspin/gorka/backbone/pp/HNCOCACB" 2
+# 225 "/opt/wtopspin/gorka/backbone/pp/HNCOCACB"
+    
+
+
+# 229 "/opt/wtopspin/gorka/backbone/pp/HNCOCACB"
+      d16 pl16:f3 setnmr3^0 setnmr0^34^32^33 ctrlgrad 7  ; Set power for decoupling and blank gradient amplifier.
+
+
+go=2 ph31 cpd3:f3 finally do:f3
+# 1 "mc_line 233 file /opt/wtopspin/gorka/backbone/pp/HNCOCACB exp. mc cmd. in line"
+  MCWRK  wr #0 if #0 zd 
+
+  MCWRK
+  "ph4loop+=1"
+      "T1=T1orig + t1loop * in1 "
+      "phval11 = (ph1loop % 4) * 90"
+      MCWRK ip11 + phval11
+      "T2=T2orig + t2loop * in2 "
+      "phval12 = (ph2loop % 4) * 90"
+      MCWRK ip12 + phval12
+      "T3=T3orig + t3loop * in3 "
+      "phval13 = (ph3loop % 4) * 90"
+      MCWRK ip13 + phval13
+      "T4=T4orig + t4loop * in4 "
+      "phval14 = (ph4loop % 2) * 180"
+      MCWRK ip14 + phval14
+      "phval21 = (t4loop * 180)%360"
+      MCWRK ip21 + phval21
+      "phval31 = (t4loop * 180)%360"
+      MCWRK ip31 + phval31
+      MCWRK
+      "phval0 = ph4loop * 1"
+      MCWRK setgrad EA
+  lo to LBLF4 times 2
+  MCWRK 
+  MCWRK
+  "ph4loop-=2"
+  MCWRK 
+
+  MCWRK
+  "ph3loop+=1"
+      "T1=T1orig + t1loop * in1 "
+      "phval11 = (ph1loop % 4) * 90"
+      MCWRK ip11 + phval11
+      "T2=T2orig + t2loop * in2 "
+      "phval12 = (ph2loop % 4) * 90"
+      MCWRK ip12 + phval12
+      "T3=T3orig + t3loop * in3 "
+      "phval13 = (ph3loop % 4) * 90"
+      MCWRK ip13 + phval13
+      "T4=T4orig + t4loop * in4 "
+      "phval14 = (ph4loop % 2) * 180"
+      MCWRK ip14 + phval14
+      "phval21 = (t4loop * 180)%360"
+      MCWRK ip21 + phval21
+      "phval31 = (t4loop * 180)%360"
+      MCWRK ip31 + phval31
+      MCWRK
+      "phval0 = ph4loop * 1"
+      MCWRK setgrad EA
+  lo to LBLF3 times 2
+  MCWRK 
+  MCWRK
+  "ph3loop-=2"
+  MCWRK 
+
+  MCWRK
+  "ph2loop+=1"
+      "T1=T1orig + t1loop * in1 "
+      "phval11 = (ph1loop % 4) * 90"
+      MCWRK ip11 + phval11
+      "T2=T2orig + t2loop * in2 "
+      "phval12 = (ph2loop % 4) * 90"
+      MCWRK ip12 + phval12
+      "T3=T3orig + t3loop * in3 "
+      "phval13 = (ph3loop % 4) * 90"
+      MCWRK ip13 + phval13
+      "T4=T4orig + t4loop * in4 "
+      "phval14 = (ph4loop % 2) * 180"
+      MCWRK ip14 + phval14
+      "phval21 = (t4loop * 180)%360"
+      MCWRK ip21 + phval21
+      "phval31 = (t4loop * 180)%360"
+      MCWRK ip31 + phval31
+      MCWRK
+      "phval0 = ph4loop * 1"
+      MCWRK setgrad EA
+  lo to LBLF2 times 2
+  MCWRK 
+  MCWRK
+  "ph2loop-=2"
+  MCWRK 
+
+  MCWRK
+  "ph1loop+=1"
+      "T1=T1orig + t1loop * in1 "
+      "phval11 = (ph1loop % 4) * 90"
+      MCWRK ip11 + phval11
+      "T2=T2orig + t2loop * in2 "
+      "phval12 = (ph2loop % 4) * 90"
+      MCWRK ip12 + phval12
+      "T3=T3orig + t3loop * in3 "
+      "phval13 = (ph3loop % 4) * 90"
+      MCWRK ip13 + phval13
+      "T4=T4orig + t4loop * in4 "
+      "phval14 = (ph4loop % 2) * 180"
+      MCWRK ip14 + phval14
+      "phval21 = (t4loop * 180)%360"
+      MCWRK ip21 + phval21
+      "phval31 = (t4loop * 180)%360"
+      MCWRK ip31 + phval31
+      MCWRK
+      "phval0 = ph4loop * 1"
+      MCWRK setgrad EA
+  lo to LBLF1 times 2
+  MCWRK 
+  MCWRK
+  "ph1loop-=2"
+  MCWRK 
+
+  MCWRK
+  "t4loop = SPARSELIST"
+  MCWRK  SPARSELIST.inc
+  MCWRK
+  "ph4loop = 0"
+
+
+  MCWRK
+  "t3loop = SPARSELIST"
+  MCWRK  SPARSELIST.inc
+  MCWRK
+  "ph3loop = 2 * (t3loop % 2)"
+
+
+  MCWRK
+  "t2loop = SPARSELIST"
+  MCWRK  SPARSELIST.inc
+  MCWRK
+  "ph2loop = 2 * (t2loop % 2)"
+
+
+  MCWRK
+  "t1loop = SPARSELIST"
+  MCWRK  SPARSELIST.inc
+  MCWRK
+  "ph1loop = 2 * (t1loop % 2)"
+      "T1=T1orig + t1loop * in1 "
+      "phval11 = (ph1loop % 4) * 90"
+      MCWRK ip11 + phval11
+      "T2=T2orig + t2loop * in2 "
+      "phval12 = (ph2loop % 4) * 90"
+      MCWRK ip12 + phval12
+      "T3=T3orig + t3loop * in3 "
+      "phval13 = (ph3loop % 4) * 90"
+      MCWRK ip13 + phval13
+      "T4=T4orig + t4loop * in4 "
+      "phval14 = (ph4loop % 2) * 180"
+      MCWRK ip14 + phval14
+      "phval21 = (t4loop * 180)%360"
+      MCWRK ip21 + phval21
+      "phval31 = (t4loop * 180)%360"
+      MCWRK ip31 + phval31
+      MCWRK
+      "phval0 = ph4loop * 1"
+      MCWRK setgrad EA
+  lo to LBLSTN times STNCNT
+  MCWRK rf #0 SPARSELIST.res
+  lo to LBLAV times tdav
+# 238 "/opt/wtopspin/gorka/backbone/pp/HNCOCACB"
+	
+# 244 "/opt/wtopspin/gorka/backbone/pp/HNCOCACB"
+	
+exit
+
+; Constant phases:
+ph0 = 0
+ph1 = 1
+ph2 = 2
+ph3 = 3
+
+; Phases incremented for indirect dimensions:
+ph11 = 0 0 2 2
+ph12 = 0 0 0 0 2 2 2 2
+ph13 = 0
+ph14 = 2
+# 259 "/opt/wtopspin/gorka/backbone/pp/HNCOCACB"
+; Phase at start of INEPT before COS-INEPT - for TPPI shifting in T4:
+ph21 = 1 3
+
+; Receiver phase:
+ph31 = 0 2 2 0 2 0 0 2
+
+;gpz0: N and CO homospoil gradient: 23%.
+;gpz1: Homospoil gradient after H: 17%.
+;gpz2: Homospoil gradient after N: 13%.
+;gpz3: Homospoil gradient after CO: 11%.
+;gpz4: Homospoil gradient after CA: 7%.
+;gpz5: Homospoil gradient after CO: 3%.
+# 272 "/opt/wtopspin/gorka/backbone/pp/HNCOCACB"
+;gpz11: Gradient in H INEPT: 1%.
+
+;gpz18: Gradient in first COS-INEPT echo: 5%.
+;gpz19: Gradient in second COS-INEPT echo: -2%.
+
+;gpz21: First coherence selection gradient (on N): 80%.
+;gpz22: Second coherence selection gradient (on H): 8.1%.

@@ -1,0 +1,1301 @@
+label list:
+line no.  pc   label
+     616 0xffffffff 1
+     618 0xffffffff LBLAV
+     634 0xffffffff 2
+     635 0xffffffff LBLF1
+     636 0xffffffff LBLST1
+
+pulse program: "/reference/MENMR/ubiCN/25/2D_TROSY/1/pulseprogram"
+================
+dur0 == line 0
+fixdel(1.000000 usec) 
+
+dur1 == line 0
+fixdel(10.000000 usec) 
+
+dur2 == line 0
+fixdel(1000.000000 usec) clrNmr1: 0x400000 clrNmr2: 0x400000 
+
+'2D.wt.pp': line   1--->prosol relations=<wt>
+'2D.wt.pp': line   2--->
+'2D.wt.pp': line   3--->
+'Avance.incl': line   1--->;Avance3.incl
+'Avance.incl': line   2--->;   for AV III
+'Avance.incl': line   3--->;
+'Avance.incl': line   4--->;avance-version (13/06/17)
+'Avance.incl': line   5--->;
+'Avance.incl': line   6--->;$CLASS=HighRes Incl
+'Avance.incl': line   7--->;$COMMENT=
+'Avance.incl': line 169--->;$Id: Avance3.incl,v 1.10.2.2 2013/08/30 09:43:33 ber Exp $
+'2D.wt.pp': line   4--->
+'Grad.incl': line   1--->;Grad2.incl  -  include file for Gradient Spectroscopy
+'Grad.incl': line   2--->;   for TCU3
+'Grad.incl': line   3--->;
+'Grad.incl': line   4--->;avance-version (07/01/17)
+'Grad.incl': line   5--->;
+'Grad.incl': line   6--->;$CLASS=HighRes Incl
+'Grad.incl': line   7--->;$COMMENT=
+'Grad.incl': line   8--->
+'Grad.incl': line  27--->define list<gradient> EA=<EA>
+'Grad.incl': line  28--->
+'Grad.incl': line  29--->
+'Grad.incl': line  31--->;$Id: Grad2.incl,v 1.14 2012/01/31 17:49:21 ber Exp $
+'2D.wt.pp': line   5--->
+'2D.wt.pp': line   6--->
+'2D_config.incl': line   1---> 
+'De.incl': line   1--->;De2.incl
+'De.incl': line   2--->;   for AVi
+'De.incl': line   3--->;
+'De.incl': line   4--->;avance-version (08/02/15)
+'De.incl': line   5--->;
+'De.incl': line   6--->;$CLASS=HighRes Incl
+'De.incl': line   7--->;$COMMENT=
+'De.incl': line   8--->
+'De.incl': line   9--->
+'De.incl': line  10--->define delay rde1
+'De.incl': line  13--->"rde1=de-de1"
+'De.incl': line  14--->
+'De.incl': line  15--->
+'De.incl': line  24--->;for multi receive
+'De.incl': line  25--->
+'De.incl': line  26--->
+'De.incl': line  33--->;$Id: De2.incl,v 1.8 2012/01/31 17:49:21 ber Exp $
+'2D_config.incl': line   4--->
+'2D_config.incl': line  13--->
+'2D_config.incl': line  73--->;cnst0: Correct to phc1=0 by entering cnst0=phc1. Added to last delay.
+'2D_config.incl': line  74--->define pulse proximalDE
+'2D_config.incl': line  75--->"proximalDE = 2*dw*cnst0/360"
+'2D_config.incl': line  76--->
+'2D_config.incl': line  77--->
+'2D_config.incl': line 111--->; Adjust d1 for sequence to match requested d1 relaxation time:
+'2D_config.incl': line 112--->"d1 -= 0"   ; Prevents spurious error message from the next line.
+'2D_config.incl': line 113--->"d1 -= d11"
+'2D_config.incl': line 114--->
+'2D_config.incl': line 115--->
+'2D_config.incl': line 118--->; ASAP turned off for now:
+'2D_config.incl': line 119--->
+'2D_config.incl': line 120--->
+'2D_config.incl': line 171--->
+'2D_config.incl': line 185--->
+'2D_config.incl': line 195--->; H decoupling with flanking pulses, ignored in case of 1:
+'2D_config.incl': line 207--->
+'2D_config.incl': line 208--->; H or D decoupling with flanking pulses:
+'2D_config.incl': line 226--->
+'2D_config.incl': line 227--->;d1 : relaxation delay; 1-5 * T1
+'2D_config.incl': line 228--->;d11: delay for disk I/O                               [1 ms]
+'2D_config.incl': line 229--->;d13: short delay for setting parameters               [4 us]
+'2D_config.incl': line 231--->;ns: 1 * n
+'2D_config.incl': line 232--->;ds: >= 16
+'2D_config.incl': line 233--->;td1: number of experiments
+'2D_config.incl': line 234--->
+'2D_config.incl': line 235--->;cpd1: decoupling according to sequence defined by cpdprg1, DIPSI2
+'2D_config.incl': line 236--->;cpd2: decoupling according to sequence defined by cpdprg2
+'2D_config.incl': line 237--->
+'2D_config.incl': line 238--->;cpd4: decoupling according to sequence defined by cpdprg4, waltz16
+'2D_config.incl': line 240--->;pcpd2: f2 channel - 90 degree pulse for decoupling sequence
+'2D_config.incl': line 241--->
+'2D_config.incl': line 242--->
+'2D_config.incl': line 243--->;p16: homospoil/gradient pulse                         [650 us]
+'2D_config.incl': line 244--->;p19: gradient pulse 2                                 [100 us]
+'2D_config.incl': line 245--->;p32: gradient pulse in echo
+'2D_config.incl': line 247--->;p34: distal selection gradient pulse [200 usec]
+'2D_config.incl': line 248--->
+'2D_config.incl': line 249--->;d16: delay for homospoil/gradient recovery [200 usec]
+'2D_config.incl': line 250--->;d19: delay for short gradient recovery [80 usec]
+'2D_config.incl': line 251--->;d32: delay for gradient recovery [20 usec]
+'2D_config.incl': line 252--->;d34: distal recovery after selection gradient [20 usec]
+'2D_config.incl': line 253--->
+'2D_config.incl': line 255--->;p1 : f1 channel -  90 degree high power pulse
+'2D_config.incl': line 256--->;p2 : f1 channel - 180 degree high power pulse
+'2D_config.incl': line 257--->;p3 : f2 channel -  90 degree high power pulse
+'2D_config.incl': line 258--->;p4 : f2 channel - 180 degree high power pulse
+'2D_config.incl': line 259--->;p21 : f3 channel - 90 degree high power pulse
+'2D_config.incl': line 260--->;p22 : f3 channel - 180 degree high power pulse
+'2D_config.incl': line 261--->
+'2D_config.incl': line 262--->;pl1: power for 1H  pulses
+'2D_config.incl': line 263--->;pl2: power for 13C pulses
+'2D_config.incl': line 264--->;pl3: power for 15N pulses
+'2D_config.incl': line 265--->;pl4: power for 2H pulses
+'2D_config.incl': line 266--->
+'2D_config.incl': line 267--->;gpz0: prefocussing gradient.
+'2D_config.incl': line 268--->;gpnam0: SMSQ10.100
+'2D_config.incl': line 281--->
+'2D_config.incl': line 292--->
+'H.incl': line   1--->define delay dH_inversion
+'H.incl': line   2--->define delay dH_inversion_raw
+'H.incl': line   3--->
+'H.incl': line   4--->define delay dHC_inversion
+'H.incl': line   5--->define delay dHC_inversion_raw
+'H.incl': line   6--->
+'H.incl': line   7--->define pulse pH_excitation
+'H.incl': line   8--->define pulse pHC_excitation
+'H.incl': line   9--->define pulse pH_exc_UR
+'H.incl': line  10--->define pulse pHC_exc_UR
+'H.incl': line  11--->define pulse pH_refocussing
+'H.incl': line  12--->define pulse pHC_refocussing
+'H.incl': line  13--->define pulse pH_inversion
+'H.incl': line  14--->define pulse pHC_inversion
+'H.incl': line  15--->define pulse eH_excitation
+'H.incl': line  16--->define pulse eHC_excitation
+'H.incl': line  17--->define delay eH_refocussing
+'H.incl': line  18--->define pulse eHC_refocussing
+'H.incl': line  19--->define delay eH_exc_UR
+'H.incl': line  20--->define pulse eHC_exc_UR
+'H.incl': line  21--->define delay eH_fb_UR
+'H.incl': line  22--->define pulse eHC_fb_UR
+'H.incl': line  23--->define pulse eH_WATERGATE
+'H.incl': line  24--->define pulse eHC_WATERGATE
+'H.incl': line  26--->define pulse pH2O_exc_Z
+'H.incl': line  27--->
+'H.incl': line  28--->
+'H.incl': line  29--->;cnst40: excitation width of HC refocussing pulses [ppm].
+'H.incl': line  30--->;cnst41: excitation width of HC excitation/flipback pulses [ppm].
+'H.incl': line  31--->;cnst42: chemical shift of HC protons [ppm].
+'H.incl': line  32--->;cnst43: rotation angle for HC pc9 pulse [0-90 deg]
+'H.incl': line  34--->;cnst50: excitation width of HN/HCaro refocussing pulses [ppm].
+'H.incl': line  35--->;cnst51: excitation width of HN/HCaro excitation/flipback pulses [ppm].
+'H.incl': line  36--->;cnst52: chemical shift of HN/HCaro protons [ppm].
+'H.incl': line  37--->;cnst53: rotation angle for HN/HCaro pc9 pulse [0-90 deg]
+'H.incl': line  38--->
+'H.incl': line  39--->"d42 = cnst40*0.05u + cnst41*0.05u + cnst42*0.05u + cnst43*0.05u"
+'H.incl': line  40--->"d52 = cnst50*0.05u + cnst51*0.05u + cnst52*0.05u + cnst53*0.05u"
+'H.incl': line  41--->
+'H.incl': line  43--->; H pulses act on > 4.7 and HC pulses on 4.7 > with H2O unaffected.
+'H.incl': line  44--->
+'H.incl': line  45--->define pulse pH2O_excitation
+'H.incl': line  46--->define pulse pH2O_flipback
+'H.incl': line  47--->
+'H.incl': line  83--->    "pH2O_excitation = 0u"
+'H.incl': line  84--->    "pH2O_flipback = 0u"
+'H.incl': line  85--->    "pH2O_exc_Z = 0u"
+'H.incl': line  87--->    "p11 = 0u"
+'H.incl': line  88--->
+'H.incl': line  89--->
+'H.incl': line  91--->    "d46 = 0u"
+'H.incl': line  92--->    "d56 = 0u"
+'H.incl': line  93--->    "pHC_excitation = p44"
+'H.incl': line  94--->    "pHC_exc_UR = p47"
+'H.incl': line  95--->
+'H.incl': line  96--->
+'H.incl': line 102--->    "pHC_inversion = p46"
+'H.incl': line 103--->    "d46 = p46*cnst46/2"
+'H.incl': line 104--->    "eHC_refocussing = p46*cnst46 + d46"
+'H.incl': line 105--->    "eHC_excitation = p44*cnst44"
+'H.incl': line 106--->    "eHC_exc_UR = p47*cnst47"
+'H.incl': line 107--->    "eHC_fb_UR = p47*cnst48"
+'H.incl': line 108--->    "pHC_refocussing = p46 + d46"
+'H.incl': line 109--->    "pH_excitation = p54"
+'H.incl': line 110--->    "pH_exc_UR = p57"
+'H.incl': line 111--->
+'H.incl': line 112--->
+'H.incl': line 118--->    "pH_inversion = p56"
+'H.incl': line 119--->    "d56 = 0u"
+'H.incl': line 120--->    "eH_excitation = p54*cnst54"
+'H.incl': line 121--->    "eH_refocussing = p56*cnst56"
+'H.incl': line 122--->
+'H.incl': line 123--->"eH_exc_UR = p57*cnst57"
+'H.incl': line 124--->
+'H.incl': line 125--->    "eH_fb_UR = p57*cnst58"
+'H.incl': line 126--->    "pH_refocussing = p56"
+'H.incl': line 127--->    "dH_inversion = p56+d56"
+'H.incl': line 128--->    "dH_inversion_raw = p56"
+'H.incl': line 132--->"eH_WATERGATE = eH_refocussing"
+'H.incl': line 133--->    "eHC_WATERGATE = eHC_refocussing"
+'H.incl': line 134--->
+'2D_config.incl': line 294--->
+'C.incl': line   1--->define delay dC_inversion
+'C.incl': line   2--->define delay dC_universal
+'C.incl': line   4--->define pulse eC_excitation
+'C.incl': line   5--->define pulse eC_flipback
+'C.incl': line   6--->define pulse eC_universal
+'C.incl': line   7--->
+'C.incl': line  32--->    "dC_inversion = p41"
+'C.incl': line  33--->    "dC_universal = p3"
+'C.incl': line  34--->    "eC_excitation = p3*2/PI"
+'2D_config.incl': line 295--->
+'N.incl': line   1--->define delay dN_inversion
+'N.incl': line   2--->define delay dN_universal
+'N.incl': line  26--->     "dN_universal = p21"
+'N.incl': line  27--->     "dN_inversion = p22"
+'2D_config.incl': line 296--->
+'2D_config.incl': line 297--->
+'2D_config.incl': line 298--->
+'gradients.incl': line   1--->
+'gradients.incl': line   4--->; 1-10 free?
+'gradients.incl': line  15--->
+'gradients.incl': line  16--->
+'gradients.incl': line  26--->;gp31 reserved for rdgradient
+'gradients.incl': line  27--->
+'gradients.incl': line  40--->
+'gradients.incl': line  63--->
+'gradients.incl': line  64--->
+'gradients.incl': line  87--->
+'gradients.incl': line  88--->
+'gradients.incl': line  98--->define list<gradient> EA2=<EA2>
+'gradients.incl': line  99--->
+'gradients.incl': line 100--->;gpnam0: SMSQ10.100
+'gradients.incl': line 101--->;gpnam1: SMSQ10.100
+'gradients.incl': line 102--->
+'gradients.incl': line 103--->;gpnam28: SMSQ10.100
+'gradients.incl': line 104--->;gpnam29: SMSQ10.100
+'gradients.incl': line 105--->;gpnam30: SMSQ10.100
+'gradients.incl': line 107--->;gpz0: Prefocussing gradient.
+'2D_config.incl': line 299--->
+'pulses.incl': line   1--->; Manual set decoupling power:
+'pulses.incl': line   2--->
+'pulses.incl': line   5--->  "plw16 = plw3*(p21*p21)/(pcpd3*pcpd3)"  ; Recalculate power for classic N decoupling.
+'pulses.incl': line   6--->
+'pulses.incl': line   7--->
+'pulses.incl': line   8--->"plw12 = plw2*(p3*p3)/(pcpd2*pcpd2)"  ; Recalculate power for classic C decoupling.
+'pulses.incl': line   9--->"p51 = 10*p1"
+'pulses.incl': line  10--->"p52 = 10*p3"
+'pulses.incl': line  12--->"p61 = 10*p1"
+'pulses.incl': line  13--->"p62 = 10*p3"
+'pulses.incl': line  14--->"p63 = 10*p21"
+'pulses.incl': line  15--->
+'pulses.incl': line  16--->"spw51 = plw1"
+'pulses.incl': line  17--->"spw52 = plw2"
+'pulses.incl': line  18--->
+'pulses.incl': line  19--->"spw61 = plw1"
+'pulses.incl': line  20--->"spw62 = plw2"
+'pulses.incl': line  21--->"spw63 = plw3"
+'pulses.incl': line  23--->define pulse pGRAD
+'pulses.incl': line  24--->"pGRAD = p16"
+'pulses.incl': line  25--->define delay dGRAD
+'pulses.incl': line  26--->"dGRAD = d16"
+'pulses.incl': line  27--->define pulse pGProximalL
+'pulses.incl': line  28--->"pGProximalL = p17"
+'pulses.incl': line  29--->define delay dGProximalL
+'pulses.incl': line  30--->"dGProximalL = d17"
+'pulses.incl': line  31--->define pulse pGProximalS
+'pulses.incl': line  32--->"pGProximalS = p18"
+'pulses.incl': line  33--->define delay dGProximalS
+'pulses.incl': line  34--->"dGProximalS = d18"
+'pulses.incl': line  35--->define pulse pGDistalL
+'pulses.incl': line  36--->"pGDistalL = p19"
+'pulses.incl': line  37--->define delay dGDistalL
+'pulses.incl': line  38--->"dGDistalL = d19"
+'pulses.incl': line  39--->define pulse pGDistalS
+'pulses.incl': line  40--->"pGDistalS = p20"
+'pulses.incl': line  41--->define delay dGDistalS
+'pulses.incl': line  42--->"dGDistalS = d20"
+'pulses.incl': line  43--->;p16: crusher/prefocussing gradient pulse.
+'pulses.incl': line  44--->;p17: Proximal long gradient pulse.
+'pulses.incl': line  45--->;p18: Proximal short gradient pulse.
+'pulses.incl': line  46--->;p19: Distal long gradient pulse.
+'pulses.incl': line  47--->;p20: Distal short gradient pulse.
+'pulses.incl': line  48--->
+'pulses.incl': line  49--->
+'pulses.incl': line  50--->;d16: Crusher/prefocussing gradient delay.
+'pulses.incl': line  51--->;d17: Proximal long gradient delay.
+'pulses.incl': line  52--->;d18: Proximal short gradient delay.
+'pulses.incl': line  53--->;d19: Distal long gradient delay.
+'pulses.incl': line  54--->;d20: Distal short gradient delay.
+'pulses.incl': line  56--->; Water flipback and flipdown pulses:
+'pulses.incl': line  57--->
+'pulses.incl': line  58--->;p48: H2O flipback pulse
+'pulses.incl': line  59--->;p49: H2O flipdown pulse
+'pulses.incl': line  60--->
+'pulses.incl': line  61--->;sp48: H2O flipback pulse
+'pulses.incl': line  62--->;sp49: H2O flipdown pulse
+'pulses.incl': line  64--->;p50:
+'pulses.incl': line  65--->;p51: f1 channel, broadband refocussing pulse [BURBOP 20-200-900]
+'pulses.incl': line  66--->;p52: f2 channel, broadband refocussing pulse [BURBOP 20-200-900]
+'pulses.incl': line  67--->
+'pulses.incl': line  68--->;p61: f1 channel, broadband refocussing pulse [G5]
+'pulses.incl': line  69--->;p62: f2 channel, broadband refocussing pulse [G5]
+'pulses.incl': line  70--->;p63: f3 channel, broadband refocussing pulse [G5]
+'pulses.incl': line  71--->
+'pulses.incl': line  72--->;sp50:
+'pulses.incl': line  73--->;sp51: f1 channel, broadband refocussing pulse [BURBOP 20-200-900]
+'pulses.incl': line  74--->;sp52: f2 channel, broadband refocussing pulse [BURBOP 20-200-900]
+'pulses.incl': line  75--->;sp53: f3 channel, broadband refocussing pulse [BURBOP 20-200-900]
+'pulses.incl': line  76--->;sp61: f1 channel, broadband refocussing pulse [G5]
+'pulses.incl': line  77--->;sp62: f2 channel, broadband refocussing pulse [G5]
+'pulses.incl': line  78--->;sp63: f3 channel, broadband refocussing pulse [G5]
+'pulses.incl': line  80--->; Descriptions of parameters read from prosol:
+'pulses.incl': line  81--->
+'pulses.incl': line  82--->;p1: f1 channel -  90 degree high power pulse.
+'pulses.incl': line  83--->;p2: f1 channel - 180 degree high power pulse.
+'pulses.incl': line  84--->;p3: f2 channel -  90 degree high power pulse.
+'pulses.incl': line  85--->;p4: f2 channel - 180 degree high power pulse.
+'pulses.incl': line  86--->;p9: f2 channel - TOCSY mixing 90 degree pulselength.
+'pulses.incl': line  87--->;p11: f1 channel -  90 degree shaped pulse.
+'pulses.incl': line  88--->;p13: f2 channel -  90 Q5 Cali/CO.
+'pulses.incl': line  89--->;p14: f2 channel - 180 Q3 Cali/CO.
+'pulses.incl': line  90--->
+'pulses.incl': line  91--->;p16: homospoil/gradient pulse  [1 ms]
+'pulses.incl': line  92--->;p17: f1 channel - trim pulse [2.5 ms]
+'pulses.incl': line  94--->;p21: f3 channel -  90 degree high power pulse.
+'pulses.incl': line  95--->;p22: f3 channel - 180 degree high power pulse.
+'pulses.incl': line  96--->
+'pulses.incl': line  97--->;p32
+'pulses.incl': line  98--->;p34
+'pulses.incl': line  99--->;p36
+'pulses.incl': line 100--->;p37
+'pulses.incl': line 101--->;p38
+'pulses.incl': line 102--->;p53
+'pulses.incl': line 103--->;p54
+'pulses.incl': line 104--->;p58
+'pulses.incl': line 105--->;p59
+'pulses.incl': line 106--->;plw37-63
+'pulses.incl': line 107--->
+'pulses.incl': line 108--->;p53: f4 channel - 90 degree high power pulse.
+'pulses.incl': line 110--->;pcpd1: f1 channel - 90 degree pulse for decoupling sequence.
+'pulses.incl': line 111--->;pcpd2: f2 channel - 90 degree pulse for decoupling sequence.
+'pulses.incl': line 112--->;pcpd3: f3 channel - 90 degree pulse for decoupling sequence.
+'pulses.incl': line 113--->;pcpd4: f4 channel - 90 degree pulse for decoupling sequence.
+'pulses.incl': line 114--->;pcpd5: f5 channel - 90 degree pulse for decoupling sequence.
+'pulses.incl': line 115--->
+'pulses.incl': line 116--->
+'pulses.incl': line 117--->;pl1: power for 1H  pulses.
+'pulses.incl': line 118--->;pl2: power for 13C pulses.
+'pulses.incl': line 119--->;pl3: power for 15N pulses.
+'pulses.incl': line 120--->;pl4: power for 2H pulses.
+'pulses.incl': line 123--->;pl10: f1 channel - trim pulse, 25 us equivalent maximum!
+'pulses.incl': line 124--->;pl12: f2 channel - power level for CPD/BB decoupling.
+'pulses.incl': line 125--->;pl16: f3 channel - power level for CPD/BB decoupling.
+'pulses.incl': line 126--->;pl32: f1 channel - power level for H presat, 80 us equivalent maximum!
+'pulses.incl': line 127--->
+'pulses.incl': line 128--->;cpd1: decoupling according to sequence defined by cpdprg1.
+'pulses.incl': line 129--->;cpd2: decoupling according to sequence defined by cpdprg2.
+'pulses.incl': line 130--->;cpd3: decoupling according to sequence defined by cpdprg3.
+'pulses.incl': line 131--->;cpd4: decoupling according to sequence defined by cpdprg4.
+'pulses.incl': line 132--->;cpd5: decoupling according to sequence defined by cpdprg5.
+'pulses.incl': line 133--->
+'pulses.incl': line 135--->; Shaped pulses: sp1-sp42 set by Prosol.
+'pulses.incl': line 136--->
+'pulses.incl': line 137--->;sp1: f1 channel - shaped pulse  90 degree  (H2O on resonance).
+'pulses.incl': line 138--->;sp2: f2 channel, 90 Q5 Cali/CO on resonance.
+'pulses.incl': line 139--->;sp3: f2 channel, 180 Q3 Cali/CO on resonance.
+'pulses.incl': line 140--->;sp5: f2 channel, 180 Q3 Cali off resonance.
+'pulses.incl': line 141--->;sp6: f2 channel, 90 Q5 Cali/CO off resonance time reversed.
+'pulses.incl': line 142--->;sp7: f2 channel, 180 Q3 CO with off resonance.
+'pulses.incl': line 143--->;sp8: f2 channel, 90 Q5 Cali/CO on resonance time reversed.
+'2D_config.incl': line 300--->
+'delays.incl': line   1--->;d1: relaxation delay    [1.2 s]
+'delays.incl': line   2--->;d2: effective relaxation delay
+'delays.incl': line   3--->;d3: delay for RD gradient recovery [2 us]
+'delays.incl': line   5--->;d9: C TOCSY mixing time [20 ms]
+'delays.incl': line   6--->;d11: delay for disk I/O    [30 ms]
+'delays.incl': line   7--->;d13: short delay  [4 usec]
+'delays.incl': line   8--->;d16: delay for homospoil/gradient recovery [200 us]
+'delays.incl': line   9--->
+'delays.incl': line  10--->;d21: time for H -> N evolution [5.4 ms]
+'delays.incl': line  11--->;d22: time for N -> H evolution [5.4 ms]
+'delays.incl': line  12--->;d23: time for simultaneous H -> N and N -> H evolution [5.4 ms]
+'delays.incl': line  13--->;d24: time for H -> C evolution [3.5 ms]
+'delays.incl': line  14--->;d25: time for C -> H(1/2/3) evolution, prefers CH, 1/(3JCH) [2.6 ms]
+'delays.incl': line  15--->;d26: time for C -> H(1/2/3) evolution, prefers CH2, 1/(4JCH) [1.8 ms]
+'delays.incl': line  16--->;d27: time for C -> H(1/2/3) evolution, prefers CH3, 1/(5JCH) [1.4 ms]
+'delays.incl': line  17--->;d28: time for H -> Caro evolution [3.5 ms]
+'delays.incl': line  18--->;d29: time for Caro -> H evolution [3.5 ms]
+'delays.incl': line  19--->;d30: time for N -> CO evolution [28 ms]
+'delays.incl': line  20--->;d31: time for N -> CA evolution [28 ms]
+'delays.incl': line  21--->;d32: time for CO -> CA evolution [9.1 ms]
+'delays.incl': line  22--->;d33: time for CA -> CO evolution compensated for relaxation [6.3 ms to 9.1 ms]
+'delays.incl': line  23--->;d34: time for CA -> CO evolution in constant time [9.1 ms]
+'delays.incl': line  24--->;d35: 2*time for CA -> CACB evolution or CA constant time evolution [28.6 ms]
+'delays.incl': line  25--->;d36: time for NCA -> CAN' evolution [28.6 ms or 54 ms]
+'delays.incl': line  26--->;d37: time for CA -> CACB and CB -> CBCA partial evolution 1/(4JCACB) [7.1 ms]
+'delays.incl': line  27--->;d38: time for CO -> N evolution [28 ms]
+'delays.incl': line  28--->;d39: time for N -> CO and N -> CA evolution [28 ms]
+'delays.incl': line  29--->;d40: time for N -> NCAiCAi-1 evolution [50 ms]
+'delays.incl': line  30--->;d41: time for Hm -> Cm evolution [4 ms]
+'delays.incl': line  31--->
+'delays.incl': line  32--->;d46: symmetrizing delay for HC_refocussing.
+'delays.incl': line  34--->;d50: time for C(ali)C(ali) FLOPSY16 mixing [20 ms]
+'delays.incl': line  35--->;d51: time for C(aro)C(aro) FLOPSY16 mixing [20 ms]
+'delays.incl': line  36--->
+'delays.incl': line  37--->;d56: symmetrizing delay for H_refocussing.
+'2D_config.incl': line 301--->
+'2D.wt.pp': line   7--->
+'2D.wt.pp': line   8--->"in1 = inf1"
+'2D.wt.pp': line   9--->
+'proximal_2D.incl': line   1--->
+'proximal_2D.incl': line   2--->
+'proximal.incl': line   1--->; Use gradients by default:
+'proximal.incl': line   2--->
+'proximal.incl': line   3--->
+'proximal.incl': line  15--->
+'proximal.incl': line  16--->define delay timeHX
+'proximal.incl': line  17--->define delay timeXH
+'proximal.incl': line  28--->  "timeHX = d21"
+'proximal.incl': line  29--->  "timeXH = d22"
+'proximal.incl': line  30--->
+'proximal.incl': line  35--->define delay dX_inversion
+'proximal.incl': line  36--->define delay dX_universal
+'proximal.incl': line  37--->
+'proximal.incl': line  38--->define pulse eHX_refocussing
+'proximal.incl': line  39--->define pulse eHX_excitation
+'proximal.incl': line  40--->define pulse eHX_exc_UR
+'proximal.incl': line  41--->define pulse eHX_fb_UR
+'proximal.incl': line  42--->define pulse pHX_inversion
+'proximal.incl': line  43--->define pulse pHX_exc_UR
+'proximal.incl': line  44--->
+'proximal.incl': line  60--->    "dX_inversion = dN_inversion"
+'proximal.incl': line  61--->    "dX_universal = dN_universal"
+'proximal.incl': line  76--->define pulse pY_inversion
+'proximal.incl': line  77--->
+'proximal.incl': line  78--->
+'proximal.incl': line  85--->    "pY_inversion = dC_inversion"
+'proximal.incl': line  86--->
+'proximal.incl': line  87--->
+'proximal.incl': line 123--->
+'proximal.incl': line 124--->
+'proximal.incl': line 125--->    "pHX_inversion = pH_inversion"
+'proximal.incl': line 126--->    "pHX_exc_UR = pH_exc_UR"
+'proximal.incl': line 127--->    "eHX_excitation = eH_excitation"
+'proximal.incl': line 128--->    "eHX_refocussing = eH_refocussing"
+'proximal.incl': line 129--->    "eHX_exc_UR = eH_exc_UR"
+'proximal.incl': line 130--->    "eHX_fb_UR = eH_fb_UR"
+'proximal.incl': line 133--->;cnst44: effective evolution multiplier for HC_excitation.
+'proximal.incl': line 134--->;cnst46: effective evolution multiplier for HC_refocussing.
+'proximal.incl': line 135--->;cnst47: effective evolution multiplier for HC_UR_exc.
+'proximal.incl': line 136--->;cnst48: effective evolution multiplier for HC_UR_fb.
+'proximal.incl': line 137--->
+'proximal.incl': line 138--->;cnst54: effective evolution multiplier for C_excitation.
+'proximal.incl': line 139--->;cnst56: effective evolution multiplier for C_refocussing.
+'proximal.incl': line 140--->;cnst57: effective evolution multiplier for C_UR_exc.
+'proximal.incl': line 141--->;cnst58: effective evolution multiplier for C_UR_fb.
+'proximal_2D.incl': line   4--->
+'hsqc.pp': line   1--->
+'hsqc.pp': line   2--->
+'hsqc.pp': line   3--->; Set up chemical shift evolution times:
+'hsqc.pp': line   5--->define delay TProximal
+'hsqc.pp': line   6--->"TProximal = 0"
+'hsqc.pp': line   7--->
+'hsqc.pp': line   8--->define delay TproximalPre
+'hsqc.pp': line   9--->define delay TproximalPost
+'hsqc.pp': line  10--->define delay dHX  ; H echo.
+'hsqc.pp': line  11--->define delay dXH_SE1  ; First echo of the sensitivity enhanced transfer.
+'hsqc.pp': line  12--->define delay dXH_SE2  ; Second echo of the sensitivity enhanced transfer.
+'hsqc.pp': line  13--->define delay ECHOTIME1  ; Delay before the last H refocussing pulse.
+'hsqc.pp': line  14--->define delay ECHOTIME2  ; Delay after the last H refocussing pulse.
+'hsqc.pp': line  15--->
+'hsqc.pp': line  16--->; Nietlispach's TROSY requires an extra flipback pulse to bring H2O back to z:
+'hsqc.pp': line  23--->; For now assumes pulses exciting H to the left of H2O:
+'hsqc.pp': line  24--->"dHX = timeHX/2 - pGProximalS - dGProximalS - eHX_refocussing/2 - eHX_excitation"
+'hsqc.pp': line  25--->
+'hsqc.pp': line  26--->"dXH_SE1 = timeXH/2 - pGProximalS - dGProximalS - eHX_refocussing/2 - eHX_fb_UR"
+'hsqc.pp': line  27--->"dXH_SE2 = timeXH/2 - pGProximalS - dGProximalS - eHX_refocussing/2 - eHX_exc_UR"
+'hsqc.pp': line  28--->
+'hsqc.pp': line  29--->; Compensate X SQ echo if H pulse in the ending pair is longer than the X pulse:
+'hsqc.pp': line  30--->"TproximalPre = larger((pHX_exc_UR - dX_universal), 0)"
+'hsqc.pp': line  33--->    "TproximalPre += pH2O_flipback"
+'hsqc.pp': line  34--->
+'hsqc.pp': line  35--->
+'hsqc.pp': line  36--->; Compensate for inversion pulses during X SQ evolution:
+'hsqc.pp': line  38--->    "TproximalPost = pY_inversion"
+'hsqc.pp': line  39--->
+'hsqc.pp': line  40--->
+'hsqc.pp': line  43--->; Mutually compensate delays around the N refocussing pulse:
+'hsqc.pp': line  44--->"if (TproximalPre > TproximalPost) {TproximalPre -= TproximalPost; TproximalPost = 0;}"
+'hsqc.pp': line  45--->"if (TproximalPost > TproximalPre) {TproximalPost -= TproximalPre; TproximalPre = 0;}"
+'hsqc.pp': line  46--->
+'hsqc.pp': line  47--->; Delays in the gradient selection echo on H:
+'hsqc.pp': line  48--->"ECHOTIME1 = de"
+'hsqc.pp': line  49--->"ECHOTIME2 = eHX_fb_UR"
+'hsqc.pp': line  50--->
+'hsqc.pp': line  51--->; Mutually compensate delays in the last echo of a sensitivity enhanced sequence:
+'hsqc.pp': line  52--->"if (ECHOTIME1 >= ECHOTIME2) {ECHOTIME1 -= ECHOTIME2; ECHOTIME2 = 0;}"
+'hsqc.pp': line  53--->"if (ECHOTIME2 > ECHOTIME1) {ECHOTIME2 -= ECHOTIME1; ECHOTIME1 = 0;}"
+'hsqc.pp': line  65--->"acqt0 = 0"
+'hsqc.pp': line  66--->baseopt_echo
+'hsqc.pp': line  67--->; *****************************************************************************
+'2D.wt.pp': line  11--->
+'2D.wt.pp': line  12, macro exp. def. 1--->; dimension 2D; AQ_mode  (F1) Echo-Antiecho
+'2D.wt.pp': line  12, macro exp. def. 2--->define delay MCWRK
+'2D.wt.pp': line  12, macro exp. def. 3--->define delay MCREST
+'2D.wt.pp': line  12, macro exp. def. 4--->define delay TProximalorig
+'2D.wt.pp': line  12, macro exp. def. 5--->"TProximalorig=TProximal"
+'2D.wt.pp': line  12, macro exp. def. 6--->define loopcounter t1loop
+'2D.wt.pp': line  12, macro exp. def. 7--->"t1loop=0"
+'2D.wt.pp': line  12, macro exp. def. 8--->define loopcounter ph1loop
+'2D.wt.pp': line  12, macro exp. def. 9--->"ph1loop=0"
+'2D.wt.pp': line  12, macro exp. def. 10--->define loopcounter ST1CNT
+'2D.wt.pp': line  12, macro exp. def. 11--->"ST1CNT = trunc(td1 / 2)"
+'2D.wt.pp': line  12, macro exp. def. 12--->"MCREST = d11 - d11"
+'2D.wt.pp': line  12, macro exp. def. 13--->"MCWRK = 0.076923*d11"
+'2D.wt.pp': line  12, macro exp. def. 14--->
+'2D.wt.pp': line  12, macro exp. def. 15--->    dccorr
+
+Begin of PTList: lalign
+{
+    dur3 == line 614
+    fixdel(13.500000 usec) SYNCRCU 
+    
+    dur4 == line 614
+    fixdel(4.500000 usec) ADCGO RCU 1 ADCGO_DC channel 1: SY receive phase(65,0) PHADDO PHREF 
+    phase(65,8) receive 
+}
+
+
+{
+    dur5 == line 614
+    de 
+    
+    dur6 == line 614
+    fixdel(1000.000000 usec) setNmr1: 0x2100 
+    
+    dur7 == line 614
+    fixdel(500.000000 usec) clrNmr1: 0x2100  EVENT-EOSZ eos1 
+}
+End of PTList
+
+'2D.wt.pp': line  12--->1 ze
+dur8 == line 616
+fixdel(3000.000000 usec)  EVENT-EOSZ ze1 
+
+'2D.wt.pp': line  13, macro exp. def. 1--->LBLAV, MCWRK
+'2D.wt.pp': line  13, macro exp. def. 2--->      "TProximal=TProximalorig + t1loop * in1 "
+dur9 == line 618
+MCWRK 
+
+'2D.wt.pp': line  13, macro exp. def. 3--->      "phval13 = (ph1loop % 2) * 180"
+dur10 == line 620
+fixdel(0.000000 usec) 
+
+'2D.wt.pp': line  13, macro exp. def. 4--->      MCWRK ip13 + phval13
+'2D.wt.pp': line  13, macro exp. def. 5--->      "phval11 = (t1loop * 180)%360"
+dur11 == line 621
+MCWRK  IRPTIPH 13 
+
+'2D.wt.pp': line  13, macro exp. def. 6--->      MCWRK ip11 + phval11
+'2D.wt.pp': line  13, macro exp. def. 7--->      "phval31 = (t1loop * 180)%360"
+dur12 == line 623
+MCWRK  IRPTIPH 11 
+
+'2D.wt.pp': line  13, macro exp. def. 8--->      MCWRK ip31 + phval31
+dur13 == line 625
+MCWRK  IRPTIPH 31 
+
+'2D.wt.pp': line  13, macro exp. def. 9--->      MCWRK
+'2D.wt.pp': line  13, macro exp. def. 10--->      "phval0 = ph1loop * 1"
+dur14 == line 626
+MCWRK 
+
+'2D.wt.pp': line  13, macro exp. def. 11--->      MCWRK setgrad EA
+'2D.wt.pp': line  13--->
+'preparation.incl': line   1--->
+dur15 == line 628
+MCWRK Gradient statement # 1, type = 0xf00 
+
+'2D.wt.pp': line   2, macro exp. start 1--->2 MCWRK  * 6 do:f2  do:f3
+dur16 == line 634
+MCWRK  * 6 channel 2: DO channel 3: DO 
+
+'2D.wt.pp': line   2, macro exp. start 2--->LBLF1, MCWRK  * 6
+dur17 == line 635
+MCWRK  * 6 
+
+'2D.wt.pp': line   2, macro exp. start 3--->LBLST1, MCWRK 
+dur18 == line 636
+MCWRK 
+
+'2D.wt.pp': line   2, macro exp. start 4--->  MCREST
+'2D.wt.pp': line   3--->; TODO: 
+'2D.wt.pp': line   4--->; Calculate recycling delay including everything outside pulses and acquisition time.
+'2D.wt.pp': line   5--->
+'2D.wt.pp': line   6--->; Reset relaxation delay:
+'preparation.incl': line  10--->    "d0 = d1"   ; Reset relaxation delay.
+'preparation.incl': line  11--->
+'preparation.incl': line  12--->
+dur19 == line 637
+MCREST 
+
+'preparation.incl': line  13--->"d0 -= d11 + 4u"    ; Account for d11 file write delay and 4u delay for setnmr3|0 setnmr0|34|32|33 ctrlgrad 0.
+'preparation.incl': line  35--->
+'preparation.incl': line  45--->
+'preparation.incl': line  63--->
+'preparation.incl': line  64--->
+dur20 == line 647
+fixdel(0.000000 usec) 
+
+'preparation.incl': line  67--->  d0    ; Relaxation delay.
+'preparation.incl': line  68--->
+'preparation.incl': line  78--->
+dur21 == line 658
+d0 
+
+'preparation.incl': line  88--->  4u do:f1 setnmr3|0 setnmr0|34|32|33 ctrlgrad 0
+'preparation.incl': line  98--->
+'preparation.incl': line  99--->
+'preparation.incl': line 114--->
+'preparation.incl': line 115--->; Extra gradient delay:  
+'preparation.incl': line 116--->
+'2D.wt.pp': line  15--->
+'2D.wt.pp': line  16--->; Include in acq.incl
+'2D.wt.pp': line  17--->
+'hsqc.pp': line  69--->
+'hsqc.pp': line  70--->
+'hsqc.pp': line  71--->; Hz -> HzNz:
+dur22 == line 663
+fixdel(4.000000 usec) setRcp2: 0x7 setNmr1: 0x1 channel 1: DO Gradient statement # 0, type = 0xa00 
+
+'hsqc.pp': line  72--->  (p54:sp54 ph0):f1
+
+Begin of PTList: lalign
+{
+    dur23 == line 683
+    p54 Shape Pulse SP54:f1 channel 1: shape pulse 54 via ptr -1 phase(0,0) 
+}
+End of PTList
+
+'hsqc.pp': line  73--->  pGProximalS:gp11 dGProximalS
+dur24 == line 684
+pGProximalS Gradient statement # 0, type = 0x200 NEXTGRAD 
+
+dur25 == line 684
+dGProximalS 
+
+'hsqc.pp': line  74--->  dHX
+dur26 == line 685
+dHX 
+
+'hsqc.pp': line  75--->  (center (p56:sp56 ph1 d56):f1 (p22 ph0 pl3):f3)
+
+Begin of PTList: center
+{
+    dur27 == line 686
+    p56 Shape Pulse SP56:f1 channel 1: shape pulse 56 via ptr -1 phase(1,0) 
+    
+    dur28 == line 686
+    d56 
+}
+
+
+{
+    dur29 == line 686
+    p22 Pulse3 channel 3: set power PL3 phase(0,0) 
+}
+End of PTList
+
+'hsqc.pp': line  76--->  dHX
+dur30 == line 687
+dHX 
+
+'hsqc.pp': line  77--->  pGProximalS:gp11 dGProximalS
+dur31 == line 688
+pGProximalS Gradient statement # 1, type = 0x200 NEXTGRAD 
+
+dur32 == line 688
+dGProximalS 
+
+'hsqc.pp': line  79--->      (p55:sp55 ph3):f1 ; CHalpha or NHbeta.
+'hsqc.pp': line  80--->
+'hsqc.pp': line  81--->
+'hsqc.pp': line  83--->   ; H2O to z by default.
+'hsqc.pp': line  84--->
+'hsqc.pp': line  85--->
+
+Begin of PTList: lalign
+{
+    dur33 == line 690
+    p55 Shape Pulse SP55:f1 channel 1: shape pulse 55 via ptr -1 phase(3,0) 
+}
+End of PTList
+
+'hsqc.pp': line  86--->  p16:gp14 d16
+'hsqc.pp': line  88--->; HzNz -> HzNy + HzNx with N evolution (T1):
+dur34 == line 697
+p16 Gradient statement # 2, type = 0x200 NEXTGRAD 
+
+dur35 == line 697
+d16 
+
+'hsqc.pp': line  89--->  (p21 ph11 pl3):f3
+'hsqc.pp': line  90--->  
+
+Begin of PTList: lalign
+{
+    dur36 == line 700
+    p21 Pulse3 channel 3: set power PL3 phase(11,0) 
+}
+End of PTList
+
+'hsqc.pp': line  91--->  TProximal*0.5
+'hsqc.pp': line  92--->  
+'hsqc.pp': line  93--->
+dur37 == line 702
+TProximal  * 0.5 
+
+'hsqc.pp': line  94--->    (p41:sp41 ph0):f2
+'hsqc.pp': line  95--->
+
+Begin of PTList: lalign
+{
+    dur38 == line 705
+    p41 Shape Pulse SP41:f2 channel 2: shape pulse 41 via ptr -1 phase(0,0) 
+}
+End of PTList
+
+'hsqc.pp': line  98--->  p16:gp17*EA
+dur39 == line 708
+p16 Gradient statement # 3, type = 0x200 NEXTGRAD 
+
+'hsqc.pp': line  99--->  d16
+'hsqc.pp': line 100--->  
+dur40 == line 709
+d16 
+
+'hsqc.pp': line 101--->  TProximal*0.5
+'hsqc.pp': line 102--->  
+dur41 == line 711
+TProximal  * 0.5 
+
+'hsqc.pp': line 103--->  TproximalPre
+dur42 == line 713
+TproximalPre 
+
+'hsqc.pp': line 104--->  (p22 ph12 pl3):f3
+
+Begin of PTList: lalign
+{
+    dur43 == line 714
+    p22 Pulse3 channel 3: set power PL3 phase(12,0) 
+}
+End of PTList
+
+'hsqc.pp': line 105--->  p16:gp18*EA    ; Optional.
+dur44 == line 715
+p16 Gradient statement # 4, type = 0x200 NEXTGRAD 
+
+'hsqc.pp': line 106--->  d16
+'hsqc.pp': line 107--->   ; Compensate for the minimum time of two RDGRADs
+dur45 == line 716
+d16 
+
+'hsqc.pp': line 108--->  TproximalPost
+'hsqc.pp': line 109--->
+'hsqc.pp': line 110--->
+'hsqc.pp': line 130--->;   COS-INEPT/Nietlispach 1:
+dur46 == line 718
+TproximalPost 
+
+'hsqc.pp': line 131--->    (ralign ( p58:sp58 ph0):f1 (p21 ph13 pl3):f3)
+
+Begin of PTList: ralign
+{
+    dur47 == line 724
+    p58 Shape Pulse SP58:f1 channel 1: shape pulse 58 via ptr -1 phase(0,0) 
+}
+
+
+{
+    dur48 == line 724
+    p21 Pulse3 channel 3: set power PL3 phase(13,0) 
+}
+End of PTList
+
+'hsqc.pp': line 132--->    pGProximalS:gp12 dGProximalS
+dur49 == line 725
+pGProximalS Gradient statement # 5, type = 0x200 NEXTGRAD 
+
+dur50 == line 725
+dGProximalS 
+
+'hsqc.pp': line 133--->    dXH_SE1
+dur51 == line 726
+dXH_SE1 
+
+'hsqc.pp': line 134--->    (center (p56:sp56 ph0 d56):f1 (p22 ph0 pl3):f3)
+
+Begin of PTList: center
+{
+    dur52 == line 727
+    p56 Shape Pulse SP56:f1 channel 1: shape pulse 56 via ptr -1 phase(0,0) 
+    
+    dur53 == line 727
+    d56 
+}
+
+
+{
+    dur54 == line 727
+    p22 Pulse3 channel 3: set power PL3 phase(0,0) 
+}
+End of PTList
+
+'hsqc.pp': line 135--->    dXH_SE1
+dur55 == line 728
+dXH_SE1 
+
+'hsqc.pp': line 136--->    pGProximalS:gp12 dGProximalS
+dur56 == line 729
+pGProximalS Gradient statement # 6, type = 0x200 NEXTGRAD 
+
+dur57 == line 729
+dGProximalS 
+
+'hsqc.pp': line 137--->    (lalign (p57:sp57 ph1):f1 (p21 ph0 pl3):f3)
+
+Begin of PTList: lalign
+{
+    dur58 == line 730
+    p57 Shape Pulse SP57:f1 channel 1: shape pulse 57 via ptr -1 phase(1,0) 
+}
+
+
+{
+    dur59 == line 730
+    p21 Pulse3 channel 3: set power PL3 phase(0,0) 
+}
+End of PTList
+
+'hsqc.pp': line 138--->    pGProximalS:gp13 dGProximalS
+dur60 == line 731
+pGProximalS Gradient statement # 7, type = 0x200 NEXTGRAD 
+
+dur61 == line 731
+dGProximalS 
+
+'hsqc.pp': line 139--->    dXH_SE2
+dur62 == line 732
+dXH_SE2 
+
+'hsqc.pp': line 140--->    (center (p56:sp56 ph0 d56):f1 (p22 ph0 pl3):f3)
+
+Begin of PTList: center
+{
+    dur63 == line 733
+    p56 Shape Pulse SP56:f1 channel 1: shape pulse 56 via ptr -1 phase(0,0) 
+    
+    dur64 == line 733
+    d56 
+}
+
+
+{
+    dur65 == line 733
+    p22 Pulse3 channel 3: set power PL3 phase(0,0) 
+}
+End of PTList
+
+'hsqc.pp': line 141--->    dXH_SE2
+dur66 == line 734
+dXH_SE2 
+
+'hsqc.pp': line 142--->    pGProximalS:gp13 dGProximalS
+'hsqc.pp': line 143--->
+dur67 == line 735
+pGProximalS Gradient statement # 8, type = 0x200 NEXTGRAD 
+
+dur68 == line 735
+dGProximalS 
+
+'hsqc.pp': line 144--->      (ralign (p58:sp58 ph1):f1 (p21 ph1 + ph14 pl3):f3)
+'hsqc.pp': line 145--->
+
+Begin of PTList: ralign
+{
+    dur69 == line 737
+    p58 Shape Pulse SP58:f1 channel 1: shape pulse 58 via ptr -1 phase(1,0) 
+}
+
+
+{
+    dur70 == line 737
+    p21 Pulse3 channel 3: set power PL3 phase(1,0) + phase (14,0) 
+}
+End of PTList
+
+'hsqc.pp': line 148--->  pGRAD:gp19
+dur71 == line 740
+pGRAD Gradient statement # 9, type = 0x200 NEXTGRAD 
+
+'hsqc.pp': line 149--->  dGRAD
+dur72 == line 741
+dGRAD 
+
+'hsqc.pp': line 150--->  ECHOTIME1
+dur73 == line 742
+ECHOTIME1 
+
+'hsqc.pp': line 151--->  (p56:sp56 ph0 d56):f1
+
+Begin of PTList: lalign
+{
+    dur74 == line 743
+    p56 Shape Pulse SP56:f1 channel 1: shape pulse 56 via ptr -1 phase(0,0) 
+    
+    dur75 == line 743
+    d56 
+}
+End of PTList
+
+'hsqc.pp': line 152--->  ECHOTIME2
+dur76 == line 744
+ECHOTIME2 
+
+'hsqc.pp': line 153--->  pGRAD:gp20
+dur77 == line 745
+pGRAD Gradient statement # 10, type = 0x200 NEXTGRAD 
+
+'hsqc.pp': line 154--->  dGRAD  setnmr3^0 setnmr0^34^32^33 ctrlgrad 7
+'hsqc.pp': line 155--->
+'hsqc.pp': line 164--->
+'hsqc.pp': line 165--->; *****************************************************************************
+'acq.incl': line   1--->
+'acq.incl': line   2--->
+dur78 == line 746
+dGRAD clrRcp2: 0x7 clrNmr1: 0x1 Gradient statement # 7, type = 0xa00 
+
+'acq.incl': line  16--->    go=2 ph31 
+'2D.wt.pp': line  20--->
+
+Begin of PTList: lalign
+{
+    dur79 == line 758
+    fixdel(13.500000 usec) SYNCRCU 
+    
+    dur80 == line 758
+    fixdel(4.500000 usec) ADCGO RCU 1 channel 1: SY receive phase(65,0) PHADDO PHREF 
+    phase(31,8) receive 
+}
+
+
+{
+    dur81 == line 758
+    de 
+    
+    dur82 == line 758
+    aq channel 1: CPDSNG prog 16 (CPDPRG17)via ptr 0 
+    
+    dur83 == line 758
+    fixdel(2500.000000 usec) 
+    
+    dur84 == line 758
+    fixdel(500.000000 usec) channel 1: Dwell off channel 1: SY transmit  EVENT-EOSZ eos1 
+    loop to '2D.wt.pp': line   2, macro exp. start 1 times ns (ns+ds) 
+}
+End of PTList
+
+'2D.wt.pp': line  21, macro exp. mc 1--->  MCWRK  wr #0 if #0 zd 
+'2D.wt.pp': line  21, macro exp. mc 2--->
+'2D.wt.pp': line  21, macro exp. mc 3--->  "ph1loop+=1"
+dur85 == line 762
+MCWRK  EVENT-EOSZ zd1  AQBUS-WR RCU 1 wrif 0 
+
+'2D.wt.pp': line  21, macro exp. mc 4--->      "TProximal=TProximalorig + t1loop * in1 "
+dur86 == line 765
+fixdel(0.000000 usec) 
+
+'2D.wt.pp': line  21, macro exp. mc 5--->      "phval13 = (ph1loop % 2) * 180"
+dur87 == line 766
+fixdel(0.000000 usec) 
+
+'2D.wt.pp': line  21, macro exp. mc 6--->      MCWRK ip13 + phval13
+'2D.wt.pp': line  21, macro exp. mc 7--->      "phval11 = (t1loop * 180)%360"
+dur88 == line 767
+MCWRK  IRPTIPH 13 
+
+'2D.wt.pp': line  21, macro exp. mc 8--->      MCWRK ip11 + phval11
+'2D.wt.pp': line  21, macro exp. mc 9--->      "phval31 = (t1loop * 180)%360"
+dur89 == line 769
+MCWRK  IRPTIPH 11 
+
+'2D.wt.pp': line  21, macro exp. mc 10--->      MCWRK ip31 + phval31
+dur90 == line 771
+MCWRK  IRPTIPH 31 
+
+'2D.wt.pp': line  21, macro exp. mc 11--->      MCWRK
+'2D.wt.pp': line  21, macro exp. mc 12--->      "phval0 = ph1loop * 1"
+dur91 == line 772
+MCWRK 
+
+'2D.wt.pp': line  21, macro exp. mc 13--->      MCWRK setgrad EA
+'2D.wt.pp': line  21, macro exp. mc 14--->  lo to LBLF1 times 2
+dur92 == line 774
+MCWRK Gradient statement # 1, type = 0xf00 loop to '2D.wt.pp': line   2, macro exp. start 2 times 2 
+
+'2D.wt.pp': line  21, macro exp. mc 15--->  MCWRK 
+'2D.wt.pp': line  21, macro exp. mc 16--->
+'2D.wt.pp': line  21, macro exp. mc 17--->  "t1loop+=1"
+dur93 == line 776
+MCWRK 
+
+'2D.wt.pp': line  21, macro exp. mc 18--->      "TProximal=TProximalorig + t1loop * in1 "
+dur94 == line 779
+fixdel(0.000000 usec) 
+
+'2D.wt.pp': line  21, macro exp. mc 19--->      "phval13 = (ph1loop % 2) * 180"
+dur95 == line 780
+fixdel(0.000000 usec) 
+
+'2D.wt.pp': line  21, macro exp. mc 20--->      MCWRK ip13 + phval13
+'2D.wt.pp': line  21, macro exp. mc 21--->      "phval11 = (t1loop * 180)%360"
+dur96 == line 781
+MCWRK  IRPTIPH 13 
+
+'2D.wt.pp': line  21, macro exp. mc 22--->      MCWRK ip11 + phval11
+'2D.wt.pp': line  21, macro exp. mc 23--->      "phval31 = (t1loop * 180)%360"
+dur97 == line 783
+MCWRK  IRPTIPH 11 
+
+'2D.wt.pp': line  21, macro exp. mc 24--->      MCWRK ip31 + phval31
+dur98 == line 785
+MCWRK  IRPTIPH 31 
+
+'2D.wt.pp': line  21, macro exp. mc 25--->      MCWRK
+'2D.wt.pp': line  21, macro exp. mc 26--->      "phval0 = ph1loop * 1"
+dur99 == line 786
+MCWRK 
+
+'2D.wt.pp': line  21, macro exp. mc 27--->      MCWRK setgrad EA
+'2D.wt.pp': line  21, macro exp. mc 28--->  lo to LBLST1 times ST1CNT
+dur100 == line 788
+MCWRK Gradient statement # 1, type = 0xf00 loop to '2D.wt.pp': line   2, macro exp. start 3 times l120 
+
+'2D.wt.pp': line  21, macro exp. mc 29--->  MCWRK 
+'2D.wt.pp': line  21, macro exp. mc 30--->  "t1loop=0"
+dur101 == line 790
+MCWRK 
+
+'2D.wt.pp': line  21, macro exp. mc 31--->  "ph1loop=0"
+dur102 == line 792
+fixdel(0.000000 usec) 
+
+'2D.wt.pp': line  21, macro exp. mc 32--->  MCWRK rf #0
+'2D.wt.pp': line  21, macro exp. mc 33--->  lo to LBLAV times tdav
+dur103 == line 793
+MCWRK  AQBUS-WR RCU 1 rf 0 loop to '2D.wt.pp': line  13, macro exp. def. 1 times tdav 
+
+'2D.wt.pp': line  23--->exit
+'2D.wt.pp': line  24--->
+dur104 == line 796
+fixdel(50000.000000 usec) 
+
+dur105 == line 796
+fixdel(10000.000000 usec)  EVENT-EOSZ esc0 
+
+dur106 == line 796
+fixdel(10000.000000 usec) 
+
+
+phase program no. 65:
+Fraction:  4.000000 
+Increment:  0x4000 =  90.00 degrees
+  0:             0 =   0.00 degrees
+
+phase program no. 0:
+Fraction:  4.000000 
+Increment:  0x4000 =  90.00 degrees
+  0:             0 =   0.00 degrees
+
+phase program no. 1:
+Fraction:  4.000000 
+Increment:  0x4000 =  90.00 degrees
+  0:        0x4000 =  90.00 degrees
+
+phase program no. 2:
+Fraction:  4.000000 
+Increment:  0x4000 =  90.00 degrees
+  0:        0x8000 = 180.00 degrees
+
+phase program no. 3:
+Fraction:  4.000000 
+Increment:  0x4000 =  90.00 degrees
+  0:        0xc000 = 270.00 degrees
+
+phase program no. 30:
+Fraction:  4.000000 
+Increment:  0x4000 =  90.00 degrees
+  0:             0 =   0.00 degrees
+
+phase program no. 14:
+Fraction:  4.000000 
+Increment:  0x4000 =  90.00 degrees
+  0:             0 =   0.00 degrees
+
+phase program no. 13:
+Fraction:  4.000000 
+Increment:  0x4000 =  90.00 degrees
+  0:             0 =   0.00 degrees
+
+phase program no. 11:
+Fraction:  4.000000 
+Increment:  0x4000 =  90.00 degrees
+  0:        0xc000 = 270.00 degrees
+  1:        0x4000 =  90.00 degrees
+
+phase program no. 12:
+Fraction:  4.000000 
+Increment:  0x4000 =  90.00 degrees
+  0:             0 =   0.00 degrees
+  1:             0 =   0.00 degrees
+  2:        0x8000 = 180.00 degrees
+  3:        0x8000 = 180.00 degrees
+
+phase program no. 31:
+Fraction:  4.000000 
+Increment:  0x4000 =  90.00 degrees
+  0:             0 =   0.00 degrees
+  1:        0x8000 = 180.00 degrees
+file list:
+=================================================
+          filename              actlineno  offset
+=================================================
+               2D.wt.pp        1            1
+             <built-in>        2            2
+         <command-line>        3            3
+               2D.wt.pp        4            4
+            Avance.incl        8            8
+            Avance.incl       16         -152
+               2D.wt.pp       18           15
+              Grad.incl       20           20
+              Grad.incl       29            3
+              Grad.incl       33            3
+               2D.wt.pp       35           31
+         2D_config.incl       38           38
+                De.incl       40           40
+                De.incl       51           39
+                De.incl       55           32
+                De.incl       59           27
+         2D_config.incl       61           58
+         2D_config.incl       63           51
+         2D_config.incl       65           -7
+         2D_config.incl       71          -38
+         2D_config.incl       72          -38
+         2D_config.incl       78          -39
+         2D_config.incl       82          -87
+         2D_config.incl       83          -87
+         2D_config.incl       85          -99
+         2D_config.incl       87         -106
+         2D_config.incl       88         -106
+         2D_config.incl       90         -116
+         2D_config.incl       93         -132
+         2D_config.incl       98         -132
+         2D_config.incl      107         -132
+         2D_config.incl      114         -132
+         2D_config.incl      122         -132
+         2D_config.incl      137         -142
+         2D_config.incl      138         -142
+         2D_config.incl      140         -151
+                 H.incl      142          142
+                 H.incl      167          142
+                 H.incl      175          142
+                 H.incl      184          142
+                 H.incl      190          108
+                 H.incl      194          108
+                 H.incl      198          108
+                 H.incl      205          104
+                 H.incl      217          100
+                 H.incl      229           98
+         2D_config.incl      233          -60
+                 C.incl      235          235
+                 C.incl      238          235
+                 C.incl      243          212
+         2D_config.incl      247          -47
+                 N.incl      249          249
+                 N.incl      252          228
+                 N.incl      253          228
+         2D_config.incl      256          -39
+            phases.incl      259          259
+         2D_config.incl      260          -37
+         gradients.incl      262          262
+         gradients.incl      264          261
+         gradients.incl      266          252
+         gradients.incl      269          244
+         gradients.incl      272          233
+         gradients.incl      274          213
+         gradients.incl      275          213
+         gradients.incl      278          193
+         gradients.incl      279          193
+         gradients.incl      282          185
+         gradients.incl      291          185
+         2D_config.incl      293           -5
+            pulses.incl      295          295
+            pulses.incl      298          294
+            pulses.incl      305          294
+            pulses.incl      316          294
+            pulses.incl      349          294
+            pulses.incl      357          294
+            pulses.incl      373          294
+            pulses.incl      387          294
+            pulses.incl      403          294
+            pulses.incl      415          293
+            pulses.incl      427          293
+         2D_config.incl      437          138
+            delays.incl      439          439
+            delays.incl      443          439
+            delays.incl      472          439
+         2D_config.incl      477          177
+         2D_config.incl      479          159
+               2D.wt.pp      480          474
+       proximal_2D.incl      484          484
+          proximal.incl      487          487
+          proximal.incl      491          478
+          proximal.incl      492          478
+          proximal.incl      496          469
+          proximal.incl      500          466
+          proximal.incl      511          452
+          proximal.incl      514          445
+          proximal.incl      515          440
+          proximal.incl      519          435
+          proximal.incl      523          402
+          proximal.incl      524          402
+          proximal.incl      533          401
+       proximal_2D.incl      543          540
+                hsqc.pp      545          545
+                hsqc.pp      549          545
+                hsqc.pp      562          540
+                hsqc.pp      571          539
+                hsqc.pp      576          539
+                hsqc.pp      580          538
+                hsqc.pp      592          528
+       proximal_2D.incl      596          587
+               2D.wt.pp      597          587
+2D.wt.pp exp. def. part      599          587
+               2D.wt.pp      615          604
+2D.wt.pp exp. def. of m      617          604
+               2D.wt.pp      629          617
+       preparation.incl      631          631
+2D.wt.pp exp. start lab      633          631
+               2D.wt.pp      638          636
+       preparation.incl      643          634
+       preparation.incl      648          615
+       preparation.incl      649          615
+       preparation.incl      651          607
+       preparation.incl      653          592
+       preparation.incl      654          592
+       preparation.incl      657          591
+       preparation.incl      660          583
+       preparation.incl      662          575
+       preparation.incl      664          568
+       preparation.incl      665          568
+       preparation.incl      668          556
+       preparation.incl      669          556
+               2D.wt.pp      673          659
+       proximal_2D.incl      677          677
+                hsqc.pp      678          678
+                hsqc.pp      679          611
+                hsqc.pp      689          611
+                hsqc.pp      693          611
+                hsqc.pp      698          611
+                hsqc.pp      707          610
+                hsqc.pp      721          593
+                hsqc.pp      722          593
+                hsqc.pp      739          592
+                hsqc.pp      748          585
+       proximal_2D.incl      751          742
+               2D.wt.pp      752          735
+               acq.incl      753          753
+               acq.incl      756          742
+               acq.incl      757          742
+               2D.wt.pp      759          740
+2D.wt.pp exp. mc cmd. i      761          740
+               2D.wt.pp      795          773
+       proximal_2D.incl      803          803
+                hsqc.pp      806          806
+                hsqc.pp      807          641
+                hsqc.pp      811          636
+                hsqc.pp      816          636
+                hsqc.pp      820          635
+                hsqc.pp      824          632
+                hsqc.pp      828          631
+                hsqc.pp      832          620
+                hsqc.pp      846          620
+       proximal_2D.incl      854          845
+               2D.wt.pp      855          823

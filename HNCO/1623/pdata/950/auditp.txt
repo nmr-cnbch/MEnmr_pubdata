@@ -1,0 +1,22 @@
+##TITLE= Audit trail, TopSpin 3.6.5
+##JCAMPDX= 5.01
+##ORIGIN= Bruker BioSpin GmbH
+##OWNER= gorka
+$$ /reference/MENMR/ubiCN/25/HNCO/1623/pdata/950/auditp.txt
+##AUDIT TRAIL=  $$ (NUMBER, WHEN, WHO, WHERE, PROCESS, VERSION, WHAT)
+(   1,<2024-01-27 18:36:35.807 +0100>,<gorka>,<gorka>,<mvrow>,<TopSpin 3.6.5>,
+      <rsr 1074 from
+       23 1623 "HNCO" "/reference/MENMR/ubiCN/25"
+       data hash MD5: 8K
+       ED 6E E9 60 C4 7F 14 A6 E3 60 02 C6 A2 CB CC 43>)
+(   2,<2024-01-27 18:38:05.700 +0100>,<gorka>,<gorka>,<proc1d>,<TopSpin 3.6.5>,
+      <pk fgphup PHC0 = -1.75 PHC1 = 0 
+       data hash MD5: 8K
+       A6 D8 25 AB 9D 15 12 24 C1 67 A1 CD 56 5F F3 B2>)
+$$ /reference/MENMR/pub/HNCO/1623/pdata/950/auditp.txt
+(   3,<2024-01-28 17:18:31.647 +0100>,<nmrsu>,<CZC603BPWK>,<disknew>,<TopSpin 3.6.5>,
+      <processed data deleted by delp>)
+##END=
+
+$$ hash MD5
+$$ E4 A5 86 78 0C E3 71 1F 06 04 81 77 BA 78 E3 E5

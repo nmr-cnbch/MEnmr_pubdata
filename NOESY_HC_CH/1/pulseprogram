@@ -1,0 +1,1097 @@
+# 1 "/opt/wtopspin/gorka/2D/pp/WT/seq/NOESY/4D_NOESY.wt.pp"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 1 "/opt/wtopspin/gorka/2D/pp/WT/seq/NOESY/4D_NOESY.wt.pp"
+prosol relations=<wt>
+
+
+# 1 "/opt/topspin3.6.5/exp/stan/nmr/lists/pp/Avance.incl" 1
+;Avance3.incl
+;   for AV III
+;
+;avance-version (13/06/17)
+;
+;$CLASS=HighRes Incl
+;$COMMENT=
+# 169 "/opt/topspin3.6.5/exp/stan/nmr/lists/pp/Avance.incl"
+;$Id: Avance3.incl,v 1.10.2.2 2013/08/30 09:43:33 ber Exp $
+# 4 "/opt/wtopspin/gorka/2D/pp/WT/seq/NOESY/4D_NOESY.wt.pp" 2
+
+# 1 "/opt/topspin3.6.5/exp/stan/nmr/lists/pp/Grad.incl" 1
+;Grad2.incl  -  include file for Gradient Spectroscopy
+;   for TCU3
+;
+;avance-version (07/01/17)
+;
+;$CLASS=HighRes Incl
+;$COMMENT=
+
+# 27 "/opt/topspin3.6.5/exp/stan/nmr/lists/pp/Grad.incl"
+define list<gradient> EA=<EA>
+
+
+# 31 "/opt/topspin3.6.5/exp/stan/nmr/lists/pp/Grad.incl"
+;$Id: Grad2.incl,v 1.14 2012/01/31 17:49:21 ber Exp $
+# 5 "/opt/wtopspin/gorka/2D/pp/WT/seq/NOESY/4D_NOESY.wt.pp" 2
+
+
+# 1 "/opt/wtopspin/gorka/2D/pp/WT/config.incl" 1
+ 
+# 1 "/opt/topspin3.6.5/exp/stan/nmr/lists/pp/De.incl" 1
+;De2.incl
+;   for AVi
+;
+;avance-version (08/02/15)
+;
+;$CLASS=HighRes Incl
+;$COMMENT=
+
+
+define delay rde1
+# 13 "/opt/topspin3.6.5/exp/stan/nmr/lists/pp/De.incl"
+"rde1=de-de1"
+
+
+# 24 "/opt/topspin3.6.5/exp/stan/nmr/lists/pp/De.incl"
+;for multi receive
+
+
+# 33 "/opt/topspin3.6.5/exp/stan/nmr/lists/pp/De.incl"
+;$Id: De2.incl,v 1.8 2012/01/31 17:49:21 ber Exp $
+# 4 "/opt/wtopspin/gorka/2D/pp/WT/config.incl" 2
+
+# 13 "/opt/wtopspin/gorka/2D/pp/WT/config.incl"
+
+# 41 "/opt/wtopspin/gorka/2D/pp/WT/config.incl"
+# 42 "/opt/wtopspin/gorka/2D/pp/WT/config.incl"
+
+
+# 71 "/opt/wtopspin/gorka/2D/pp/WT/config.incl"
+# 72 "/opt/wtopspin/gorka/2D/pp/WT/config.incl"
+
+
+# 103 "/opt/wtopspin/gorka/2D/pp/WT/config.incl"
+;cnst0: Correct to phc1=0 by entering cnst0=phc1. Added to last delay.
+define delay WT_de
+
+
+# 108 "/opt/wtopspin/gorka/2D/pp/WT/config.incl"
+    "WT_de = de - 2*dw*cnst0/360"
+
+
+# 144 "/opt/wtopspin/gorka/2D/pp/WT/config.incl"
+# 145 "/opt/wtopspin/gorka/2D/pp/WT/config.incl"
+
+; Adjust d1 for sequence to match requested d1 relaxation time:
+"d1 -= 0"   ; Prevents spurious error message from the next line.
+"d1 -= d11"
+
+# 153 "/opt/wtopspin/gorka/2D/pp/WT/config.incl"
+; ASAP turned off for now:
+
+
+# 206 "/opt/wtopspin/gorka/2D/pp/WT/config.incl"
+# 207 "/opt/wtopspin/gorka/2D/pp/WT/config.incl"
+
+; H decoupling with flanking pulses, ignored in case of TROSY:
+# 220 "/opt/wtopspin/gorka/2D/pp/WT/config.incl"
+
+; H or D decoupling with flanking pulses:
+# 239 "/opt/wtopspin/gorka/2D/pp/WT/config.incl"
+# 240 "/opt/wtopspin/gorka/2D/pp/WT/config.incl"
+;ns: 1 * n
+;ds: >= 16
+;td1: number of experiments
+
+;cpd1: decoupling according to sequence defined by cpdprg1, DIPSI2
+;cpd2: decoupling according to sequence defined by cpdprg2
+
+;cpd4: decoupling according to sequence defined by cpdprg4, waltz16
+# 249 "/opt/wtopspin/gorka/2D/pp/WT/config.incl"
+;pcpd2: f2 channel - 90 degree pulse for decoupling sequence
+
+;gpz0: prefocussing gradient.
+;gpnam0: SMSQ10.100
+
+# 265 "/opt/wtopspin/gorka/2D/pp/WT/config.incl"
+# 275 "/opt/wtopspin/gorka/2D/pp/WT/config.incl"
+# 276 "/opt/wtopspin/gorka/2D/pp/WT/config.incl"
+
+
+# 1 "/opt/wtopspin/gorka/2D/pp/WT/pulses/H.incl" 1
+define delay dH_inversion
+define delay dH_inversion_raw
+# 4 "/opt/wtopspin/gorka/2D/pp/WT/pulses/H.incl"
+define delay dHC_inversion
+define delay dHC_inversion_raw
+
+define pulse pH_excitation
+define pulse pHC_excitation
+define pulse pH_exc_UR
+define pulse pHC_exc_UR
+define pulse pH_refocussing
+define pulse pHC_refocussing
+define pulse pH_inversion
+define pulse pHC_inversion
+define pulse eH_excitation
+define pulse eHC_excitation
+define pulse eH_refocussing
+define pulse eHC_refocussing
+define pulse eH_exc_UR
+define pulse eHC_exc_UR
+define pulse eH_fb_UR
+define pulse eHC_fb_UR
+define pulse eH_WATERGATE
+define pulse eHC_WATERGATE
+
+define pulse pH2O_exc_Z
+# 38 "/opt/wtopspin/gorka/2D/pp/WT/pulses/H.incl"
+# 39 "/opt/wtopspin/gorka/2D/pp/WT/pulses/H.incl"
+
+; H pulses act on > 4.7 and HC pulses on 4.7 > with H2O unaffected.
+
+define pulse pH2O_excitation
+define pulse pH2O_flipback
+# 79 "/opt/wtopspin/gorka/2D/pp/WT/pulses/H.incl"
+# 80 "/opt/wtopspin/gorka/2D/pp/WT/pulses/H.incl"
+    "pH2O_excitation = 0u"
+    "pH2O_flipback = 0u"
+    "pH2O_exc_Z = 0u"
+
+    "p11 = 0u"
+
+# 159 "/opt/wtopspin/gorka/2D/pp/WT/pulses/H.incl"
+# 160 "/opt/wtopspin/gorka/2D/pp/WT/pulses/H.incl"
+    "pH_inversion = p2"
+
+    "d46 = 0"
+    "eH_excitation = p1*2/PI"
+    "eH_refocussing = 0"
+    "eH_exc_UR = p1*2/PI"
+    "eH_fb_UR = p1*2/PI"
+    "pH_refocussing = p2"
+    "pH_exc_UR = p1"
+    "p46 = p2"
+    "p45 = p1"
+
+# 178 "/opt/wtopspin/gorka/2D/pp/WT/pulses/H.incl"
+    "pHC_inversion = p2"
+    "eHC_excitation = p1*2/PI"
+    "pHC_refocussing = p2"
+    "eHC_exc_UR = p1*2/PI"
+    "eHC_fb_UR = p1*2/PI"
+    "d56 = 0"
+    "p55 = p1"
+    "p56 = p2"
+    "pH_inversion = p2"
+    "dH_inversion = p2"
+    "dH_inversion_raw = p2"
+# 200 "/opt/wtopspin/gorka/2D/pp/WT/pulses/H.incl"
+      "eH_WATERGATE = p2"
+      "eHC_WATERGATE = p2"
+# 278 "/opt/wtopspin/gorka/2D/pp/WT/config.incl" 2
+
+# 1 "/opt/wtopspin/gorka/2D/pp/WT/pulses/C.incl" 1
+define delay dC_inversion
+define delay dC_universal
+
+define pulse pC_refocussing
+# 6 "/opt/wtopspin/gorka/2D/pp/WT/pulses/C.incl"
+define pulse eC_excitation
+define pulse eC_flipback
+define pulse eC_universal
+
+# 28 "/opt/wtopspin/gorka/2D/pp/WT/pulses/C.incl"
+    "pC_refocussing = p4"
+
+# 33 "/opt/wtopspin/gorka/2D/pp/WT/pulses/C.incl"
+    "dC_inversion = p41"
+    "dC_universal = p3"
+    "eC_excitation = p3*2/PI"
+# 279 "/opt/wtopspin/gorka/2D/pp/WT/config.incl" 2
+
+# 1 "/opt/wtopspin/gorka/2D/pp/WT/pulses/N.incl" 1
+define delay dN_inversion
+define delay dN_universal
+
+# 26 "/opt/wtopspin/gorka/2D/pp/WT/pulses/N.incl"
+     "dN_universal = p21"
+     "dN_inversion = p22"
+# 280 "/opt/wtopspin/gorka/2D/pp/WT/config.incl" 2
+# 1 "/opt/wtopspin/gorka/2D/pp/WT/includes/phases.incl" 1
+
+
+# 282 "/opt/wtopspin/gorka/2D/pp/WT/config.incl" 2
+
+# 1 "/opt/wtopspin/gorka/2D/pp/WT/includes/gradients.incl" 1
+
+# 4 "/opt/wtopspin/gorka/2D/pp/WT/includes/gradients.incl"
+; 1-10 free
+# 15 "/opt/wtopspin/gorka/2D/pp/WT/includes/gradients.incl"
+
+
+# 28 "/opt/wtopspin/gorka/2D/pp/WT/includes/gradients.incl"
+;gp31 reserved for rdgradient
+
+# 42 "/opt/wtopspin/gorka/2D/pp/WT/includes/gradients.incl"
+
+# 66 "/opt/wtopspin/gorka/2D/pp/WT/includes/gradients.incl"
+# 67 "/opt/wtopspin/gorka/2D/pp/WT/includes/gradients.incl"
+
+
+# 92 "/opt/wtopspin/gorka/2D/pp/WT/includes/gradients.incl"
+# 93 "/opt/wtopspin/gorka/2D/pp/WT/includes/gradients.incl"
+
+
+# 106 "/opt/wtopspin/gorka/2D/pp/WT/includes/gradients.incl"
+define list<gradient> EA2=<EA2>
+
+;gpnam0: SMSQ10.100
+;gpnam1: SMSQ10.100
+
+;gpz0: Prefocussing gradient.
+# 283 "/opt/wtopspin/gorka/2D/pp/WT/config.incl" 2
+
+# 1 "/opt/wtopspin/gorka/2D/pp/WT/includes/pulses.incl" 1
+; Manual set decoupling power:
+
+# 5 "/opt/wtopspin/gorka/2D/pp/WT/includes/pulses.incl"
+  "plw16 = plw3*(p21*p21)/(pcpd3*pcpd3)"  ; Recalculate power for classic N decoupling.
+
+
+"plw12 = plw2*(p3*p3)/(pcpd2*pcpd2)"  ; Recalculate power for classic C decoupling.
+"p51 = 10*p1"
+"p52 = 10*p3"
+# 12 "/opt/wtopspin/gorka/2D/pp/WT/includes/pulses.incl"
+"p61 = 10*p1"
+"p62 = 10*p3"
+"p63 = 10*p21"
+
+"spw51 = plw1"
+"spw52 = plw2"
+
+"spw61 = plw1"
+"spw62 = plw2"
+"spw63 = plw3"
+# 23 "/opt/wtopspin/gorka/2D/pp/WT/includes/pulses.incl"
+;p1 : f1 channel -  90 degree high power pulse
+;p2 : f1 channel - 180 degree high power pulse
+;p3 : f2 channel -  90 degree high power pulse
+;p4 : f2 channel - 180 degree high power pulse
+;p21 : f3 channel - 90 degree high power pulse
+;p22 : f3 channel - 180 degree high power pulse
+
+;pl1: power for 1H  pulses
+;pl2: power for 13C pulses
+;pl3: power for 15N pulses
+;pl4: power for 2H pulses
+
+define pulse pGRAD
+"pGRAD = p16"
+define delay dGRAD
+"dGRAD = d16"
+define pulse pGProximalL
+"pGProximalL = p17"
+define delay dGProximalL
+"dGProximalL = d17"
+define pulse pGProximalS
+"pGProximalS = p18"
+define delay dGProximalS
+"dGProximalS = d18"
+define pulse pGDistalL
+"pGDistalL = p19"
+define delay dGDistalL
+"dGDistalL = d19"
+define pulse pGDistalS
+"pGDistalS = p20"
+define delay dGDistalS
+"dGDistalS = d20"
+;p16: crusher/prefocussing gradient pulse.
+;p17: Proximal long gradient pulse.
+;p18: Proximal short gradient pulse.
+;p19: Distal long gradient pulse.
+;p20: Distal short gradient pulse.
+# 62 "/opt/wtopspin/gorka/2D/pp/WT/includes/pulses.incl"
+;d16: Crusher/prefocussing gradient delay.
+;d17: Proximal long gradient delay.
+;d18: Proximal short gradient delay.
+;d19: Distal long gradient delay.
+;d20: Distal short gradient delay.
+
+; Water flipback and flipdown pulses:
+
+;p48: H2O flipback pulse
+;p49: H2O flipdown pulse
+# 73 "/opt/wtopspin/gorka/2D/pp/WT/includes/pulses.incl"
+;sp48: H2O flipback pulse
+;sp49: H2O flipdown pulse
+
+;p50:
+;p51: f1 channel, broadband refocussing pulse [BURBOP 20-200-900]
+;p52: f2 channel, broadband refocussing pulse [BURBOP 20-200-900]
+
+;p61: f1 channel, broadband refocussing pulse [G5]
+;p62: f2 channel, broadband refocussing pulse [G5]
+;p63: f3 channel, broadband refocussing pulse [G5]
+# 84 "/opt/wtopspin/gorka/2D/pp/WT/includes/pulses.incl"
+;sp50:
+;sp51: f1 channel, broadband refocussing pulse [BURBOP 20-200-900]
+;sp52: f2 channel, broadband refocussing pulse [BURBOP 20-200-900]
+;sp53: f3 channel, broadband refocussing pulse [BURBOP 20-200-900]
+;sp61: f1 channel, broadband refocussing pulse [G5]
+;sp62: f2 channel, broadband refocussing pulse [G5]
+;sp63: f3 channel, broadband refocussing pulse [G5]
+
+; Descriptions of parameters read from prosol:
+
+;p1: f1 channel -  90 degree high power pulse.
+;p2: f1 channel - 180 degree high power pulse.
+;p3: f2 channel -  90 degree high power pulse.
+;p4: f2 channel - 180 degree high power pulse.
+;p9: f2 channel - TOCSY mixing 90 degree pulselength.
+;p11: f1 channel -  90 degree shaped pulse.
+;p13: f2 channel -  90 Q5 Cali/CO.
+;p14: f2 channel - 180 Q3 Cali/CO.
+# 103 "/opt/wtopspin/gorka/2D/pp/WT/includes/pulses.incl"
+;p16: homospoil/gradient pulse  [1 ms]
+;p17: f1 channel - trim pulse [2.5 ms]
+
+;p21: f3 channel -  90 degree high power pulse.
+;p22: f3 channel - 180 degree high power pulse.
+
+;p32
+;p34
+;p36
+;p37
+;p38
+;p53
+;p54
+;p58
+;p59
+;plw37-63
+# 120 "/opt/wtopspin/gorka/2D/pp/WT/includes/pulses.incl"
+;p53: f4 channel - 90 degree high power pulse.
+
+;pcpd1: f1 channel - 90 degree pulse for decoupling sequence.
+;pcpd2: f2 channel - 90 degree pulse for decoupling sequence.
+;pcpd3: f3 channel - 90 degree pulse for decoupling sequence.
+;pcpd4: f4 channel - 90 degree pulse for decoupling sequence.
+;pcpd5: f5 channel - 90 degree pulse for decoupling sequence.
+
+# 129 "/opt/wtopspin/gorka/2D/pp/WT/includes/pulses.incl"
+;pl1: power for 1H  pulses.
+;pl2: power for 13C pulses.
+;pl3: power for 15N pulses.
+;pl4: power for 2H pulses.
+
+
+;pl10: f1 channel - trim pulse, 25 us equivalent maximum!
+;pl12: f2 channel - power level for CPD/BB decoupling.
+;pl16: f3 channel - power level for CPD/BB decoupling.
+;pl32: f1 channel - power level for H presat, 80 us equivalent maximum!
+# 140 "/opt/wtopspin/gorka/2D/pp/WT/includes/pulses.incl"
+;cpd1: decoupling according to sequence defined by cpdprg1.
+;cpd2: decoupling according to sequence defined by cpdprg2.
+;cpd3: decoupling according to sequence defined by cpdprg3.
+;cpd4: decoupling according to sequence defined by cpdprg4.
+;cpd5: decoupling according to sequence defined by cpdprg5.
+
+
+; Shaped pulses: sp1-sp42 set by Prosol.
+# 149 "/opt/wtopspin/gorka/2D/pp/WT/includes/pulses.incl"
+;sp1: f1 channel - shaped pulse  90 degree  (H2O on resonance).
+;sp2: f2 channel, 90 Q5 Cali/CO on resonance.
+;sp3: f2 channel, 180 Q3 Cali/CO on resonance.
+;sp5: f2 channel, 180 Q3 Cali off resonance.
+;sp6: f2 channel, 90 Q5 Cali/CO off resonance time reversed.
+;sp7: f2 channel, 180 Q3 CO with off resonance.
+;sp8: f2 channel, 90 Q5 Cali/CO on resonance time reversed.
+# 284 "/opt/wtopspin/gorka/2D/pp/WT/config.incl" 2
+
+# 1 "/opt/wtopspin/gorka/2D/pp/WT/includes/delays.incl" 1
+;d1: relaxation delay    [1.2 s]
+;d0: effective relaxation delay
+;d3: delay for RD gradient recovery [2 us]
+
+;d9: C TOCSY mixing time [20 ms]
+;d11: delay for disk I/O    [30 ms]
+;d13: short delay  [4 usec]
+# 9 "/opt/wtopspin/gorka/2D/pp/WT/includes/delays.incl"
+;d16
+;...gradients
+;d20
+
+;d21: time for H -> N evolution [5.4 ms]
+;d22: time for N -> H evolution [5.4 ms]
+;d23: time for simultaneous H -> N and N -> H evolution [5.4 ms]
+;d24: time for H -> C evolution [3.5 ms]
+;d25: time for C -> H(1/2/3) evolution, prefers CH, 1/(3JCH) [2.6 ms]
+;d26: time for C -> H(1/2/3) evolution, prefers CH2, 1/(4JCH) [1.8 ms]
+;d27: time for C -> H(1/2/3) evolution, prefers CH3, 1/(5JCH) [1.4 ms]
+;d28: time for H -> Caro evolution [3.2 ms]
+;d29: time for Caro -> H evolution [3.2 ms]
+;d30: time for N -> CO evolution [28 ms]
+;d31: time for N -> CA evolution [28 ms]
+;d32: time for CO -> CA evolution [9.1 ms]
+;d33: time for CA -> CO evolution compensated for relaxation [6.3 ms to 9.1 ms]
+;d34: time for CA -> CO evolution in constant time [9.1 ms]
+;d35: 2*time for CA -> CACB evolution or CA constant time evolution [28.6 ms]
+;d36: time for NCA -> CAN' evolution [28.6 ms or 54 ms]
+;d37: time for CA -> CACB and CB -> CBCA partial evolution 1/(4JCACB) [7.1 ms]
+;d38: time for CO -> N evolution [28 ms]
+;d39: time for N -> CO and N -> CA evolution [28 ms]
+;d40: time for N -> NCAiCAi-1 evolution [50 ms]
+;d41: time for Hm -> Cm evolution [4 ms]
+;d42: time for Ha -> C evolution in C-BIRD (1/2J) [3.5 ms]
+
+;d46: symmetrizing delay for HC_refocussing.
+# 38 "/opt/wtopspin/gorka/2D/pp/WT/includes/delays.incl"
+;d50: time for C(ali)C(ali) FLOPSY16 mixing [20 ms]
+;d51: time for C(aro)C(aro) FLOPSY16 mixing [20 ms]
+
+;d56: symmetrizing delay for H_refocussing.
+# 285 "/opt/wtopspin/gorka/2D/pp/WT/config.incl" 2
+
+# 306 "/opt/wtopspin/gorka/2D/pp/WT/config.incl"
+# 321 "/opt/wtopspin/gorka/2D/pp/WT/config.incl"
+# 322 "/opt/wtopspin/gorka/2D/pp/WT/config.incl"
+;#   define RDGRAD(d) d
+;#   define RDGRAD_NEG(d) d
+
+
+# 7 "/opt/wtopspin/gorka/2D/pp/WT/seq/NOESY/4D_NOESY.wt.pp" 2
+
+"in1 = inf1"
+"in2 = inf2"
+"in3 = inf3"
+
+define delay mixTime
+;d10: NOESY mixing time [40-400 ms]
+"mixTime = d10 - pGRAD - dGRAD" ; Corrected for gradient.
+# 1 "/opt/wtopspin/gorka/2D/pp/WT/modules/distal_2D.incl" 1
+
+
+# 1 "/opt/wtopspin/gorka/2D/pp/WT/pulses/distal.incl" 1
+define delay timeDHX
+define delay timeDXH
+
+# 17 "/opt/wtopspin/gorka/2D/pp/WT/pulses/distal.incl"
+  "timeDHX = d24"
+  "timeDXH = d25"
+
+# 36 "/opt/wtopspin/gorka/2D/pp/WT/pulses/distal.incl"
+# 37 "/opt/wtopspin/gorka/2D/pp/WT/pulses/distal.incl"
+
+# 51 "/opt/wtopspin/gorka/2D/pp/WT/pulses/distal.incl"
+
+# 53 "/opt/wtopspin/gorka/2D/pp/WT/pulses/distal.incl"
+define delay dDX_inversion
+define delay dDX_universal
+
+define pulse pDHX_refoc
+define pulse pDX_refocussing
+
+define pulse eDHX_excitation
+# 63 "/opt/wtopspin/gorka/2D/pp/WT/pulses/distal.incl"
+    "dDX_inversion = dC_inversion"
+    "dDX_universal = dC_universal"
+
+
+# 73 "/opt/wtopspin/gorka/2D/pp/WT/pulses/distal.incl"
+    "pDX_refocussing = pC_refocussing"
+# 88 "/opt/wtopspin/gorka/2D/pp/WT/pulses/distal.incl"
+
+
+define delay dDY_inversion
+# 99 "/opt/wtopspin/gorka/2D/pp/WT/pulses/distal.incl"
+# 100 "/opt/wtopspin/gorka/2D/pp/WT/pulses/distal.incl"
+    "dDY_inversion = 0"
+
+
+# 112 "/opt/wtopspin/gorka/2D/pp/WT/pulses/distal.incl"
+# 113 "/opt/wtopspin/gorka/2D/pp/WT/pulses/distal.incl"
+    "pDHX_refoc = pHC_refocussing"
+    "eDHX_excitation = eHC_excitation"
+# 4 "/opt/wtopspin/gorka/2D/pp/WT/modules/distal_2D.incl" 2
+
+
+# 1 "/opt/wtopspin/gorka/2D/pp/WT/modules/distal_hmqc.pp" 1
+
+
+# 7 "/opt/wtopspin/gorka/2D/pp/WT/modules/distal_hmqc.pp"
+define delay T1
+"T1 = 0"
+define delay T2
+"T2 = 0"
+define delay T1max
+"T1max = max(in1*(td1/2 - 1), 0)"
+
+
+# 21 "/opt/wtopspin/gorka/2D/pp/WT/modules/distal_hmqc.pp"
+; Set up delays:
+
+define delay T1a
+define delay T1b
+define delay T1c
+
+"T1a = 0"
+"T1b = 0"
+"T1c = 0"
+# 31 "/opt/wtopspin/gorka/2D/pp/WT/modules/distal_hmqc.pp"
+define delay deltaDHpre  ; Correction for H chemical shift evolution due to pulses in outer echo.
+define delay deltaDHpost
+
+"deltaDHpre = pDHX_refoc"
+
+define delay deltaDX  ; Correction for gradient and pulses in T1.
+"deltaDX = pDHX_refoc"
+# 47 "/opt/wtopspin/gorka/2D/pp/WT/modules/distal_hmqc.pp"
+"deltaDHpost = 2*eDHX_excitation"
+
+define delay dDHX    ; Delay for HX J coupling back-evolution (single H only).
+"dDHX = timeDHX - 2*eDHX_excitation"   ; Two pulses and the delay compensating for the evolution.
+
+# 14 "/opt/wtopspin/gorka/2D/pp/WT/modules/distal_2D.incl" 2
+# 17 "/opt/wtopspin/gorka/2D/pp/WT/seq/NOESY/4D_NOESY.wt.pp" 2
+
+# 1 "/opt/wtopspin/gorka/2D/pp/WT/modules/proximal_2D.incl" 1
+
+# 1 "/opt/wtopspin/gorka/2D/pp/WT/pulses/proximal.incl" 1
+; Use gradients by default:
+
+
+# 14 "/opt/wtopspin/gorka/2D/pp/WT/pulses/proximal.incl"
+# 15 "/opt/wtopspin/gorka/2D/pp/WT/pulses/proximal.incl"
+
+
+# 21 "/opt/wtopspin/gorka/2D/pp/WT/pulses/proximal.incl"
+define delay timeHX
+define delay timeXH
+# 36 "/opt/wtopspin/gorka/2D/pp/WT/pulses/proximal.incl"
+  "timeHX = d24"
+  "timeXH = d25"
+
+
+# 55 "/opt/wtopspin/gorka/2D/pp/WT/pulses/proximal.incl"
+# 56 "/opt/wtopspin/gorka/2D/pp/WT/pulses/proximal.incl"
+
+# 70 "/opt/wtopspin/gorka/2D/pp/WT/pulses/proximal.incl"
+
+define delay dX_inversion
+define delay dX_universal
+# 74 "/opt/wtopspin/gorka/2D/pp/WT/pulses/proximal.incl"
+define pulse pHX_inversion
+define pulse pHX_exc_UR
+define pulse pHX_refocussing
+
+define pulse eHX_refocussing
+define pulse eHX_excitation
+define pulse eHX_exc_UR
+define pulse eHX_fb_UR
+
+# 84 "/opt/wtopspin/gorka/2D/pp/WT/pulses/proximal.incl"
+define pulse eHX_WATERGATE
+
+
+    "dX_inversion = dC_inversion"
+    "dX_universal = dC_universal"
+# 97 "/opt/wtopspin/gorka/2D/pp/WT/pulses/proximal.incl"
+# 114 "/opt/wtopspin/gorka/2D/pp/WT/pulses/proximal.incl"
+# 115 "/opt/wtopspin/gorka/2D/pp/WT/pulses/proximal.incl"
+
+
+define pulse pY_inversion
+# 129 "/opt/wtopspin/gorka/2D/pp/WT/pulses/proximal.incl"
+# 130 "/opt/wtopspin/gorka/2D/pp/WT/pulses/proximal.incl"
+    "pY_inversion = 0"
+
+
+# 144 "/opt/wtopspin/gorka/2D/pp/WT/pulses/proximal.incl"
+    "eHX_WATERGATE = eHC_WATERGATE"
+    "pHX_refocussing = pHC_refocussing"
+    "pHX_inversion = pHC_inversion"
+    "pHX_exc_UR = pHC_exc_UR"
+    "eHX_excitation = eHC_excitation"
+    "eHX_refocussing = eHC_refocussing"
+    "eHX_exc_UR = eHC_exc_UR"
+    "eHX_fb_UR = eHC_fb_UR"
+# 172 "/opt/wtopspin/gorka/2D/pp/WT/pulses/proximal.incl"
+# 173 "/opt/wtopspin/gorka/2D/pp/WT/pulses/proximal.incl"
+
+;cnst44: effective evolution multiplier for HC_excitation.
+;cnst46: effective evolution multiplier for HC_refocussing.
+;cnst47: effective evolution multiplier for HC_UR_exc.
+;cnst48: effective evolution multiplier for HC_UR_fb.
+
+;cnst54: effective evolution multiplier for C_excitation.
+;cnst56: effective evolution multiplier for C_refocussing.
+;cnst57: effective evolution multiplier for C_UR_exc.
+;cnst58: effective evolution multiplier for C_UR_fb.
+# 4 "/opt/wtopspin/gorka/2D/pp/WT/modules/proximal_2D.incl" 2
+# 17 "/opt/wtopspin/gorka/2D/pp/WT/modules/proximal_2D.incl"
+# 18 "/opt/wtopspin/gorka/2D/pp/WT/modules/proximal_2D.incl"
+# 1 "/opt/wtopspin/gorka/2D/pp/WT/modules/hsqc.pp" 1
+
+
+; Set up chemical shift evolution times:
+define delay TProximal
+"TProximal = 0"
+# 7 "/opt/wtopspin/gorka/2D/pp/WT/modules/hsqc.pp"
+;define delay TproximalPre
+define delay TproximalPost
+define delay dHX  ; H echo.
+define delay dHX2_1  ; Second H echo - before acquisition.
+define delay dHX2_2  ; Second H echo - before acquisition.
+
+; Compensate J evolution delays for gradients and evolution during pulses:
+"dHX = timeHX/2 - pGProximalS - dGProximalS - eHX_WATERGATE/2 - eHX_excitation"
+"dHX2_1 = timeHX/2 - pGRAD - dGRAD - eHX_WATERGATE/2 - eHX_excitation"
+"dHX2_2 = timeHX/2 - pGRAD - dGRAD - eHX_WATERGATE/2 - WT_de"
+
+; Compensate for inversion pulses during X SQ evolution:
+# 22 "/opt/wtopspin/gorka/2D/pp/WT/modules/hsqc.pp"
+    "TproximalPost = larger(pHX_inversion, pY_inversion)"
+
+
+# 42 "/opt/wtopspin/gorka/2D/pp/WT/modules/hsqc.pp"
+# 43 "/opt/wtopspin/gorka/2D/pp/WT/modules/hsqc.pp"
+
+; Phase of last H excitation pulse:
+
+# 51 "/opt/wtopspin/gorka/2D/pp/WT/modules/hsqc.pp"
+"acqt0 = 0"
+baseopt_echo
+; *****************************************************************************
+# 18 "/opt/wtopspin/gorka/2D/pp/WT/modules/proximal_2D.incl" 2
+# 18 "/opt/wtopspin/gorka/2D/pp/WT/seq/NOESY/4D_NOESY.wt.pp" 2
+
+# 1 "mc_line 19 file /opt/wtopspin/gorka/2D/pp/WT/seq/NOESY/4D_NOESY.wt.pp exp. def. part of mc cmd. before ze"
+; dimension 4D; AQ_mode  (F3) Echo-Antiecho (F2) States-TPPI (F1) States-TPPI
+define delay MCWRK
+define delay MCREST
+define delay T1orig
+"T1orig=T1"
+define delay T2orig
+"T2orig=T2"
+define delay TProximalorig
+"TProximalorig=TProximal"
+define loopcounter t3loop
+"t3loop=0"
+define loopcounter t2loop
+"t2loop=0"
+define loopcounter t1loop
+"t1loop=0"
+define loopcounter ph1loop
+"ph1loop=0"
+define loopcounter ph2loop
+"ph2loop=0"
+define loopcounter ph3loop
+"ph3loop=0"
+define loopcounter ST1CNT
+"ST1CNT = trunc(td1 / 2)"
+define loopcounter ST2CNT
+"ST2CNT = trunc(td2 / 2)"
+define loopcounter ST3CNT
+"ST3CNT = trunc(td3 / 2)"
+"MCREST = d11 - d11"
+"MCWRK = 0.022222*d11"
+
+    dccorr
+# 19 "/opt/wtopspin/gorka/2D/pp/WT/seq/NOESY/4D_NOESY.wt.pp"
+1 ze
+# 1 "mc_line 19 file /opt/wtopspin/gorka/2D/pp/WT/seq/NOESY/4D_NOESY.wt.pp exp. def. of mc cmd. after ze"
+LBLAV, MCWRK
+      "T1=T1orig + t1loop * in1 "
+      "phval21 = (ph1loop % 4) * 90"
+      MCWRK ip21 + phval21
+      "T2=T2orig + t2loop * in2 "
+      "phval23 = (ph2loop % 4) * -90"
+      MCWRK ip23 + phval23
+      "TProximal=TProximalorig + t3loop * in3 "
+      "phval11 = (t3loop * 180)%360"
+      MCWRK ip11 + phval11
+      "phval31 = (t3loop * 180)%360"
+      MCWRK ip31 + phval31
+      MCWRK
+      "phval0 = ph3loop * 1"
+      MCWRK setgrad EA
+# 20 "/opt/wtopspin/gorka/2D/pp/WT/seq/NOESY/4D_NOESY.wt.pp"
+
+# 1 "/opt/wtopspin/gorka/2D/pp/WT/includes/preparation.incl" 1
+
+# 1 "mc_line 2 file /opt/wtopspin/gorka/2D/pp/WT/seq/NOESY/4D_NOESY.wt.pp exp. start label for mc cmd."
+2 MCWRK  * 7 do:f2  do:f3
+LBLF3, MCWRK  * 7
+LBLST3, MCWRK  * 8
+LBLF2, MCWRK  * 7
+LBLST2, MCWRK  * 8
+LBLF1, MCWRK  * 7
+LBLST1, MCWRK pl32:f1 cw:f1 
+  MCREST
+# 3 "/opt/wtopspin/gorka/2D/pp/WT/seq/NOESY/4D_NOESY.wt.pp"
+; TODO: do:f2
+; Calculate recycling delay including everything outside pulses and acquisition time.
+
+; Reset relaxation delay:
+# 10 "/opt/wtopspin/gorka/2D/pp/WT/includes/preparation.incl"
+    "d0 = d1"   ; Reset relaxation delay.
+
+
+"d0 -= d11 + 4u"    ; Account for d11 file write delay and 4u delay for setnmr3|0 setnmr0|34|32|33 ctrlgrad 0.
+# 34 "/opt/wtopspin/gorka/2D/pp/WT/includes/preparation.incl"
+# 35 "/opt/wtopspin/gorka/2D/pp/WT/includes/preparation.incl"
+
+# 45 "/opt/wtopspin/gorka/2D/pp/WT/includes/preparation.incl"
+
+# 62 "/opt/wtopspin/gorka/2D/pp/WT/includes/preparation.incl"
+# 63 "/opt/wtopspin/gorka/2D/pp/WT/includes/preparation.incl"
+
+
+# 67 "/opt/wtopspin/gorka/2D/pp/WT/includes/preparation.incl"
+  d0    ; Relaxation delay.
+
+# 78 "/opt/wtopspin/gorka/2D/pp/WT/includes/preparation.incl"
+
+# 88 "/opt/wtopspin/gorka/2D/pp/WT/includes/preparation.incl"
+  4u do:f1 setnmr3|0 setnmr0|34|32|33 ctrlgrad 0
+# 97 "/opt/wtopspin/gorka/2D/pp/WT/includes/preparation.incl"
+# 98 "/opt/wtopspin/gorka/2D/pp/WT/includes/preparation.incl"
+
+
+# 113 "/opt/wtopspin/gorka/2D/pp/WT/includes/preparation.incl"
+# 114 "/opt/wtopspin/gorka/2D/pp/WT/includes/preparation.incl"
+
+; Extra gradient delay:  
+
+# 22 "/opt/wtopspin/gorka/2D/pp/WT/seq/NOESY/4D_NOESY.wt.pp" 2
+
+
+# 1 "/opt/wtopspin/gorka/2D/pp/WT/modules/distal_2D.incl" 1
+# 1 "/opt/wtopspin/gorka/2D/pp/WT/modules/distal_hmqc.pp" 1
+
+
+# 53 "/opt/wtopspin/gorka/2D/pp/WT/modules/distal_hmqc.pp"
+# 54 "/opt/wtopspin/gorka/2D/pp/WT/modules/distal_hmqc.pp"
+
+  "T1a = T1/2"
+  "T1b = 0"
+  "T1c = dDHX - T1/2"
+
+; Hz -> HzCz
+  
+  (p1 ph21 pl1):f1
+  deltaDHpre    ; Compensate for the delay deltaDX in X echo.
+  T1a
+  (center (p4 ph0 pl2):f2 (p2 ph0 pl1):f1) ; For hard pulses brings solvent to -z.
+  T1c
+  deltaDHpost   ; Compensate for evolution in excitation/flipback pulses.
+# 68 "/opt/wtopspin/gorka/2D/pp/WT/modules/distal_hmqc.pp"
+; HzCz real-time evolution of C:
+  (p3 ph23 pl2):f2
+  pGDistalS:gp22 dGDistalS
+  deltaDX ; Compensate for DHX_refocussing.
+  (p4 ph24 pl2):f2
+  T2*0.5
+
+  (p2 ph22 pl1):f1
+  pGDistalS:gp22 dGDistalS
+
+  T2*0.5
+  (p3 ph25 pl2):f2
+# 81 "/opt/wtopspin/gorka/2D/pp/WT/modules/distal_hmqc.pp"
+; HzCz -> Ht:
+  dDHX
+  (p1 ph0 pl1):f1
+  
+
+
+# 14 "/opt/wtopspin/gorka/2D/pp/WT/modules/distal_2D.incl" 2
+# 24 "/opt/wtopspin/gorka/2D/pp/WT/seq/NOESY/4D_NOESY.wt.pp" 2
+
+; NOESY mixing:
+
+# 33 "/opt/wtopspin/gorka/2D/pp/WT/seq/NOESY/4D_NOESY.wt.pp"
+    mixTime
+
+
+  pGRAD:gp27 dGRAD
+# 1 "/opt/wtopspin/gorka/2D/pp/WT/modules/proximal_2D.incl" 1
+
+
+# 17 "/opt/wtopspin/gorka/2D/pp/WT/modules/proximal_2D.incl"
+# 18 "/opt/wtopspin/gorka/2D/pp/WT/modules/proximal_2D.incl"
+# 1 "/opt/wtopspin/gorka/2D/pp/WT/modules/hsqc.pp" 1
+# 55 "/opt/wtopspin/gorka/2D/pp/WT/modules/hsqc.pp"
+
+
+; Hz -> HzXz:
+  (p1 ph0 pl1):f1
+  pGProximalS:gp11 dGProximalS
+  dHX
+  (center (p2 ph1 pl1):f1 (p41:sp41 ph0):f2)
+  dHX
+  pGProximalS:gp11 dGProximalS
+  (p1 ph1 pl1):f1
+  
+# 68 "/opt/wtopspin/gorka/2D/pp/WT/modules/hsqc.pp"
+  p16:gp14 d16
+
+; HzNz -> HzNy + HzNx with N evolution (T1):
+  (p3 ph11 pl2):f2
+  
+  TProximal*0.5
+  
+  (center (p2 ph0 pl1):f1 (0u):f1)
+  
+  TProximal*0.5
+  
+;  TproximalPre
+  pGRAD:gp17 dGRAD
+  (p4 ph0 pl2):f2
+  pGRAD:gp18 dGRAD
+  
+  TproximalPost
+  (p3 ph13 pl2):f2
+
+  p16:gp15 d16
+# 89 "/opt/wtopspin/gorka/2D/pp/WT/modules/hsqc.pp"
+; HzXz -> Ht:
+  
+  (p1 ph3 pl1):f1
+  pGRAD:gp19*EA dGRAD
+  dHX2_1
+  (center (p2 ph0 pl1):f1 (p4 ph0 pl2):f2)
+  pGRAD:gp20*EA dGRAD
+  dHX2_2 pl12:f2 setnmr3^0 setnmr0^34^32^33 ctrlgrad 7
+
+# 109 "/opt/wtopspin/gorka/2D/pp/WT/modules/hsqc.pp"
+
+; *****************************************************************************
+# 18 "/opt/wtopspin/gorka/2D/pp/WT/modules/proximal_2D.incl" 2
+# 39 "/opt/wtopspin/gorka/2D/pp/WT/seq/NOESY/4D_NOESY.wt.pp" 2
+# 1 "/opt/wtopspin/gorka/2D/pp/WT/includes/acq.incl" 1
+
+
+# 15 "/opt/wtopspin/gorka/2D/pp/WT/includes/acq.incl"
+# 16 "/opt/wtopspin/gorka/2D/pp/WT/includes/acq.incl"
+    go=2 ph31 cpds2:f2 finally do:f2
+# 41 "/opt/wtopspin/gorka/2D/pp/WT/seq/NOESY/4D_NOESY.wt.pp" 2
+
+# 1 "mc_line 42 file /opt/wtopspin/gorka/2D/pp/WT/seq/NOESY/4D_NOESY.wt.pp exp. mc cmd. in line"
+  MCWRK  wr #0 if #0 zd 
+
+  "ph3loop+=1"
+      "T1=T1orig + t1loop * in1 "
+      "phval21 = (ph1loop % 4) * 90"
+      MCWRK ip21 + phval21
+      "T2=T2orig + t2loop * in2 "
+      "phval23 = (ph2loop % 4) * -90"
+      MCWRK ip23 + phval23
+      "TProximal=TProximalorig + t3loop * in3 "
+      "phval11 = (t3loop * 180)%360"
+      MCWRK ip11 + phval11
+      "phval31 = (t3loop * 180)%360"
+      MCWRK ip31 + phval31
+      MCWRK
+      "phval0 = ph3loop * 1"
+      MCWRK setgrad EA
+  lo to LBLF3 times 2
+  MCWRK 
+
+  "t3loop+=1"
+      "T1=T1orig + t1loop * in1 "
+      "phval21 = (ph1loop % 4) * 90"
+      MCWRK ip21 + phval21
+      "T2=T2orig + t2loop * in2 "
+      "phval23 = (ph2loop % 4) * -90"
+      MCWRK ip23 + phval23
+      "TProximal=TProximalorig + t3loop * in3 "
+      "phval11 = (t3loop * 180)%360"
+      MCWRK ip11 + phval11
+      "phval31 = (t3loop * 180)%360"
+      MCWRK ip31 + phval31
+      MCWRK
+      "phval0 = ph3loop * 1"
+      MCWRK setgrad EA
+  lo to LBLST3 times ST3CNT
+  MCWRK 
+  "t3loop=0"
+  "ph3loop=0"
+  MCWRK 
+
+  "ph2loop+=1"
+      "T1=T1orig + t1loop * in1 "
+      "phval21 = (ph1loop % 4) * 90"
+      MCWRK ip21 + phval21
+      "T2=T2orig + t2loop * in2 "
+      "phval23 = (ph2loop % 4) * -90"
+      MCWRK ip23 + phval23
+      "TProximal=TProximalorig + t3loop * in3 "
+      "phval11 = (t3loop * 180)%360"
+      MCWRK ip11 + phval11
+      "phval31 = (t3loop * 180)%360"
+      MCWRK ip31 + phval31
+      MCWRK
+      "phval0 = ph3loop * 1"
+      MCWRK setgrad EA
+  lo to LBLF2 times 2
+  MCWRK 
+
+  "t2loop+=1"
+      "T1=T1orig + t1loop * in1 "
+      "phval21 = (ph1loop % 4) * 90"
+      MCWRK ip21 + phval21
+      "T2=T2orig + t2loop * in2 "
+      "phval23 = (ph2loop % 4) * -90"
+      MCWRK ip23 + phval23
+      "TProximal=TProximalorig + t3loop * in3 "
+      "phval11 = (t3loop * 180)%360"
+      MCWRK ip11 + phval11
+      "phval31 = (t3loop * 180)%360"
+      MCWRK ip31 + phval31
+      MCWRK
+      "phval0 = ph3loop * 1"
+      MCWRK setgrad EA
+  lo to LBLST2 times ST2CNT
+  MCWRK 
+  "t2loop=0"
+  "ph2loop=0"
+  MCWRK 
+
+  "ph1loop+=1"
+      "T1=T1orig + t1loop * in1 "
+      "phval21 = (ph1loop % 4) * 90"
+      MCWRK ip21 + phval21
+      "T2=T2orig + t2loop * in2 "
+      "phval23 = (ph2loop % 4) * -90"
+      MCWRK ip23 + phval23
+      "TProximal=TProximalorig + t3loop * in3 "
+      "phval11 = (t3loop * 180)%360"
+      MCWRK ip11 + phval11
+      "phval31 = (t3loop * 180)%360"
+      MCWRK ip31 + phval31
+      MCWRK
+      "phval0 = ph3loop * 1"
+      MCWRK setgrad EA
+  lo to LBLF1 times 2
+  MCWRK 
+
+  "t1loop+=1"
+      "T1=T1orig + t1loop * in1 "
+      "phval21 = (ph1loop % 4) * 90"
+      MCWRK ip21 + phval21
+      "T2=T2orig + t2loop * in2 "
+      "phval23 = (ph2loop % 4) * -90"
+      MCWRK ip23 + phval23
+      "TProximal=TProximalorig + t3loop * in3 "
+      "phval11 = (t3loop * 180)%360"
+      MCWRK ip11 + phval11
+      "phval31 = (t3loop * 180)%360"
+      MCWRK ip31 + phval31
+      MCWRK
+      "phval0 = ph3loop * 1"
+      MCWRK setgrad EA
+  lo to LBLST1 times ST1CNT
+  MCWRK 
+  "t1loop=0"
+  "ph1loop=0"
+  MCWRK rf #0
+  lo to LBLAV times tdav
+# 46 "/opt/wtopspin/gorka/2D/pp/WT/seq/NOESY/4D_NOESY.wt.pp"
+exit
+
+ph0 = 0
+ph1 = 1
+ph2 = 2
+ph3 = 3
+# 1 "/opt/wtopspin/gorka/2D/pp/WT/modules/distal_2D.incl" 1
+
+
+# 1 "/opt/wtopspin/gorka/2D/pp/WT/modules/distal_hmqc.pp" 1
+
+
+# 96 "/opt/wtopspin/gorka/2D/pp/WT/modules/distal_hmqc.pp"
+# 97 "/opt/wtopspin/gorka/2D/pp/WT/modules/distal_hmqc.pp"
+
+ph21 = 2  ; H excitation.
+ph22 = 0  ; H refocussing.
+
+# 104 "/opt/wtopspin/gorka/2D/pp/WT/modules/distal_hmqc.pp"
+ph23 = 0 2  ; X excitation.
+ph24 = 0    ; X refocussing.
+
+
+# 110 "/opt/wtopspin/gorka/2D/pp/WT/modules/distal_hmqc.pp"
+    ph25 = 0 0 0 0 2 2 2 2 ; X flipback.
+
+
+# 117 "/opt/wtopspin/gorka/2D/pp/WT/modules/distal_hmqc.pp"
+;for z-only gradients:
+;gpz21: Distal HMQC: gradient in the outer echo (H): 17%.
+;gpz22: Distal HMQC: gradient in the inner (X and H) echo: 5%.
+;gpz23: Distal HMQC: second gradient in the inner (X and H) echo: 5%.
+;gpz24: Distal HMQC: second gradient in the outer (H) echo: 5%.
+
+;use gradient files:
+;gpnam21: SMSQ10.100
+;gpnam22: SMSQ10.100
+;gpnam23: SMSQ10.100
+;gpnam24: SMSQ10.100
+# 14 "/opt/wtopspin/gorka/2D/pp/WT/modules/distal_2D.incl" 2
+# 55 "/opt/wtopspin/gorka/2D/pp/WT/seq/NOESY/4D_NOESY.wt.pp" 2
+
+# 1 "/opt/wtopspin/gorka/2D/pp/WT/modules/proximal_2D.incl" 1
+# 17 "/opt/wtopspin/gorka/2D/pp/WT/modules/proximal_2D.incl"
+# 18 "/opt/wtopspin/gorka/2D/pp/WT/modules/proximal_2D.incl"
+# 1 "/opt/wtopspin/gorka/2D/pp/WT/modules/hsqc.pp" 1
+# 112 "/opt/wtopspin/gorka/2D/pp/WT/modules/hsqc.pp"
+
+; X excitation:
+
+# 118 "/opt/wtopspin/gorka/2D/pp/WT/modules/hsqc.pp"
+    ph11 = 0 0 2 2 
+
+
+# 125 "/opt/wtopspin/gorka/2D/pp/WT/modules/hsqc.pp"
+; X flipback:
+
+
+# 131 "/opt/wtopspin/gorka/2D/pp/WT/modules/hsqc.pp"
+    ph13 = 0 0 0 0 0 0 0 0 2 2 2 2 2 2 2 2
+
+
+# 138 "/opt/wtopspin/gorka/2D/pp/WT/modules/hsqc.pp"
+;gpnam11: SMSQ10.100
+;gpnam12: SMSQ10.100
+;gpnam13: SMSQ10.100
+;gpnam14: SMSQ10.100
+;gpnam15: SMSQ10.100
+;gpnam17: SMSQ10.100
+;gpnam18: SMSQ10.100
+;gpnam19: SMSQ10.100
+;gpnam20: SMSQ10.100
+
+;gpz11: Gradient in Hz -> HzXz echo: 1%.
+
+;gpz12: Short gradient in X evolution echo: 5%.
+;gpz13: Short gradient in HzXz -> Ht (WATERGATE) echo: 21%.
+# 153 "/opt/wtopspin/gorka/2D/pp/WT/modules/hsqc.pp"
+;gpz14: Gradient after Hz -> HzXz echo: 3%.
+;gpz15: Gradient after X evolution echo : 11%.
+
+;gpz17: First coherence selection gradient (on N/C): 80%.
+;gpz18: Second coherence selection gradient (on N/C): 0%.
+
+# 163 "/opt/wtopspin/gorka/2D/pp/WT/modules/hsqc.pp"
+;gpz19: Third coherence selection gradient (on H): 1%.
+;gpz20: Forth coherence selection gradient (on H): 21.1%.
+
+
+# 18 "/opt/wtopspin/gorka/2D/pp/WT/modules/proximal_2D.incl" 2
+# 56 "/opt/wtopspin/gorka/2D/pp/WT/seq/NOESY/4D_NOESY.wt.pp" 2
+# 57 "/opt/wtopspin/gorka/2D/pp/WT/seq/NOESY/4D_NOESY.wt.pp"
+; Receiver phase:
+ph31 = ph11 + ph13 + ph23 + ph25
+
+;gpz27: gradient after NOESY: -7%.
+;gpnam27: SMSQ10.100

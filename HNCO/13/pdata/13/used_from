@@ -1,0 +1,16 @@
+##TITLE= Parameter file, TopSpin 3.6.5
+##JCAMPDX= 5.0
+##DATATYPE= Parameter Values
+##NPOINTS= 5	$$ modification sequence number
+##ORIGIN= Bruker BioSpin GmbH
+##OWNER= nmrsu
+$$ 2024-01-26 09:30:42.221 +0100  nmrsu@CZC603BPWK
+$$ /reference/MENMR/ubiCN/25/TEST_HNCO/13/pdata/13/used_from
+$$ process /opt/topspin3.6.5/prog/mod/proc2d
+##$CUREXP= <13 raw plane>
+##$DATPATH= </reference/MENMR/ubiCN/25>
+##$EXPNO= 13
+##$NAME= <TEST_HNCO>
+##$PROCNO= 1
+##$PROCNO2= 1
+##END=

@@ -1,0 +1,32 @@
+##TITLE= Audit trail, TopSpin 3.6.5
+##JCAMPDX= 5.01
+##ORIGIN= Bruker BioSpin GmbH
+##OWNER= gorka
+$$ /reference/MENMR/ubiCN/25/HNCO/1623/pdata/23/auditp.txt
+##AUDIT TRAIL=  $$ (NUMBER, WHEN, WHO, WHERE, PROCESS, VERSION, WHAT)
+(   1,<2024-01-26 09:51:57.339 +0100>,<nmrsu>,<CZC603BPWK>,<go4>,<TopSpin 3.6.5>,
+      <created by zg on data set with UUID '6254fdcc-bc27-11ee-937a-a0369f8b6044'
+       started at 2024-01-26 09:46:24.012 +0100,
+       POWCHK enabled, PULCHK disabled,
+       completed at 2024-01-26 09:51:57.335 +0100
+
+       configuration hash MD5:
+       04 21 62 58 AD B4 6D E5 C7 79 17 9C E0 84 8E 89
+       data hash MD5: 8K * 64 * 1
+       24 9C C8 5B 1E BB FA D1 AE 72 9A 3F 62 00 89 46>)
+(   2,<2024-01-27 18:40:11.971 +0100>,<gorka>,<gorka>,<proc2d>,<TopSpin 3.6.5>,
+      <Start of raw data processing
+       xfb s23 F2: SI = 8K BC_mod = 6 BCFW = 1 WDW = 4 SSB = 3 FT_mod = 6 PKNL = 1 PHC0 = 448.6516 PHC1 = -24.375 F1: SI = 2K WDW = 4 SSB = 2 FT_mod = 6 FCOR = 0.5 PHC0 = 0 PHC1 = 0
+       data hash MD5: 8K * 2K
+       C0 B3 FE 24 97 DA 04 62 7F 22 B9 18 48 E9 5F 0C>)
+(   3,<2024-01-27 18:40:37.030 +0100>,<gorka>,<gorka>,<proc2d>,<TopSpin 3.6.5>,
+      <pk2 fgphup F2: PHC0 = -2.5625 PHC1 = 0
+       data hash MD5: 8K * 2K
+       5E 90 9F EF 50 28 04 84 DC 96 EF DB 79 F6 1A 30>)
+$$ /reference/MENMR/pub/HNCO/1623/pdata/23/auditp.txt
+(   4,<2024-01-28 17:18:31.593 +0100>,<nmrsu>,<CZC603BPWK>,<disknew>,<TopSpin 3.6.5>,
+      <processed data deleted by delp>)
+##END=
+
+$$ hash MD5
+$$ C4 9C 2E 6E 85 55 20 B0 AB 1B 82 A4 87 73 EA 96

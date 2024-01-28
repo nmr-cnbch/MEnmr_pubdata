@@ -1,0 +1,89 @@
+##TITLE= Audit trail, TopSpin 3.6.5
+##JCAMPDX= 5.01
+##ORIGIN= Bruker BioSpin GmbH
+##OWNER= nmrsu
+$$ /reference/MENMR/ubiCN/25/2D_TROSY_SHAPED/250/pdata/1/auditp.txt
+##AUDIT TRAIL=  $$ (NUMBER, WHEN, WHO, WHERE, PROCESS, VERSION, WHAT)
+(   1,<2024-01-24 02:33:58.350 +0100>,<nmrsu>,<CZC603BPWK>,<go4>,<TopSpin 3.6.5>,
+      <acquisition in progress>)
+(   2,<2024-01-24 02:34:22.898 +0100>,<nmrsu>,<CZC603BPWK>,<proc2d>,<TopSpin 3.6.5>,
+      <Start of raw data processing
+       xfb F2: SI = 4K BC_mod = 6 BCFW = 1 WDW = 4 SSB = 2 FT_mod = 6 PKNL = 1 PHC0 = 341.8964 PHC1 = 35.8 F1: SI = 2K WDW = 4 SSB = 2 FT_mod = 6 FCOR = 0.5 PHC0 = 0 PHC1 = 0
+       data hash MD5: 4K * 2K
+       6C BA 69 79 47 D0 92 5E 67 02 C2 63 24 AE 9C D8>)
+(   3,<2024-01-24 02:45:40.243 +0100>,<nmrsu>,<CZC603BPWK>,<audit>,<TopSpin 3.6.5>,
+      <user comment:
+       TITLE=TITLE_END
+       data hash MD5: 4K * 2K
+       6C BA 69 79 47 D0 92 5E 67 02 C2 63 24 AE 9C D8>)
+(   4,<2024-01-24 02:46:18.955 +0100>,<nmrsu>,<CZC603BPWK>,<dirdata>,<TopSpin 3.6.5>,
+      <wrpa from 1 1 "2D_NHSQC" "/reference/MENMR/ubiCN/25"
+       data hash MD5: 4K * 2K
+       6C BA 69 79 47 D0 92 5E 67 02 C2 63 24 AE 9C D8>)
+(   5,<2024-01-24 02:58:26.100 +0100>,<nmrsu>,<CZC603BPWK>,<dirdata>,<TopSpin 3.6.5>,
+      <wrpa from 1 2 "2D_NHSQC" "/reference/MENMR/ubiCN/25"
+       data hash MD5: 4K * 2K
+       6C BA 69 79 47 D0 92 5E 67 02 C2 63 24 AE 9C D8>)
+(   6,<2024-01-24 03:18:19.173 +0100>,<nmrsu>,<CZC603BPWK>,<audit>,<TopSpin 3.6.5>,
+      <user comment:
+       TITLE=HARDTITLE_END
+       data hash MD5: 4K * 2K
+       6C BA 69 79 47 D0 92 5E 67 02 C2 63 24 AE 9C D8>)
+(   7,<2024-01-24 03:18:37.147 +0100>,<nmrsu>,<CZC603BPWK>,<audit>,<TopSpin 3.6.5>,
+      <user comment:
+       TITLE=HARDTITLE_END
+       data hash MD5: 4K * 2K
+       6C BA 69 79 47 D0 92 5E 67 02 C2 63 24 AE 9C D8>)
+(   8,<2024-01-24 03:18:43.683 +0100>,<nmrsu>,<CZC603BPWK>,<audit>,<TopSpin 3.6.5>,
+      <user comment:
+       TITLE=d1 1s; HARDTITLE_END
+       data hash MD5: 4K * 2K
+       6C BA 69 79 47 D0 92 5E 67 02 C2 63 24 AE 9C D8>)
+(   9,<2024-01-24 03:18:46.157 +0100>,<nmrsu>,<CZC603BPWK>,<audit>,<TopSpin 3.6.5>,
+      <user comment:
+       TITLE=d1 1s; HARDTITLE_END
+       data hash MD5: 4K * 2K
+       6C BA 69 79 47 D0 92 5E 67 02 C2 63 24 AE 9C D8>)
+(  10,<2024-01-24 03:23:13.718 +0100>,<nmrsu>,<CZC603BPWK>,<dirdata>,<TopSpin 3.6.5>,
+      <wrpa from 1 1 "2D_NHSQC" "/reference/MENMR/ubiCN/25"
+       data hash MD5: 4K * 2K
+       6C BA 69 79 47 D0 92 5E 67 02 C2 63 24 AE 9C D8>)
+(  11,<2024-01-24 03:23:52.096 +0100>,<nmrsu>,<CZC603BPWK>,<audit>,<TopSpin 3.6.5>,
+      <user comment:
+       TITLE=d1 0.15 s; HARDTITLE_END
+       data hash MD5: 4K * 2K
+       6C BA 69 79 47 D0 92 5E 67 02 C2 63 24 AE 9C D8>)
+(  12,<2024-01-24 03:23:59.128 +0100>,<nmrsu>,<CZC603BPWK>,<dirdata>,<TopSpin 3.6.5>,
+      <wrpa from 1 150 "2D_NHSQC" "/reference/MENMR/ubiCN/25"
+       data hash MD5: 4K * 2K
+       6C BA 69 79 47 D0 92 5E 67 02 C2 63 24 AE 9C D8>)
+(  13,<2024-01-24 03:24:41.847 +0100>,<nmrsu>,<CZC603BPWK>,<audit>,<TopSpin 3.6.5>,
+      <user comment:
+       TITLE=d1 0.25 s; HARDTITLE_END
+       data hash MD5: 4K * 2K
+       6C BA 69 79 47 D0 92 5E 67 02 C2 63 24 AE 9C D8>)
+(  14,<2024-01-24 03:24:43.230 +0100>,<nmrsu>,<CZC603BPWK>,<audit>,<TopSpin 3.6.5>,
+      <user comment:
+       TITLE=d1 0.25 s; HARDTITLE_END
+       data hash MD5: 4K * 2K
+       6C BA 69 79 47 D0 92 5E 67 02 C2 63 24 AE 9C D8>)
+(  15,<2024-01-24 03:30:33.928 +0100>,<nmrsu>,<CZC603BPWK>,<dirdata>,<TopSpin 3.6.5>,
+      <wrpa from 1 250 "2D_NHSQC" "/reference/MENMR/ubiCN/25"
+       data hash MD5: 4K * 2K
+       6C BA 69 79 47 D0 92 5E 67 02 C2 63 24 AE 9C D8>)
+(  16,<2024-01-24 03:59:31.195 +0100>,<nmrsu>,<CZC603BPWK>,<dirdata>,<TopSpin 3.6.5>,
+      <wrpa from 1 250 "2D_NHSQC_SHAPED" "/reference/MENMR/ubiCN/25"
+       data hash MD5: 4K * 2K
+       6C BA 69 79 47 D0 92 5E 67 02 C2 63 24 AE 9C D8>)
+(  17,<2024-01-28 16:45:48.433 +0100>,<nmrsu>,<CZC603BPWK>,<audit>,<TopSpin 3.6.5>,
+      <user comment:
+       TITLE=d1 0.25 s; SHAPED; NS4TITLE_END
+       data hash MD5: 4K * 2K
+       6C BA 69 79 47 D0 92 5E 67 02 C2 63 24 AE 9C D8>)
+$$ /reference/MENMR/pub/2D_TROSY_SHAPED/250/pdata/1/auditp.txt
+(  18,<2024-01-28 17:18:31.177 +0100>,<nmrsu>,<CZC603BPWK>,<disknew>,<TopSpin 3.6.5>,
+      <processed data deleted by delp>)
+##END=
+
+$$ hash MD5
+$$ 8B F6 43 31 ED 20 6E C5 0E 58 02 8C AA 77 2C 81

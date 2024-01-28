@@ -1,0 +1,16 @@
+##TITLE= Parameter file, TopSpin 3.6.5
+##JCAMPDX= 5.0
+##DATATYPE= Parameter Values
+##NPOINTS= 1	$$ modification sequence number
+##ORIGIN= Bruker BioSpin GmbH
+##OWNER= nmrsu
+$$ 2024-01-26 02:10:34.982 +0100  nmrsu@CZC603BPWK
+$$ /reference/MENMR/ubiCN/25/NOESY_HC_NH/214/pdata/999/used_from
+$$ process /opt/topspin3.6.5/prog/mod/proc1d
+##$CUREXP= <ser>
+##$DATPATH= </reference/MENMR/ubiCN/25>
+##$EXPNO= 214
+##$NAME= <NOESY_HC_NH>
+##$PROCNO= 1
+##$PROCNO2= 1
+##END=

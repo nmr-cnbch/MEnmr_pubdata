@@ -1,0 +1,20 @@
+##TITLE= Audit trail, TopSpin 3.6.5
+##JCAMPDX= 5.01
+##ORIGIN= Bruker BioSpin GmbH
+##OWNER= nmrsu
+$$ /reference/MENMR/ubiCN/25/2D_TROSY_SHAPED/500/audita.txt
+##AUDIT TRAIL=  $$ (NUMBER, WHEN, WHO, WHERE, PROCESS, VERSION, WHAT)
+(   1,<2024-01-24 05:19:01.183 +0100>,<nmrsu>,<CZC603BPWK>,<go4>,<TopSpin 3.6.5>,
+      <created by zg on data set with UUID 'f35561d2-ba6e-11ee-9960-a0369f8b6044'
+       started at 2024-01-24 05:13:39.105 +0100,
+       POWCHK enabled, PULCHK disabled,
+       completed at 2024-01-24 05:19:01.180 +0100
+
+       configuration hash MD5:
+       04 21 62 58 AD B4 6D E5 C7 79 17 9C E0 84 8E 89
+       data hash MD5: 2K * 256
+       19 58 E8 51 24 8A BC 3F 5D 56 D4 77 BF 66 2C E3>)
+##END=
+
+$$ hash MD5
+$$ 1D EA EB 35 34 C9 BE B4 C9 74 CF 15 61 74 10 39

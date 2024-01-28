@@ -1,0 +1,26 @@
+##TITLE= Audit trail, TopSpin 3.6.5
+##JCAMPDX= 5.01
+##ORIGIN= Bruker BioSpin GmbH
+##OWNER= nmrsu
+$$ /reference/MENMR/ubiCN/25/TEST_HNCO/1/audita.txt
+##AUDIT TRAIL=  $$ (NUMBER, WHEN, WHO, WHERE, PROCESS, VERSION, WHAT)
+(   1,<2024-01-25 15:04:52.978 +0100>,<nmrsu>,<CZC603BPWK>,<go4>,<TopSpin 3.6.5>,
+      <created by zg on data set with UUID '62f3bfa6-bb79-11ee-9adb-a0369f8b6044'
+       started at 2024-01-25 13:00:53.524 +0100,
+       POWCHK enabled, PULCHK disabled,
+       completed at 2024-01-25 15:04:52.975 +0100
+
+       configuration hash MD5:
+       04 21 62 58 AD B4 6D E5 C7 79 17 9C E0 84 8E 89
+       data hash MD5: 2K * 1600 * 1 * 1
+       BD E5 74 2D 57 43 38 BF 62 CE 8F 66 7E 31 FD 97>)
+(   2,<2024-01-25 21:29:37.765 +0100>,<nmrsu>,<CZC603BPWK>,<dirdata>,<TopSpin 3.6.5>,
+      <wrpa from 1 1 "NOESY_HC_NH" "/reference/MENMR/ubiCN/25"
+       data hash MD5: 2K * 1600 * 1 * 1
+       BD E5 74 2D 57 43 38 BF 62 CE 8F 66 7E 31 FD 97>)
+(   3,<2024-01-25 21:29:56.615 +0100>,<nmrsu>,<CZC603BPWK>,<siparproc>,<TopSpin 3.6.5>,
+      <raw data deleted by change of acquisition dimension from 4D to 3D>)
+##END=
+
+$$ hash MD5
+$$ A0 D5 23 7F 8D C3 4B 92 A4 FC 0E B7 8B 04 FA 5F

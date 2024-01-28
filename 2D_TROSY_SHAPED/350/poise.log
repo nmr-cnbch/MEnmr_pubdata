@@ -1,0 +1,36 @@
+
+
+
+
+========================================
+2024-01-22 12:14:18
+Routine name              - Hp90cal
+Optimisation parameters   - ['p1']
+Cost function             - minabsint
+AU programme              - 
+Initial values            - [10.47]
+Lower bounds              - [9.0]
+Upper bounds              - [12.0]
+Tolerances                - [0.1]
+Optimisation algorithm    - bobyqa
+
+    p1          cf      
+------------------------
+
+
+
+
+========================================
+2024-01-22 12:16:59
+Routine name              - Hp90cal
+Optimisation parameters   - ['p1']
+Cost function             - minabsint
+AU programme              - 
+Initial values            - [10.47]
+Lower bounds              - [9.0]
+Upper bounds              - [12.0]
+Tolerances                - [0.1]
+Optimisation algorithm    - bobyqa
+
+    p1          cf      
+------------------------

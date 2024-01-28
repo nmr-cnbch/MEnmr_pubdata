@@ -1,0 +1,28 @@
+##TITLE= Audit trail, TopSpin 3.6.5
+##JCAMPDX= 5.01
+##ORIGIN= Bruker BioSpin GmbH
+##OWNER= nmrsu
+$$ /reference/MENMR/ubiCN/25/NOESY_HC_CH/34/pdata/34/auditp.txt
+##AUDIT TRAIL=  $$ (NUMBER, WHEN, WHO, WHERE, PROCESS, VERSION, WHAT)
+(   1,<2024-01-26 05:05:42.569 +0100>,<nmrsu>,<CZC603BPWK>,<go4>,<TopSpin 3.6.5>,
+      <created by zg on data set with UUID '724b8aea-bbfd-11ee-aea5-a0369f8b6044'
+       started at 2024-01-26 04:46:11.636 +0100,
+       POWCHK enabled, PULCHK disabled,
+       completed at 2024-01-26 05:05:42.565 +0100
+
+       configuration hash MD5:
+       04 21 62 58 AD B4 6D E5 C7 79 17 9C E0 84 8E 89
+       data hash MD5: 2K * 256 * 1 * 1
+       D7 B3 C7 60 22 C7 C0 98 8B FA E4 6C F7 FA AD 97>)
+(   2,<2024-01-26 05:13:05.681 +0100>,<nmrsu>,<CZC603BPWK>,<proc2d>,<TopSpin 3.6.5>,
+      <Start of raw data processing
+       xfb s34 F2: SI = 4K WDW = 4 SSB = 2 FT_mod = 6 PKNL = 1 PHC0 = -9.8915 PHC1 = 0 F1: SI = 1K WDW = 4 SSB = 2 FT_mod = 6 FCOR = 0.5 PHC0 = 0 PHC1 = 0
+       data hash MD5: 4K * 1K
+       A5 6C 91 92 D1 36 C7 DC 81 D6 FF 60 CA 61 67 98>)
+$$ /reference/MENMR/pub/NOESY_HC_CH/34/pdata/34/auditp.txt
+(   3,<2024-01-28 17:18:31.699 +0100>,<nmrsu>,<CZC603BPWK>,<disknew>,<TopSpin 3.6.5>,
+      <processed data deleted by delp>)
+##END=
+
+$$ hash MD5
+$$ 3B 6D 97 8C BE 8E F8 13 0C 4A EF D1 B6 FA 15 C3

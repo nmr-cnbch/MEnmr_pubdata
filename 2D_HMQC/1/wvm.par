@@ -1,0 +1,83 @@
+## Wavemaker parameter file. 
+## PULPROG: 2D.wt.pulses.pp 
+
+2D.wt.pulses.pp_sp54:f1 
+  e400b(5.5 ppm; TR)
+  nuc =  1H 
+  p90 =  10.470 us
+  pl =    8.000000 W
+  BF =  799.6700000 MHz
+  ofs =   4.700000 ppm 
+
+2D.wt.pulses.pp_sp55:f1 
+  e400b(5.5 ppm)
+  nuc =  1H 
+  p90 =  10.470 us
+  pl =    8.000000 W
+  BF =  799.6700000 MHz
+  ofs =   4.700000 ppm 
+
+2D.wt.pulses.pp_sp56:f1 
+  reburp(5.5 ppm)
+  nuc =  1H 
+  p90 =  10.470 us
+  pl =    8.000000 W
+  BF =  799.6700000 MHz
+  ofs =   4.700000 ppm 
+
+2D.wt.pulses.pp_sp57:f1 
+  e400b(5.5 ppm; TR)
+  nuc =  1H 
+  p90 =  10.470 us
+  pl =    8.000000 W
+  BF =  799.6700000 MHz
+  ofs =   4.700000 ppm 
+
+2D.wt.pulses.pp_sp58:f1 
+  e400b(5.5 ppm)
+  nuc =  1H 
+  p90 =  10.470 us
+  pl =    8.000000 W
+  BF =  799.6700000 MHz
+  ofs =   4.700000 ppm 
+
+2D.wt.pulses.pp_sp44:f1 
+  e400b(5 ppm; TR)
+  nuc =  1H 
+  p90 =  10.470 us
+  pl =    8.000000 W
+  BF =  799.6700000 MHz
+  ofs =   4.700000 ppm 
+
+2D.wt.pulses.pp_sp45:f1 
+  e400b(5 ppm)
+  nuc =  1H 
+  p90 =  10.470 us
+  pl =    8.000000 W
+  BF =  799.6700000 MHz
+  ofs =   4.700000 ppm 
+
+2D.wt.pulses.pp_sp46:f1 
+  reburp(5 ppm)
+  nuc =  1H 
+  p90 =  10.470 us
+  pl =    8.000000 W
+  BF =  799.6700000 MHz
+  ofs =   4.700000 ppm 
+
+2D.wt.pulses.pp_sp47:f1 
+  e400b(5 ppm; TR)
+  nuc =  1H 
+  p90 =  10.470 us
+  pl =    8.000000 W
+  BF =  799.6700000 MHz
+  ofs =   4.700000 ppm 
+
+2D.wt.pulses.pp_sp48:f1 
+  e400b(5 ppm)
+  nuc =  1H 
+  p90 =  10.470 us
+  pl =    8.000000 W
+  BF =  799.6700000 MHz
+  ofs =   4.700000 ppm 
+

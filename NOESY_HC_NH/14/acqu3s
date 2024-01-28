@@ -1,0 +1,24 @@
+##TITLE= Parameter file, TopSpin 3.6.5
+##JCAMPDX= 5.0
+##DATATYPE= Parameter Values
+##NPOINTS= 6	$$ modification sequence number
+##ORIGIN= Bruker BioSpin GmbH
+##OWNER= nmrsu
+$$ 2024-01-26 03:42:49.768 +0100  nmrsu@CZC603BPWK
+$$ /reference/MENMR/ubiCN/25/NOESY_HC_NH/14/acqu3s
+$$ process /opt/topspin3.6.5/prog/mod/go4
+##$ACQT0= 0
+##$BF1= 201.076646
+##$FnILOOP= 0
+##$FnMODE= 5
+##$NUC1= <13C>
+##$NusJSP= 0
+##$NusT2= 1
+##$NusTD= 1
+##$O1= 8043.06584
+##$ProjAngle= 0
+##$SFO1= 201.08468906584
+##$SW= 79.9522355117867
+##$SW_h= 16077.1704180064
+##$TD= 1
+##END=

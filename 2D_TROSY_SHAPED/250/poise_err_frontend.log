@@ -1,0 +1,12 @@
+======= From frontend =======
+2024-01-22 12:14:18
+Error during acquisition loop:
+Backend exception: FileNotFoundError((2, 'No such file or directory'))
+
+
+======= From frontend =======
+2024-01-22 12:16:59
+Error during acquisition loop:
+Backend exception: FileNotFoundError((2, 'No such file or directory'))
+
+

@@ -1,0 +1,16 @@
+##TITLE= Parameter file, TopSpin 3.6.1
+##JCAMPDX= 5.0
+##DATATYPE= Parameter Values
+##NPOINTS= 5	$$ modification sequence number
+##ORIGIN= Bruker BioSpin GmbH
+##OWNER= nmrsu
+$$ 2024-01-27 16:36:14.402 +0100  gorka@gorka
+$$ /reference/MENMR/ubiCN/25/2D_HMQC/1/pdata/1/outd
+$$ process /net/synology/volume1/nhome/opt/topspin3.6.1/prog/mod/dataserver
+##$CURPLOT= < Qõ	ÔQõ	àQõ	>
+##$CURPRIN= <$1#1#1#1#1#1#1#1#0#-1#-1#1#-1>
+##$DFORMAT= <normdp>
+##$LAYOUT= <+/2D_inv.xwp>
+##$LFORMAT= <normlp>
+##$PFORMAT= <normpl>
+##END=

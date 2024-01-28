@@ -1,0 +1,232 @@
+
+New TopShim run:
+
+version = topshim 2.0.0
+date = 2024-01-12
+time = 20:51:23.008
+command = topshim  3d
+
+FULL SHIMMING
+
+Parameters:
+
+probe = Z156387_0002
+solvent = H2O+D2O
+shim nucleus = 1H
+nucleus optimised for = 1H
+o1p (from lock) = 4.70 ppm
+
+Results:
+
+
+3D Shimming:
+Iteration  1: FWHM Before= 0.9 Hz, Target= 0.7 Hz, After= 0.8 Hz
+Shim succeeded
+
+Lineshape quality factor (1D spectrum, non-spinning) = 0.996
+
+
+1D Shimming:
+Iteration  1: FWHM Before= 0.5 Hz, Target= 0.2 Hz, After= 0.2 Hz
+Shim succeeded
+
+Lineshape quality factor (1D spectrum, spinning) = 0.52
+
+shim changes: 
+Z	-33
+Z3	+134
+Z4	+100
+Z5	-350
+Z6	-528
+X	+7
+XZ	+8
+XZ2	+29
+XZ3	+23
+XZ4	-72
+XZ5	-613
+Y	+29
+YZ	-7
+YZ2	-53
+YZ3	+52
+YZ4	+82
+YZ5	-433
+XY	+467
+XYZ	-214
+XYZ2	-196
+XYZ3	+136
+XYZ4	+361
+XYZ5	+120
+(X2-Y2)	+44
+(X2-Y2)Z	-25
+(X2-Y2)Z2	-310
+(X2-Y2)Z3	-31
+(X2-Y2)Z4	+1090
+(X2-Y2)Z5	+390
+X3	+4027
+X3Z	-1491
+Y3	-214
+Y3Z	+746
+
+duration = 3 min 41 sec
+completed successfully
+finished Fri Jan 12 20:55:02 2024
+
+
+========================================================================
+
+New TopShim run:
+
+version = topshim 2.0.0
+date = 2024-01-14
+time = 19:43:10.576
+command = topshim  z6off 3d optsolvent coil=1H tuneb tuneaoff
+
+FULL SHIMMING
+
+Parameters:
+
+probe = Z156387_0002
+solvent = H2O+D2O
+shim nucleus = 1H
+nucleus optimised for = 1H
+o1p (from lock) = 4.70 ppm
+
+Results:
+
+
+3D Shimming:
+Iteration  1: FWHM Before= 2.0 Hz, Target= 1.4 Hz, After= 2.1 Hz
+Iteration  2: FWHM Before= 2.1 Hz, Target= 1.3 Hz, After= 1.6 Hz
+Iteration  3: FWHM Before= 1.6 Hz, Target= 1.2 Hz, After= 1.4 Hz
+Iteration  4: FWHM Before= 1.4 Hz, Target= 1.2 Hz, After= 1.4 Hz
+Shim succeeded
+
+Lineshape quality factor (1D spectrum, non-spinning) = 1.96
+
+
+1D Shimming:
+Iteration  1: FWHM Before= 1.0 Hz, Target= 0.3 Hz, After= 0.4 Hz
+Iteration  2: FWHM Before= 0.4 Hz, Target= 0.3 Hz
+Shim succeeded
+
+Lineshape quality factor (1D spectrum, spinning) = 0.972
+
+shim changes: 
+Z	-428
+Z2	-243
+Z3	+330
+Z4	+1162
+Z5	+318
+X	+65
+XZ	+122
+XZ2	-17
+XZ3	-358
+XZ4	+165
+XZ5	+4124
+Y	+65
+YZ	-20
+YZ2	-126
+YZ3	+445
+YZ4	+825
+YZ5	-2725
+XY	-518
+XYZ	+125
+XYZ2	+1549
+XYZ3	-6
+XYZ4	-4236
+XYZ5	-460
+(X2-Y2)	+208
+(X2-Y2)Z	+262
+(X2-Y2)Z2	-100
+(X2-Y2)Z3	-773
+(X2-Y2)Z4	-378
+(X2-Y2)Z5	+3446
+X3	-177
+X3Z	-450
+Y3	-153
+Y3Z	-380
+
+duration = 9 min 8 sec
+completed successfully
+finished Sun Jan 14 19:52:16 2024
+
+
+========================================================================
+
+New TopShim run:
+
+version = topshim 2.0.0
+date = 2024-01-15
+time = 00:12:44.198
+command = topshim  3d
+
+FULL SHIMMING
+
+Parameters:
+
+probe = Z156387_0002
+solvent = H2O+D2O
+shim nucleus = 1H
+nucleus optimised for = 1H
+o1p (from lock) = 4.70 ppm
+
+Results:
+
+
+3D Shimming:
+Iteration  1: FWHM Before= 1.8 Hz, Target= 1.1 Hz, After= 1.5 Hz
+Iteration  2: FWHM Before= 1.5 Hz, Target= 1.0 Hz, After= 1.9 Hz
+Iteration  3: FWHM Before= 1.9 Hz, Target= 1.1 Hz, After= 1.1 Hz
+Shim succeeded
+
+Lineshape quality factor (1D spectrum, non-spinning) = 1.53
+
+
+1D Shimming:
+Iteration  1: FWHM Before= 1.1 Hz, Target= 0.8 Hz, After= 0.6 Hz
+Iteration  2: FWHM Before= 0.6 Hz, Target= 0.8 Hz, After= 0.6 Hz
+Shim succeeded
+
+Lineshape quality factor (1D spectrum, spinning) = 1.17
+
+shim changes: 
+Z	+18
+Z2	+12
+Z3	-24
+Z4	+31
+Z6	-298
+X	-20
+XZ	+21
+XZ2	+103
+XZ3	-183
+XZ4	-331
+XZ5	+1192
+Y	+18
+YZ	+4
+YZ2	+5
+YZ3	+86
+YZ4	-132
+YZ5	-825
+XY	+17
+XYZ	-67
+XYZ2	-101
+XYZ3	+76
+XYZ4	+218
+XYZ5	-214
+(X2-Y2)	+99
+(X2-Y2)Z	+53
+(X2-Y2)Z2	-37
+(X2-Y2)Z3	-895
+(X2-Y2)Z4	-37
+(X2-Y2)Z5	+5000
+X3	-586
+X3Z	-1057
+Y3	-21
+Y3Z	-375
+
+duration = 8 min 20 sec
+completed successfully
+finished Mon Jan 15 00:21:02 2024
+
+
+========================================================================
