@@ -1,0 +1,169 @@
+Input Header
+============
+
+statement[x] = 0xf45d7ff0
+statement[y] = 0xf45cff88
+statement[z] = 0xf45ff3b0
+n_statements =          8
+n_slices     =          1
+function     = 0xf45d8150
+n_functions  =          9
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Gradient Table
+
+Number: base_value n_base_values st_function n_st_functions
+     0: 0xf45d81e0             0  0xf45d81e0              2
+     1: 0xf45d8240             0  0xf45d8240              2
+     2: 0xf45d82a0             0  0xf45d82a0              2
+     3: 0xf45d8300             0  0xf45d8300              2
+     4: 0xf45d8360             0  0xf45d8360              2
+     5: 0xf45d83c0             0  0xf45d83c0              2
+     6: 0xf45d8420             0  0xf45d8420              2
+     7: 0xf45d8480             0  0xf45d8480              2
+
+Base Values
+
+Number:    factor       type trim_idx
+
+Function Values
+
+Number: index     factor       type trim_idx
+     0:     3  100.00000   0xcc0000       -1
+            4    1.00000   0x100000       -1
+     1:     3  100.00000   0x4c0000       -1
+            4    1.00000   0x100000       -1
+     2:     3  100.00000   0x4c0000       -1
+            5    1.00000   0x100000       -1
+     3:     3  100.00000   0x4c0000       -1
+            6    1.00000   0x100000       -1
+     4:     3  100.00000   0x4c0000       -1
+            6    1.00000   0x100000       -1
+     5:     3  100.00000   0x4c0000       -1
+            7    1.00000   0x100000       -1
+     6:     3  100.00000   0x4c0000       -1
+            8    1.00000   0x100000       -1
+     7:     3  100.00000   0x4c0000       -1
+            8    1.00000   0x100000       -1
+
+YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY
+
+Gradient Table
+
+Number: base_value n_base_values st_function n_st_functions
+     0: 0xf45d0178             0  0xf45d0178              2
+     1: 0xf45d01d8             0  0xf45d01d8              2
+     2: 0xf45d0238             0  0xf45d0238              2
+     3: 0xf45d0298             0  0xf45d0298              2
+     4: 0xf45d02f8             0  0xf45d02f8              2
+     5: 0xf45d0358             0  0xf45d0358              2
+     6: 0xf45d03b8             0  0xf45d03b8              2
+     7: 0xf45d0418             0  0xf45d0418              2
+
+Base Values
+
+Number:    factor       type trim_idx
+
+Function Values
+
+Number: index     factor       type trim_idx
+     0:     3  100.00000   0xcc0000       -1
+            4    1.00000   0x100001       -1
+     1:     3  100.00000   0x4c0000       -1
+            4    1.00000   0x100001       -1
+     2:     3  100.00000   0x4c0000       -1
+            5    1.00000   0x100001       -1
+     3:     3  100.00000   0x4c0000       -1
+            6    1.00000   0x100001       -1
+     4:     3  100.00000   0x4c0000       -1
+            6    1.00000   0x100001       -1
+     5:     3  100.00000   0x4c0000       -1
+            7    1.00000   0x100001       -1
+     6:     3  100.00000   0x4c0000       -1
+            8    1.00000   0x100001       -1
+     7:     3  100.00000   0x4c0000       -1
+            8    1.00000   0x100001       -1
+
+ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
+
+Gradient Table
+
+Number: base_value n_base_values st_function n_st_functions
+     0: 0xf45ff5a0             0  0xf45ff5a0              2
+     1: 0xf45ff600             0  0xf45ff600              2
+     2: 0xf45ff660             0  0xf45ff660              2
+     3: 0xf45ff6c0             0  0xf45ff6c0              2
+     4: 0xf45ff720             0  0xf45ff720              2
+     5: 0xf45ff780             0  0xf45ff780              2
+     6: 0xf45ff7e0             0  0xf45ff7e0              2
+     7: 0xf45ff840             0  0xf45ff840              2
+
+Base Values
+
+Number:    factor       type trim_idx
+
+Function Values
+
+Number: index     factor       type trim_idx
+     0:     3  100.00000   0xcc0000       -1
+            4    1.00000   0x100002       -1
+     1:     3  100.00000   0x4c0000       -1
+            4    1.00000   0x100002       -1
+     2:     3  100.00000   0x4c0000       -1
+            5    1.00000   0x100002       -1
+     3:     3  100.00000   0x4c0000       -1
+            6    1.00000   0x100002       -1
+     4:     3  100.00000   0x4c0000       -1
+            6    1.00000   0x100002       -1
+     5:     3  100.00000   0x4c0000       -1
+            7    1.00000   0x100002       -1
+     6:     3  100.00000   0x4c0000       -1
+            8    1.00000   0x100002       -1
+     7:     3  100.00000   0x4c0000       -1
+            8    1.00000   0x100002       -1
+
+Function Table
+==============
+
+slice:	Value =      (nil), Size=      1, Type=0x80000000
+
+
+EA:	Value = 0xf4567580, Size=      2, Type=0x80000000
+
+
+EA2:	Value = 0xf45675a8, Size=      2, Type=0x80000000
+
+
+SMSQ10.100:	Value = 0xf45ff8e0, Size=    100, Type=  0xc00000
+ Index:   Values
+     0:  0.00000  0.03015  0.11698  0.25000  0.41318  0.58682  0.75000  0.88302  0.96985  1.00000
+    10:  1.00000  1.00000  1.00000  1.00000  1.00000  1.00000  1.00000  1.00000  1.00000  1.00000
+    20:  1.00000  1.00000  1.00000  1.00000  1.00000  1.00000  1.00000  1.00000  1.00000  1.00000
+    30:  1.00000  1.00000  1.00000  1.00000  1.00000  1.00000  1.00000  1.00000  1.00000  1.00000
+    40:  1.00000  1.00000  1.00000  1.00000  1.00000  1.00000  1.00000  1.00000  1.00000  1.00000
+    50:  1.00000  1.00000  1.00000  1.00000  1.00000  1.00000  1.00000  1.00000  1.00000  1.00000
+    60:  1.00000  1.00000  1.00000  1.00000  1.00000  1.00000  1.00000  1.00000  1.00000  1.00000
+    70:  1.00000  1.00000  1.00000  1.00000  1.00000  1.00000  1.00000  1.00000  1.00000  1.00000
+    80:  1.00000  1.00000  1.00000  1.00000  1.00000  1.00000  1.00000  1.00000  1.00000  1.00000
+    90:  1.00000  0.96985  0.88302  0.75000  0.58682  0.41318  0.25000  0.11698  0.03015  0.00000
+
+$gp11:	Value = 0xf45b8860, Size=      1, Type=  0x100000
+ Index:   Values
+     0:  0.00000
+
+$gp14:	Value = 0xf45675f0, Size=      1, Type=  0x100000
+ Index:   Values
+     0:  0.00000
+
+$gp12:	Value = 0xf4567620, Size=      1, Type=  0x100000
+ Index:   Values
+     0:  0.00000
+
+$gp15:	Value = 0xf4567650, Size=      1, Type=  0x100000
+ Index:   Values
+     0:  0.00000
+
+$gp13:	Value = 0xf4567680, Size=      1, Type=  0x100000
+ Index:   Values
+     0:  0.00000

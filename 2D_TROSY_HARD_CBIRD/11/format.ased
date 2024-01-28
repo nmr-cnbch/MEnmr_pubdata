@@ -1,0 +1,1334 @@
+#*******************************************************************
+#
+# $Source: /sc/CvsTree/sc/gen/src/form/ased_acqu.form,v $
+#
+# Copyright (c) 1995 - 2008
+# BRUKER BioSpin GmbH
+# D-76287 Rheinstetten, Germany
+#
+# All Rights Reserved
+#
+#
+# $Id: ased_acqu.form,v 1.27.2.3 2014/05/05 13:10:49 nipo Exp $
+#*******************************************************************
+EDIT_PAR COMMAND FILE
+
+DI_MODE         LONG
+ED_ENTRY        ACQU
+ORDER           FILE
+
+
+HEADER		"====== General ======"
+NAME		PULPROG
+END
+NAME		TD
+END
+NAME		SW
+END
+T_NAME		SWH
+		TYPE	R32
+		CLASS	ACQU
+		SUBRANGE 0.0 1e38
+		REL	"SWH=SW*SFO1"
+		INV_REL "SW=SWH/SFO1"
+		UNIT	"Hz"
+		FORMAT	"%14.2f Hz"
+		TEXT	"sweep width"
+END
+T_NAME          AQ
+		TYPE	R32
+		CLASS	ACQU
+		SUBRANGE 0.0 1e38
+		REL	"AQ=aqcalc(SW,SFO1,TD,DIGTYP)"
+		INV_REL	"TD=tdcalc(SW,SFO1,1.0e6*AQ,DIGTYP)"
+		UNIT	"sec"
+		FORMAT	"%14.7f sec"
+                TEXT	"acquisition time"
+END
+NAME		RG
+END
+T_NAME          DW
+		TYPE	R32
+		CLASS	ACQU
+		SUBRANGE 0.0 1e38
+		REL	"DW=1/(2*SW*SFO1)"
+		INV_REL	"SW=1000000/(2*(0.005+DW)*SFO1)"
+		UNIT	"usec"
+		FORMAT	"%14.3f usec"
+		TEXT	"dwell time "
+END
+NAME		DE
+		FORMAT	"%14.2f usec"
+END
+T_NAME		CNST0
+		TYPE	R32
+		CLASS	ACQU
+		SUBRANGE -1e38 1e38
+		REL	"CNST0=CNST[0]"
+		INV_REL	"CNST[0]=CNST0"
+		FORMAT	"%14.7f"
+		TEXT		"Correct to phc1=0 by entering cnst0=phc1. Added to last delay."
+END
+T_NAME		CNST54
+		TYPE	R32
+		CLASS	ACQU
+		SUBRANGE -1e38 1e38
+		REL	"CNST54=CNST[54]"
+		INV_REL	"CNST[54]=CNST54"
+		FORMAT	"%14.7f"
+		TEXT		"effective evolution multiplier for C_excitation."
+END
+T_NAME		CNST56
+		TYPE	R32
+		CLASS	ACQU
+		SUBRANGE -1e38 1e38
+		REL	"CNST56=CNST[56]"
+		INV_REL	"CNST[56]=CNST56"
+		FORMAT	"%14.7f"
+		TEXT		"effective evolution multiplier for C_refocussing."
+END
+T_NAME		CNST57
+		TYPE	R32
+		CLASS	ACQU
+		SUBRANGE -1e38 1e38
+		REL	"CNST57=CNST[57]"
+		INV_REL	"CNST[57]=CNST57"
+		FORMAT	"%14.7f"
+		TEXT		"effective evolution multiplier for C_UR_exc."
+END
+T_NAME		CNST58
+		TYPE	R32
+		CLASS	ACQU
+		SUBRANGE -1e38 1e38
+		REL	"CNST58=CNST[58]"
+		INV_REL	"CNST[58]=CNST58"
+		FORMAT	"%14.7f"
+		TEXT		"effective evolution multiplier for C_UR_fb."
+END
+T_NAME		D0
+		TYPE	R32
+		CLASS	ACQU
+		SUBRANGE 0.0 1e38
+		REL	"D0=D[0]"
+		INV_REL	"D[0]=D0"
+		UNIT	"sec"
+		FORMAT	"%14.9f sec"
+		TEXT		"effective relaxation delay"
+END
+T_NAME		d1
+		TYPE	R32
+		SUBRANGE 0.0 1e8
+		CLASS	ACQU
+		REL	"d1 -= 0"
+		INV_REL	"D[0]=d1"
+		UNIT	"sec"
+		TEXT		"relaxation delay    [1.2 s]"
+		FORMAT	"%14.8f sec"
+		NONEDIT
+END
+T_NAME		D11
+		TYPE	R32
+		CLASS	ACQU
+		SUBRANGE 0.0 1e38
+		REL	"D11=D[11]"
+		INV_REL	"D[11]=D11"
+		UNIT	"sec"
+		FORMAT	"%14.9f sec"
+		TEXT		"delay for disk I/O    [30 ms]"
+END
+T_NAME		D16
+		TYPE	R32
+		CLASS	ACQU
+		SUBRANGE 0.0 1e38
+		REL	"D16=D[16]"
+		INV_REL	"D[16]=D16"
+		UNIT	"sec"
+		FORMAT	"%14.9f sec"
+		TEXT		"Crusher/prefocussing gradient delay."
+END
+T_NAME		D18
+		TYPE	R32
+		CLASS	ACQU
+		SUBRANGE 0.0 1e38
+		REL	"D18=D[18]"
+		INV_REL	"D[18]=D18"
+		UNIT	"sec"
+		FORMAT	"%14.9f sec"
+		TEXT		"Proximal short gradient delay."
+END
+T_NAME		D21
+		TYPE	R32
+		CLASS	ACQU
+		SUBRANGE 0.0 1e38
+		REL	"D21=D[21]"
+		INV_REL	"D[21]=D21"
+		UNIT	"sec"
+		FORMAT	"%14.9f sec"
+		TEXT		"time for H -> N evolution [5.4 ms]"
+END
+T_NAME		D22
+		TYPE	R32
+		CLASS	ACQU
+		SUBRANGE 0.0 1e38
+		REL	"D22=D[22]"
+		INV_REL	"D[22]=D22"
+		UNIT	"sec"
+		FORMAT	"%14.9f sec"
+		TEXT		"time for N -> H evolution [5.4 ms]"
+END
+T_NAME		D42
+		TYPE	R32
+		CLASS	ACQU
+		SUBRANGE 0.0 1e38
+		REL	"D42=D[42]"
+		INV_REL	"D[42]=D42"
+		UNIT	"sec"
+		FORMAT	"%14.9f sec"
+		TEXT		"time for Ha -> C evolution in C-BIRD (1/2J) [3.5 ms]"
+END
+T_NAME		d46
+		TYPE	R32
+		SUBRANGE 0.0 1e8
+		CLASS	ACQU
+		REL	"d46 = 0u"
+		INV_REL	"D[0]=d46"
+		UNIT	"sec"
+		TEXT		"symmetrizing delay for HC_refocussing."
+		FORMAT	"%14.8f sec"
+		NONEDIT
+END
+T_NAME		d56
+		TYPE	R32
+		SUBRANGE 0.0 1e8
+		CLASS	ACQU
+		REL	"d56 = 0u"
+		INV_REL	"D[0]=d56"
+		UNIT	"sec"
+		TEXT		"symmetrizing delay for H_refocussing."
+		FORMAT	"%14.8f sec"
+		NONEDIT
+END
+NAME		DS
+		TEXT		">= 16"
+END
+T_NAME		ECHOTIME1
+		TYPE	R32
+		SUBRANGE 0.0 1e8
+		CLASS	ACQU
+		REL	"ECHOTIME1 = WT_de"
+		INV_REL	"D[0]=ECHOTIME1"
+		UNIT	"sec"
+		TEXT	"ECHOTIME1 = WT_de"
+		FORMAT	"%14.8f sec"
+		NONEDIT
+END
+T_NAME		ECHOTIME2
+		TYPE	R32
+		SUBRANGE 0.0 1e8
+		CLASS	ACQU
+		REL	"ECHOTIME2 = eHX_fb_UR"
+		INV_REL	"D[0]=ECHOTIME2"
+		UNIT	"sec"
+		TEXT	"ECHOTIME2 = eHX_fb_UR"
+		FORMAT	"%14.8f sec"
+		NONEDIT
+END
+T_NAME		in1
+		TYPE	R32
+		SUBRANGE 0.0 1e8
+		CLASS	ACQU
+		REL	"in1 = inf1"
+		INV_REL	"D[0]=in1"
+		UNIT	"sec"
+		TEXT	"in1 = inf1"
+		FORMAT	"%14.8f sec"
+		NONEDIT
+END
+T_NAME		INF1
+		TYPE	R64
+		CLASS	ACQU
+		SUBRANGE 0.0 1e38
+		REL	"INF1=INF[1]"
+		INV_REL	"INF[1]=INF1"
+		UNIT	"usec"
+		FORMAT	"%14.2f usec"
+		TEXT	"increment for F1"
+		NONEDIT
+END
+T_NAME		L30
+		TYPE	R32
+		CLASS	ACQU
+		SUBRANGE 0.0 1e38
+		REL	"L30=L[30]"
+		INV_REL	"L[30]=L30"
+		FORMAT	"%14.0f"
+		TEXT		"Number of chunks for homodecoupling/chunked acquisition. TD must be a multiple of 2*l30."
+END
+NAME		NS
+		TEXT		"1 * n"
+END
+T_NAME		P46
+		TYPE	R32
+		CLASS	ACQU
+		SUBRANGE 0.0 1.0e10
+		REL	"P46=P[46]"
+		INV_REL	"P[46]=P46"
+		UNIT	"usec"
+		FORMAT	"%14.3f usec"
+		TEXT	"pulse 46"
+END
+NAME		TDav	
+		TEXT	"number of averages in nD"
+END
+T_NAME		TProximal
+		TYPE	R32
+		SUBRANGE 0.0 1e8
+		CLASS	ACQU
+		REL	"TProximal = 0"
+		INV_REL	"D[0]=TProximal"
+		UNIT	"sec"
+		TEXT	"TProximal = 0"
+		FORMAT	"%14.8f sec"
+		NONEDIT
+END
+T_NAME		TProximalorig
+		TYPE	R32
+		SUBRANGE 0.0 1e8
+		CLASS	ACQU
+		REL	"TProximalorig=TProximal"
+		INV_REL	"D[0]=TProximalorig"
+		UNIT	"sec"
+		TEXT	"TProximalorig=TProximal"
+		FORMAT	"%14.8f sec"
+		NONEDIT
+END
+T_NAME		TproximalPost
+		TYPE	R32
+		SUBRANGE 0.0 1e8
+		CLASS	ACQU
+		REL	"TproximalPost = pY_inversion"
+		INV_REL	"D[0]=TproximalPost"
+		UNIT	"sec"
+		TEXT	"TproximalPost = pY_inversion"
+		FORMAT	"%14.8f sec"
+		NONEDIT
+END
+T_NAME		TproximalPre
+		TYPE	R32
+		SUBRANGE 0.0 1e8
+		CLASS	ACQU
+		REL	"TproximalPre = larger((pHX_exc_UR - dX_universal), 0)"
+		INV_REL	"D[0]=TproximalPre"
+		UNIT	"sec"
+		TEXT	"TproximalPre = larger((pHX_exc_UR - dX_universal), 0)"
+		FORMAT	"%14.8f sec"
+		NONEDIT
+END
+T_NAME		WT_de
+		TYPE	R32
+		SUBRANGE 0.0 1e8
+		CLASS	ACQU
+		REL	"WT_de = de - 2*dw*cnst0/360"
+		INV_REL	"D[0]=WT_de"
+		UNIT	"sec"
+		TEXT	"WT_de = de - 2*dw*cnst0/360"
+		FORMAT	"%14.8f sec"
+		NONEDIT
+END
+T_NAME		dACQHalfChunk
+		TYPE	R32
+		SUBRANGE 0.0 1e8
+		CLASS	ACQU
+		REL	"dACQHalfChunk = aq/(2*l30)"
+		INV_REL	"D[0]=dACQHalfChunk"
+		UNIT	"sec"
+		TEXT	"dACQHalfChunk = aq/(2*l30)"
+		FORMAT	"%14.8f sec"
+		NONEDIT
+END
+T_NAME		dAcqHC
+		TYPE	R32
+		SUBRANGE 0.0 1e8
+		CLASS	ACQU
+		REL	"dAcqHC = d42 - p16 - d16"
+		INV_REL	"D[0]=dAcqHC"
+		UNIT	"sec"
+		TEXT	"dAcqHC = d42 - p16 - d16"
+		FORMAT	"%14.8f sec"
+		NONEDIT
+END
+T_NAME		dC_inversion
+		TYPE	R32
+		SUBRANGE 0.0 1e8
+		CLASS	ACQU
+		REL	"dC_inversion = p41"
+		INV_REL	"D[0]=dC_inversion"
+		UNIT	"sec"
+		TEXT	"dC_inversion = p41"
+		FORMAT	"%14.8f sec"
+		NONEDIT
+END
+T_NAME		dGProximalS
+		TYPE	R32
+		SUBRANGE 0.0 1e8
+		CLASS	ACQU
+		REL	"dGProximalS = d18"
+		INV_REL	"D[0]=dGProximalS"
+		UNIT	"sec"
+		TEXT	"dGProximalS = d18"
+		FORMAT	"%14.8f sec"
+		NONEDIT
+END
+T_NAME		dGRAD
+		TYPE	R32
+		SUBRANGE 0.0 1e8
+		CLASS	ACQU
+		REL	"dGRAD = d16"
+		INV_REL	"D[0]=dGRAD"
+		UNIT	"sec"
+		TEXT	"dGRAD = d16"
+		FORMAT	"%14.8f sec"
+		NONEDIT
+END
+T_NAME		dHX
+		TYPE	R32
+		SUBRANGE 0.0 1e8
+		CLASS	ACQU
+		REL	"dHX = timeHX/2 - pGProximalS - dGProximalS - eHX_refocussing/2 - eHX_excitation"
+		INV_REL	"D[0]=dHX"
+		UNIT	"sec"
+		TEXT	"dHX = timeHX/2 - pGProximalS - dGProximalS - eHX_refocussing/2 - eHX_excitation"
+		FORMAT	"%14.8f sec"
+		NONEDIT
+END
+T_NAME		dN_inversion
+		TYPE	R32
+		SUBRANGE 0.0 1e8
+		CLASS	ACQU
+		REL	"dN_inversion = p22"
+		INV_REL	"D[0]=dN_inversion"
+		UNIT	"sec"
+		TEXT	"dN_inversion = p22"
+		FORMAT	"%14.8f sec"
+		NONEDIT
+END
+T_NAME		dN_universal
+		TYPE	R32
+		SUBRANGE 0.0 1e8
+		CLASS	ACQU
+		REL	"dN_universal = p21"
+		INV_REL	"D[0]=dN_universal"
+		UNIT	"sec"
+		TEXT	"dN_universal = p21"
+		FORMAT	"%14.8f sec"
+		NONEDIT
+END
+T_NAME		dXH_SE1_1
+		TYPE	R32
+		SUBRANGE 0.0 1e8
+		CLASS	ACQU
+		REL	"dXH_SE1_1 = timeXH/2 - pGProximalS - dGProximalS - eHX_refocussing/2 - eHX_fb_UR"
+		INV_REL	"D[0]=dXH_SE1_1"
+		UNIT	"sec"
+		TEXT	"dXH_SE1_1 = timeXH/2 - pGProximalS - dGProximalS - eHX_refocussing/2 - eHX_fb_UR"
+		FORMAT	"%14.8f sec"
+		NONEDIT
+END
+T_NAME		dXH_SE1_2
+		TYPE	R32
+		SUBRANGE 0.0 1e8
+		CLASS	ACQU
+		REL	"dXH_SE1_2 = timeXH/2 - pGProximalS - dGProximalS - eHX_refocussing/2 - eHX_fb_UR"
+		INV_REL	"D[0]=dXH_SE1_2"
+		UNIT	"sec"
+		TEXT	"dXH_SE1_2 = timeXH/2 - pGProximalS - dGProximalS - eHX_refocussing/2 - eHX_fb_UR"
+		FORMAT	"%14.8f sec"
+		NONEDIT
+END
+T_NAME		dXH_SE2
+		TYPE	R32
+		SUBRANGE 0.0 1e8
+		CLASS	ACQU
+		REL	"dXH_SE2 = timeXH/2 - pGProximalS - dGProximalS - eHX_refocussing/2 - eHX_exc_UR"
+		INV_REL	"D[0]=dXH_SE2"
+		UNIT	"sec"
+		TEXT	"dXH_SE2 = timeXH/2 - pGProximalS - dGProximalS - eHX_refocussing/2 - eHX_exc_UR"
+		FORMAT	"%14.8f sec"
+		NONEDIT
+END
+T_NAME		dX_inversion
+		TYPE	R32
+		SUBRANGE 0.0 1e8
+		CLASS	ACQU
+		REL	"dX_inversion = dN_inversion"
+		INV_REL	"D[0]=dX_inversion"
+		UNIT	"sec"
+		TEXT	"dX_inversion = dN_inversion"
+		FORMAT	"%14.8f sec"
+		NONEDIT
+END
+T_NAME		dX_universal
+		TYPE	R32
+		SUBRANGE 0.0 1e8
+		CLASS	ACQU
+		REL	"dX_universal = dN_universal"
+		INV_REL	"D[0]=dX_universal"
+		UNIT	"sec"
+		TEXT	"dX_universal = dN_universal"
+		FORMAT	"%14.8f sec"
+		NONEDIT
+END
+T_NAME		eHX_exc_UR
+		TYPE	R32
+		SUBRANGE -1e38 1e38
+		CLASS	ACQU
+		REL	"eHX_exc_UR = eH_exc_UR"
+		INV_REL	"D[0]=eHX_exc_UR"
+		UNIT	"usec"
+		TEXT	"eHX_exc_UR = eH_exc_UR"
+		FORMAT	"%14.2f usec"
+		NONEDIT
+END
+T_NAME		eHX_excitation
+		TYPE	R32
+		SUBRANGE -1e38 1e38
+		CLASS	ACQU
+		REL	"eHX_excitation = eH_excitation"
+		INV_REL	"D[0]=eHX_excitation"
+		UNIT	"usec"
+		TEXT	"eHX_excitation = eH_excitation"
+		FORMAT	"%14.2f usec"
+		NONEDIT
+END
+T_NAME		eHX_fb_UR
+		TYPE	R32
+		SUBRANGE -1e38 1e38
+		CLASS	ACQU
+		REL	"eHX_fb_UR = eH_fb_UR"
+		INV_REL	"D[0]=eHX_fb_UR"
+		UNIT	"usec"
+		TEXT	"eHX_fb_UR = eH_fb_UR"
+		FORMAT	"%14.2f usec"
+		NONEDIT
+END
+T_NAME		eHX_refocussing
+		TYPE	R32
+		SUBRANGE -1e38 1e38
+		CLASS	ACQU
+		REL	"eHX_refocussing = eH_refocussing"
+		INV_REL	"D[0]=eHX_refocussing"
+		UNIT	"usec"
+		TEXT	"eHX_refocussing = eH_refocussing"
+		FORMAT	"%14.2f usec"
+		NONEDIT
+END
+T_NAME		eH_exc_UR
+		TYPE	R32
+		SUBRANGE -1e38 1e38
+		CLASS	ACQU
+		REL	"eH_exc_UR = p57*cnst57"
+		INV_REL	"D[0]=eH_exc_UR"
+		UNIT	"usec"
+		TEXT	"eH_exc_UR = p57*cnst57"
+		FORMAT	"%14.2f usec"
+		NONEDIT
+END
+T_NAME		eH_excitation
+		TYPE	R32
+		SUBRANGE -1e38 1e38
+		CLASS	ACQU
+		REL	"eH_excitation = p54*cnst54"
+		INV_REL	"D[0]=eH_excitation"
+		UNIT	"usec"
+		TEXT	"eH_excitation = p54*cnst54"
+		FORMAT	"%14.2f usec"
+		NONEDIT
+END
+T_NAME		eH_fb_UR
+		TYPE	R32
+		SUBRANGE -1e38 1e38
+		CLASS	ACQU
+		REL	"eH_fb_UR = p57*cnst58"
+		INV_REL	"D[0]=eH_fb_UR"
+		UNIT	"usec"
+		TEXT	"eH_fb_UR = p57*cnst58"
+		FORMAT	"%14.2f usec"
+		NONEDIT
+END
+T_NAME		eH_refocussing
+		TYPE	R32
+		SUBRANGE -1e38 1e38
+		CLASS	ACQU
+		REL	"eH_refocussing = p56*cnst56"
+		INV_REL	"D[0]=eH_refocussing"
+		UNIT	"usec"
+		TEXT	"eH_refocussing = p56*cnst56"
+		FORMAT	"%14.2f usec"
+		NONEDIT
+END
+T_NAME		pHX_exc_UR
+		TYPE	R32
+		SUBRANGE -1e38 1e38
+		CLASS	ACQU
+		REL	"pHX_exc_UR = pH_exc_UR"
+		INV_REL	"D[0]=pHX_exc_UR"
+		UNIT	"usec"
+		TEXT	"pHX_exc_UR = pH_exc_UR"
+		FORMAT	"%14.2f usec"
+		NONEDIT
+END
+T_NAME		pH_exc_UR
+		TYPE	R32
+		SUBRANGE -1e38 1e38
+		CLASS	ACQU
+		REL	"pH_exc_UR = p57"
+		INV_REL	"D[0]=pH_exc_UR"
+		UNIT	"usec"
+		TEXT	"pH_exc_UR = p57"
+		FORMAT	"%14.2f usec"
+		NONEDIT
+END
+T_NAME		pY_inversion
+		TYPE	R32
+		SUBRANGE -1e38 1e38
+		CLASS	ACQU
+		REL	"pY_inversion = dC_inversion"
+		INV_REL	"D[0]=pY_inversion"
+		UNIT	"usec"
+		TEXT	"pY_inversion = dC_inversion"
+		FORMAT	"%14.2f usec"
+		NONEDIT
+END
+T_NAME		rde1
+		TYPE	R32
+		SUBRANGE 0.0 1e8
+		CLASS	ACQU
+		REL	"rde1=de-de1"
+		INV_REL	"D[0]=rde1"
+		UNIT	"sec"
+		TEXT	"rde1=de-de1"
+		FORMAT	"%14.8f sec"
+		NONEDIT
+END
+T_NAME		timeHX
+		TYPE	R32
+		SUBRANGE 0.0 1e8
+		CLASS	ACQU
+		REL	"timeHX = d21"
+		INV_REL	"D[0]=timeHX"
+		UNIT	"sec"
+		TEXT	"timeHX = d21"
+		FORMAT	"%14.8f sec"
+		NONEDIT
+END
+T_NAME		timeXH
+		TYPE	R32
+		SUBRANGE 0.0 1e8
+		CLASS	ACQU
+		REL	"timeXH = d22"
+		INV_REL	"D[0]=timeXH"
+		UNIT	"sec"
+		TEXT	"timeXH = d22"
+		FORMAT	"%14.8f sec"
+		NONEDIT
+END
+HEADER		"======== CHANNEL f1 ========"
+NAME		SFO1
+		FORMAT	"%14.7f MHz"
+		TEXT	"frequency of ch. 1"
+END
+NAME		O1
+		FORMAT	"%14.2f Hz"
+		TEXT	"frequency of ch. 1"
+END
+T_NAME		O1P
+		TYPE	R64
+		CLASS	ACQU
+		SUBRANGE -1e38 1e38
+		REL	"O1P=O1/BF1"
+		INV_REL	"O1=O1P*BF1"
+		UNIT	"ppm"
+		FORMAT	"%14.3f ppm"
+		TEXT	"frequency of ch. 1"
+END
+NAME		NUC1
+		NONEDIT
+		TEXT	"nucleus for channel 1"
+END
+T_NAME		CNST52
+		TYPE	R32
+		CLASS	ACQU
+		SUBRANGE -1e38 1e38
+		REL	"CNST52=CNST[52]"
+		INV_REL	"CNST[52]=CNST52"
+		FORMAT	"%14.7f"
+		TEXT		"chemical shift of HN/HCaro protons [ppm]."
+END
+T_NAME		P1
+		TYPE	R32
+		CLASS	ACQU
+		SUBRANGE 0.0 1.0e10
+		REL	"P1=P[1]"
+		INV_REL	"P[1]=P1"
+		UNIT	"usec"
+		FORMAT	"%14.3f usec"
+		TEXT		"f1 channel -  90 degree high power pulse"
+END
+T_NAME		P2
+		TYPE	R32
+		CLASS	ACQU
+		SUBRANGE 0.0 1.0e10
+		REL	"P2=P[2]"
+		INV_REL	"P[2]=P2"
+		UNIT	"usec"
+		FORMAT	"%14.3f usec"
+		TEXT		"f1 channel - 180 degree high power pulse"
+END
+T_NAME		P54
+		TYPE	R32
+		CLASS	ACQU
+		SUBRANGE 0.0 1.0e10
+		REL	"P54=P[54]"
+		INV_REL	"P[54]=P54"
+		UNIT	"usec"
+		FORMAT	"%14.3f usec"
+		TEXT	"pulse 54"
+END
+T_NAME		P55
+		TYPE	R32
+		CLASS	ACQU
+		SUBRANGE 0.0 1.0e10
+		REL	"P55=P[55]"
+		INV_REL	"P[55]=P55"
+		UNIT	"usec"
+		FORMAT	"%14.3f usec"
+		TEXT	"pulse 55"
+END
+T_NAME		P56
+		TYPE	R32
+		CLASS	ACQU
+		SUBRANGE 0.0 1.0e10
+		REL	"P56=P[56]"
+		INV_REL	"P[56]=P56"
+		UNIT	"usec"
+		FORMAT	"%14.3f usec"
+		TEXT	"pulse 56"
+END
+T_NAME		P57
+		TYPE	R32
+		CLASS	ACQU
+		SUBRANGE 0.0 1.0e10
+		REL	"P57=P[57]"
+		INV_REL	"P[57]=P57"
+		UNIT	"usec"
+		FORMAT	"%14.3f usec"
+		TEXT	"pulse 57"
+END
+T_NAME		P58
+		TYPE	R32
+		CLASS	ACQU
+		SUBRANGE 0.0 1.0e10
+		REL	"P58=P[58]"
+		INV_REL	"P[58]=P58"
+		UNIT	"usec"
+		FORMAT	"%14.3f usec"
+		TEXT	"pulse 58"
+END
+T_NAME		PLW1
+		TYPE	R32
+		CLASS	ACQU
+		SUBRANGE 0 85.8
+		REL	"PLW1=PLW[1]"
+		INV_REL	"PLW[1]=PLW1"
+		UNIT	"W"
+		FORMAT	"%14.5g W"
+		TEXT		"power for 1H  pulses"
+END
+T_NAME		PLdB1
+		TYPE	R32
+		CLASS	ACQU
+		SUBRANGE -19.4349 1000
+		REL	"if(PLW[1]>0)PLdB1=-10*log(PLW[1])/LN10;else PLdB1=1000;"
+		INV_REL	"PLW[1]=0;if(PLdB1<1000)PLW[1]=pow(10.0,(-PLdB1)/10.0)"
+		UNIT	"dB"
+		FORMAT	"%14.2f dB"
+		TEXT	"power PL1 in dB"
+END
+NAME		SPNAM[54]
+		TEXT	"file name for SP54"
+END
+T_NAME		spoal54
+		TYPE	R32
+		SUBRANGE -1e38 1e38
+		CLASS	ACQU
+		REL	"spoal54 = 0"
+		INV_REL	"D[0]=spoal54"
+		UNIT	"no"
+		TEXT	"spoal54 = 0"
+		FORMAT	"%14.7f"
+		NONEDIT
+END
+T_NAME		spoffs54
+		TYPE	R32
+		SUBRANGE -1e38 1e38
+		CLASS	ACQU
+		REL	"spoffs54 = bf1*(cnst52/1000000) - o1"
+		INV_REL	"D[0]=spoffs54"
+		UNIT	"Hz"
+		TEXT	"spoffs54 = bf1*(cnst52/1000000) - o1"
+		FORMAT	"%14.2f Hz"
+		NONEDIT
+END
+T_NAME		SPW54
+		TYPE	R32
+		CLASS	ACQU
+		SUBRANGE 0 85.8
+		REL	"SPW54=SPW[54]"
+		INV_REL	"SPW[54]=SPW54"
+		UNIT	"W"
+		FORMAT	"%14.5g W"
+		TEXT	"shaped pulse power SPW54"
+END
+T_NAME		SPdB54
+		TYPE	R32
+		CLASS	ACQU
+		SUBRANGE -19.4349 1000
+		REL	"if(SPW[54]>0)SPdB54=-10*log(SPW[54])/LN10;elseSPdB54=1000;"
+		INV_REL	"SPW[54]=0;if(SPdB54<1000)SPW[54]=pow(10.0,(-SPdB54)/10.0)"
+		UNIT	"dB"
+		FORMAT	"%14.2f -dBW"
+		TEXT	"power SPW54 in -dBW"
+END
+NAME		SPNAM[55]
+		TEXT	"file name for SP55"
+END
+T_NAME		spoal55
+		TYPE	R32
+		SUBRANGE -1e38 1e38
+		CLASS	ACQU
+		REL	"spoal55 = 1"
+		INV_REL	"D[0]=spoal55"
+		UNIT	"no"
+		TEXT	"spoal55 = 1"
+		FORMAT	"%14.7f"
+		NONEDIT
+END
+T_NAME		spoffs55
+		TYPE	R32
+		SUBRANGE -1e38 1e38
+		CLASS	ACQU
+		REL	"spoffs55 = bf1*(cnst52/1000000) - o1"
+		INV_REL	"D[0]=spoffs55"
+		UNIT	"Hz"
+		TEXT	"spoffs55 = bf1*(cnst52/1000000) - o1"
+		FORMAT	"%14.2f Hz"
+		NONEDIT
+END
+T_NAME		SPW55
+		TYPE	R32
+		CLASS	ACQU
+		SUBRANGE 0 85.8
+		REL	"SPW55=SPW[55]"
+		INV_REL	"SPW[55]=SPW55"
+		UNIT	"W"
+		FORMAT	"%14.5g W"
+		TEXT	"shaped pulse power SPW55"
+END
+T_NAME		SPdB55
+		TYPE	R32
+		CLASS	ACQU
+		SUBRANGE -19.4349 1000
+		REL	"if(SPW[55]>0)SPdB55=-10*log(SPW[55])/LN10;elseSPdB55=1000;"
+		INV_REL	"SPW[55]=0;if(SPdB55<1000)SPW[55]=pow(10.0,(-SPdB55)/10.0)"
+		UNIT	"dB"
+		FORMAT	"%14.2f -dBW"
+		TEXT	"power SPW55 in -dBW"
+END
+NAME		SPNAM[56]
+		TEXT	"file name for SP56"
+END
+T_NAME		spoal56
+		TYPE	R32
+		SUBRANGE -1e38 1e38
+		CLASS	ACQU
+		REL	"spoal56 = 0.5"
+		INV_REL	"D[0]=spoal56"
+		UNIT	"no"
+		TEXT	"spoal56 = 0.5"
+		FORMAT	"%14.7f"
+		NONEDIT
+END
+T_NAME		spoffs56
+		TYPE	R32
+		SUBRANGE -1e38 1e38
+		CLASS	ACQU
+		REL	"spoffs56 = bf1*(cnst52/1000000) - o1"
+		INV_REL	"D[0]=spoffs56"
+		UNIT	"Hz"
+		TEXT	"spoffs56 = bf1*(cnst52/1000000) - o1"
+		FORMAT	"%14.2f Hz"
+		NONEDIT
+END
+T_NAME		SPW56
+		TYPE	R32
+		CLASS	ACQU
+		SUBRANGE 0 85.8
+		REL	"SPW56=SPW[56]"
+		INV_REL	"SPW[56]=SPW56"
+		UNIT	"W"
+		FORMAT	"%14.5g W"
+		TEXT	"shaped pulse power SPW56"
+END
+T_NAME		SPdB56
+		TYPE	R32
+		CLASS	ACQU
+		SUBRANGE -19.4349 1000
+		REL	"if(SPW[56]>0)SPdB56=-10*log(SPW[56])/LN10;elseSPdB56=1000;"
+		INV_REL	"SPW[56]=0;if(SPdB56<1000)SPW[56]=pow(10.0,(-SPdB56)/10.0)"
+		UNIT	"dB"
+		FORMAT	"%14.2f -dBW"
+		TEXT	"power SPW56 in -dBW"
+END
+NAME		SPNAM[57]
+		TEXT	"file name for SP57"
+END
+T_NAME		spoal57
+		TYPE	R32
+		SUBRANGE -1e38 1e38
+		CLASS	ACQU
+		REL	"spoal57 = 0"
+		INV_REL	"D[0]=spoal57"
+		UNIT	"no"
+		TEXT	"spoal57 = 0"
+		FORMAT	"%14.7f"
+		NONEDIT
+END
+T_NAME		spoffs57
+		TYPE	R32
+		SUBRANGE -1e38 1e38
+		CLASS	ACQU
+		REL	"spoffs57 = bf1*(cnst52/1000000) - o1"
+		INV_REL	"D[0]=spoffs57"
+		UNIT	"Hz"
+		TEXT	"spoffs57 = bf1*(cnst52/1000000) - o1"
+		FORMAT	"%14.2f Hz"
+		NONEDIT
+END
+T_NAME		SPW57
+		TYPE	R32
+		CLASS	ACQU
+		SUBRANGE 0 85.8
+		REL	"SPW57=SPW[57]"
+		INV_REL	"SPW[57]=SPW57"
+		UNIT	"W"
+		FORMAT	"%14.5g W"
+		TEXT	"shaped pulse power SPW57"
+END
+T_NAME		SPdB57
+		TYPE	R32
+		CLASS	ACQU
+		SUBRANGE -19.4349 1000
+		REL	"if(SPW[57]>0)SPdB57=-10*log(SPW[57])/LN10;elseSPdB57=1000;"
+		INV_REL	"SPW[57]=0;if(SPdB57<1000)SPW[57]=pow(10.0,(-SPdB57)/10.0)"
+		UNIT	"dB"
+		FORMAT	"%14.2f -dBW"
+		TEXT	"power SPW57 in -dBW"
+END
+NAME		SPNAM[58]
+		TEXT	"file name for SP58"
+END
+T_NAME		spoal58
+		TYPE	R32
+		SUBRANGE -1e38 1e38
+		CLASS	ACQU
+		REL	"spoal58 = 1"
+		INV_REL	"D[0]=spoal58"
+		UNIT	"no"
+		TEXT	"spoal58 = 1"
+		FORMAT	"%14.7f"
+		NONEDIT
+END
+T_NAME		spoffs58
+		TYPE	R32
+		SUBRANGE -1e38 1e38
+		CLASS	ACQU
+		REL	"spoffs58 = bf1*(cnst52/1000000) - o1"
+		INV_REL	"D[0]=spoffs58"
+		UNIT	"Hz"
+		TEXT	"spoffs58 = bf1*(cnst52/1000000) - o1"
+		FORMAT	"%14.2f Hz"
+		NONEDIT
+END
+T_NAME		SPW58
+		TYPE	R32
+		CLASS	ACQU
+		SUBRANGE 0 85.8
+		REL	"SPW58=SPW[58]"
+		INV_REL	"SPW[58]=SPW58"
+		UNIT	"W"
+		FORMAT	"%14.5g W"
+		TEXT	"shaped pulse power SPW58"
+END
+T_NAME		SPdB58
+		TYPE	R32
+		CLASS	ACQU
+		SUBRANGE -19.4349 1000
+		REL	"if(SPW[58]>0)SPdB58=-10*log(SPW[58])/LN10;elseSPdB58=1000;"
+		INV_REL	"SPW[58]=0;if(SPdB58<1000)SPW[58]=pow(10.0,(-SPdB58)/10.0)"
+		UNIT	"dB"
+		FORMAT	"%14.2f -dBW"
+		TEXT	"power SPW58 in -dBW"
+END
+HEADER		"======== CHANNEL f2 ========"
+NAME		SFO2
+		FORMAT	"%14.7f MHz"
+		TEXT	"frequency of ch. 2"
+END
+NAME		O2
+		FORMAT	"%14.2f Hz"
+		TEXT	"frequency of ch. 2"
+END
+T_NAME		O2P
+		TYPE	R64
+		CLASS	ACQU
+		SUBRANGE -1e38 1e38
+		REL	"O2P=O2/BF2"
+		INV_REL	"O2=O2P*BF2"
+		UNIT	"ppm"
+		FORMAT	"%14.3f ppm"
+		TEXT	"frequency of ch. 2"
+END
+NAME		NUC2
+		NONEDIT
+		TEXT	"nucleus for channel 2"
+END
+T_NAME		CNST46
+		TYPE	R32
+		CLASS	ACQU
+		SUBRANGE -1e38 1e38
+		REL	"CNST46=CNST[46]"
+		INV_REL	"CNST[46]=CNST46"
+		FORMAT	"%14.7f"
+		TEXT		"effective evolution multiplier for HC_refocussing."
+END
+T_NAME		P41
+		TYPE	R32
+		CLASS	ACQU
+		SUBRANGE 0.0 1.0e10
+		REL	"P41=P[41]"
+		INV_REL	"P[41]=P41"
+		UNIT	"usec"
+		FORMAT	"%14.3f usec"
+		TEXT	"pulse 41"
+END
+T_NAME		PLW2
+		TYPE	R32
+		CLASS	ACQU
+		SUBRANGE 0 356.4
+		REL	"PLW2=PLW[2]"
+		INV_REL	"PLW[2]=PLW2"
+		UNIT	"W"
+		FORMAT	"%14.5g W"
+		TEXT		"power for 13C pulses"
+END
+T_NAME		PLdB2
+		TYPE	R32
+		CLASS	ACQU
+		SUBRANGE -25.6194 1000
+		REL	"if(PLW[2]>0)PLdB2=-10*log(PLW[2])/LN10;else PLdB2=1000;"
+		INV_REL	"PLW[2]=0;if(PLdB2<1000)PLW[2]=pow(10.0,(-PLdB2)/10.0)"
+		UNIT	"dB"
+		FORMAT	"%14.2f dB"
+		TEXT	"power PL2 in dB"
+END
+NAME		SPNAM[41]
+		TEXT	"file name for SP41"
+END
+T_NAME		SPOAL41
+		TYPE	R32
+		CLASS	ACQU
+		SUBRANGE -1.0 1.0
+		REL	"SPOAL41=SPOAL[41]"
+		INV_REL	"SPOAL[41]=SPOAL41"
+		FORMAT	"%14.3f"
+		TEXT	"phase alignment of freq. offset in SP41"
+END
+T_NAME		SPOFFS41
+		TYPE	R32
+		CLASS	ACQU
+		SUBRANGE -1e38 1e38
+		REL	"SPOFFS41=SPOFFS[41]"
+		INV_REL	"SPOFFS[41]=SPOFFS41"
+		UNIT	"Hz"
+		FORMAT	"%14.2f Hz"
+		TEXT	"offset frequency for SP41"
+END
+T_NAME		SPW41
+		TYPE	R32
+		CLASS	ACQU
+		SUBRANGE 0 356.4
+		REL	"SPW41=SPW[41]"
+		INV_REL	"SPW[41]=SPW41"
+		UNIT	"W"
+		FORMAT	"%14.5g W"
+		TEXT	"shaped pulse power SPW41"
+END
+T_NAME		SPdB41
+		TYPE	R32
+		CLASS	ACQU
+		SUBRANGE -25.6194 1000
+		REL	"if(SPW[41]>0)SPdB41=-10*log(SPW[41])/LN10;elseSPdB41=1000;"
+		INV_REL	"SPW[41]=0;if(SPdB41<1000)SPW[41]=pow(10.0,(-SPdB41)/10.0)"
+		UNIT	"dB"
+		FORMAT	"%14.2f -dBW"
+		TEXT	"power SPW41 in -dBW"
+END
+HEADER		"======== CHANNEL f3 ========"
+NAME		SFO3
+		FORMAT	"%14.7f MHz"
+		TEXT	"frequency of ch. 3"
+END
+NAME		O3
+		FORMAT	"%14.2f Hz"
+		TEXT	"frequency of ch. 3"
+END
+T_NAME		O3P
+		TYPE	R64
+		CLASS	ACQU
+		SUBRANGE -1e38 1e38
+		REL	"O3P=O3/BF3"
+		INV_REL	"O3=O3P*BF3"
+		UNIT	"ppm"
+		FORMAT	"%14.3f ppm"
+		TEXT	"frequency of ch. 3"
+END
+NAME		NUC3
+		NONEDIT
+		TEXT	"nucleus for channel 3"
+END
+T_NAME		P21
+		TYPE	R32
+		CLASS	ACQU
+		SUBRANGE 0.0 1.0e10
+		REL	"P21=P[21]"
+		INV_REL	"P[21]=P21"
+		UNIT	"usec"
+		FORMAT	"%14.3f usec"
+		TEXT		"f3 channel - 90 degree high power pulse"
+END
+T_NAME		P22
+		TYPE	R32
+		CLASS	ACQU
+		SUBRANGE 0.0 1.0e10
+		REL	"P22=P[22]"
+		INV_REL	"P[22]=P22"
+		UNIT	"usec"
+		FORMAT	"%14.3f usec"
+		TEXT		"f3 channel - 180 degree high power pulse"
+END
+T_NAME		PLW3
+		TYPE	R32
+		CLASS	ACQU
+		SUBRANGE 0 468.4
+		REL	"PLW3=PLW[3]"
+		INV_REL	"PLW[3]=PLW3"
+		UNIT	"W"
+		FORMAT	"%14.5g W"
+		TEXT		"power for 15N pulses"
+END
+T_NAME		PLdB3
+		TYPE	R32
+		CLASS	ACQU
+		SUBRANGE -26.8062 1000
+		REL	"if(PLW[3]>0)PLdB3=-10*log(PLW[3])/LN10;else PLdB3=1000;"
+		INV_REL	"PLW[3]=0;if(PLdB3<1000)PLW[3]=pow(10.0,(-PLdB3)/10.0)"
+		UNIT	"dB"
+		FORMAT	"%14.2f dB"
+		TEXT	"power PL3 in dB"
+END
+HEADER		"====== GRADIENT CHANNEL ====="
+NAME		GPNAM[11]
+		TEXT		"SMSQ10.100"
+END
+T_NAME		GPZ11
+		TYPE	R32
+		CLASS	ACQU
+		SUBRANGE -100.0 100.0
+		REL	"GPZ11=GPZ[11]"
+		INV_REL	"GPZ[11]=GPZ11"
+		UNIT	"%"
+		FORMAT	"%14.2f %"
+		TEXT		"Gradient in Hz -> HzXz echo: 1%."
+END
+NAME		GPNAM[12]
+		TEXT		"SMSQ10.100"
+END
+T_NAME		GPZ12
+		TYPE	R32
+		CLASS	ACQU
+		SUBRANGE -100.0 100.0
+		REL	"GPZ12=GPZ[12]"
+		INV_REL	"GPZ[12]=GPZ12"
+		UNIT	"%"
+		FORMAT	"%14.2f %"
+		TEXT		"Gradient in first COS-INEPT echo: 5%."
+END
+NAME		GPNAM[13]
+		TEXT		"SMSQ10.100"
+END
+T_NAME		GPZ13
+		TYPE	R32
+		CLASS	ACQU
+		SUBRANGE -100.0 100.0
+		REL	"GPZ13=GPZ[13]"
+		INV_REL	"GPZ[13]=GPZ13"
+		UNIT	"%"
+		FORMAT	"%14.2f %"
+		TEXT		"Gradient in second COS-INEPT echo: 2%."
+END
+NAME		GPNAM[14]
+		TEXT		"SMSQ10.100"
+END
+T_NAME		GPZ14
+		TYPE	R32
+		CLASS	ACQU
+		SUBRANGE -100.0 100.0
+		REL	"GPZ14=GPZ[14]"
+		INV_REL	"GPZ[14]=GPZ14"
+		UNIT	"%"
+		FORMAT	"%14.2f %"
+		TEXT		"Gradient after Hz -> HzXz echo: 3%."
+END
+NAME		GPNAM[17]
+		TEXT		"SMSQ10.100"
+END
+T_NAME		GPZ17
+		TYPE	R32
+		CLASS	ACQU
+		SUBRANGE -100.0 100.0
+		REL	"GPZ17=GPZ[17]"
+		INV_REL	"GPZ[17]=GPZ17"
+		UNIT	"%"
+		FORMAT	"%14.2f %"
+		TEXT		"First coherence selection gradient (on N/C): 80%."
+END
+NAME		GPNAM[18]
+		TEXT		"SMSQ10.100"
+END
+T_NAME		GPZ18
+		TYPE	R32
+		CLASS	ACQU
+		SUBRANGE -100.0 100.0
+		REL	"GPZ18=GPZ[18]"
+		INV_REL	"GPZ[18]=GPZ18"
+		UNIT	"%"
+		FORMAT	"%14.2f %"
+		TEXT		"Second coherence selection gradient (on N/C): 0%."
+END
+NAME		GPNAM[19]
+		TEXT		"SMSQ10.100"
+END
+T_NAME		GPZ19
+		TYPE	R32
+		CLASS	ACQU
+		SUBRANGE -100.0 100.0
+		REL	"GPZ19=GPZ[19]"
+		INV_REL	"GPZ[19]=GPZ19"
+		UNIT	"%"
+		FORMAT	"%14.2f %"
+		TEXT		"Third coherence selection gradient (on H): 1%."
+END
+NAME		GPNAM[20]
+		TEXT		"SMSQ10.100"
+END
+T_NAME		GPZ20
+		TYPE	R32
+		CLASS	ACQU
+		SUBRANGE -100.0 100.0
+		REL	"GPZ20=GPZ[20]"
+		INV_REL	"GPZ[20]=GPZ20"
+		UNIT	"%"
+		FORMAT	"%14.2f %"
+		TEXT		"Forth coherence selection gradient (on H): 9.1%."
+END
+NAME		GPNAM[28]
+		TEXT		"SMSQ10.100"
+END
+T_NAME		GPZ28
+		TYPE	R32
+		CLASS	ACQU
+		SUBRANGE -100.0 100.0
+		REL	"GPZ28=GPZ[28]"
+		INV_REL	"GPZ[28]=GPZ28"
+		UNIT	"%"
+		FORMAT	"%14.2f %"
+		TEXT		"Outer gradient pair for homodecoupling [3%]."
+END
+NAME		GPNAM[29]
+		TEXT		"SMSQ10.100"
+END
+T_NAME		GPZ29
+		TYPE	R32
+		CLASS	ACQU
+		SUBRANGE -100.0 100.0
+		REL	"GPZ29=GPZ[29]"
+		INV_REL	"GPZ[29]=GPZ29"
+		UNIT	"%"
+		FORMAT	"%14.2f %"
+		TEXT		"Bipolar gradient for homodecoupling [0.3%]."
+END
+NAME		GPNAM[30]
+		TEXT		"SMSQ10.100"
+END
+T_NAME		GPZ30
+		TYPE	R32
+		CLASS	ACQU
+		SUBRANGE -100.0 100.0
+		REL	"GPZ30=GPZ[30]"
+		INV_REL	"GPZ[30]=GPZ30"
+		UNIT	"%"
+		FORMAT	"%14.2f %"
+		TEXT		"Intra-INEPT gradient pair for homodecoupling [1%]."
+END
+T_NAME		P16
+		TYPE	R32
+		CLASS	ACQU
+		SUBRANGE 0.0 1.0e10
+		REL	"P16=P[16]"
+		INV_REL	"P[16]=P16"
+		UNIT	"usec"
+		FORMAT	"%14.3f usec"
+		TEXT		"crusher/prefocussing gradient pulse."
+END
+T_NAME		P18
+		TYPE	R32
+		CLASS	ACQU
+		SUBRANGE 0.0 1.0e10
+		REL	"P18=P[18]"
+		INV_REL	"P[18]=P18"
+		UNIT	"usec"
+		FORMAT	"%14.3f usec"
+		TEXT		"Proximal short gradient pulse."
+END
+T_NAME		pGProximalS
+		TYPE	R32
+		SUBRANGE -1e38 1e38
+		CLASS	ACQU
+		REL	"pGProximalS = p18"
+		INV_REL	"D[0]=pGProximalS"
+		UNIT	"usec"
+		TEXT	"pGProximalS = p18"
+		FORMAT	"%14.2f usec"
+		NONEDIT
+END
+T_NAME		pGRAD
+		TYPE	R32
+		SUBRANGE -1e38 1e38
+		CLASS	ACQU
+		REL	"pGRAD = p16"
+		INV_REL	"D[0]=pGRAD"
+		UNIT	"usec"
+		TEXT	"pGRAD = p16"
+		FORMAT	"%14.2f usec"
+		NONEDIT
+END

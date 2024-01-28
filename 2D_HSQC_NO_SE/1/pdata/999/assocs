@@ -1,0 +1,11 @@
+##TITLE= Parameter file, TopSpin 3.6.5
+##JCAMPDX= 5.0
+##DATATYPE= Parameter Values
+##NPOINTS= 4	$$ modification sequence number
+##ORIGIN= Bruker BioSpin GmbH
+##OWNER= nmrsu
+$$ 2024-01-25 00:05:48.663 +0100  nmrsu@CZC603BPWK
+$$ /reference/MENMR/ubiCN/25/TEST_2D_HSQC_SIMPLE/2/pdata/999/assocs
+$$ process /opt/topspin3.6.5/prog/mod/dataserver
+##$MULTDISP= </reference/MENMR/ubiCN/25/2D_NHSQC/1/pdata/999>
+##END=

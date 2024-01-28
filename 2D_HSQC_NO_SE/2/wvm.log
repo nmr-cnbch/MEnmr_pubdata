@@ -1,0 +1,121 @@
+
+WaveMaker (rev 3.6.5) log file: 2024-01-24 02:55:56
+
+Pulprog: /opt/wtopspin/gorka/2D/pp/WT/seq/2D/2D.wt.pulses.pp 
+Opening: /reference/MENMR/ubiCN/25/2D_NHSQC/2/wvm.par
+
+sp54(p54): 
+ spnam54: 2D.wt.pulses.pp_sp54.wv (511 steps, stepsize 2.1000 us, phi(max) = 0.00 deg)
+ p54: 1.0731000 ms
+ spw54: 0.1845371 W (7.34 dB), B1max = 3626.5 Hz (ref: p90=10.47 us @ -9.03 dB)
+ B1rms = 1542.6 Hz, 0.0333896 W (14.76 dB)
+ SP saved in /opt/topspin3.6.5/exp/stan/nmr/lists/wave/user/2D.wt.pulses.pp_sp54.wv
+
+sp55(p55): 
+ spnam55: 2D.wt.pulses.pp_sp55.wv (511 steps, stepsize 2.1000 us, phi(max) = 0.00 deg)
+ p55: 1.0731000 ms
+ spw55: 0.1845371 W (7.34 dB), B1max = 3626.5 Hz (ref: p90=10.47 us @ -9.03 dB)
+ B1rms = 1542.6 Hz, 0.0333896 W (14.76 dB)
+ SP saved in /opt/topspin3.6.5/exp/stan/nmr/lists/wave/user/2D.wt.pulses.pp_sp55.wv
+
+sp56(p56): 
+ spnam56: 2D.wt.pulses.pp_sp56.wv (504 steps, stepsize 2.2000 us, phi(max) = 0.00 deg)
+ p56: 1.1088000 ms
+ spw56: 0.4333516 W (3.63 dB), B1max = 5557.4 Hz (ref: p90=10.47 us @ -9.03 dB)
+ B1rms = 1591.8 Hz, 0.0355541 W (14.49 dB)
+ SP saved in /opt/topspin3.6.5/exp/stan/nmr/lists/wave/user/2D.wt.pulses.pp_sp56.wv
+
+sp57(p57): 
+ spnam57: 2D.wt.pulses.pp_sp57.wv (511 steps, stepsize 2.1000 us, phi(max) = 0.00 deg)
+ p57: 1.0731000 ms
+ spw57: 0.1845371 W (7.34 dB), B1max = 3626.5 Hz (ref: p90=10.47 us @ -9.03 dB)
+ B1rms = 1542.6 Hz, 0.0333896 W (14.76 dB)
+ SP saved in /opt/topspin3.6.5/exp/stan/nmr/lists/wave/user/2D.wt.pulses.pp_sp57.wv
+
+sp58(p58): 
+ spnam58: 2D.wt.pulses.pp_sp58.wv (511 steps, stepsize 2.1000 us, phi(max) = 0.00 deg)
+ p58: 1.0731000 ms
+ spw58: 0.1845371 W (7.34 dB), B1max = 3626.5 Hz (ref: p90=10.47 us @ -9.03 dB)
+ B1rms = 1542.6 Hz, 0.0333896 W (14.76 dB)
+ SP saved in /opt/topspin3.6.5/exp/stan/nmr/lists/wave/user/2D.wt.pulses.pp_sp58.wv
+
+sp44(p44): 
+ spnam44: 2D.wt.pulses.pp_sp44.wv (500 steps, stepsize 11.8000 us, phi(max) = 0.00 deg)
+ p44: 5.9000000 ms
+ spw44: 0.0061065 W (22.14 dB), B1max = 659.7 Hz (ref: p90=10.47 us @ -9.03 dB)
+ B1rms = 280.6 Hz, 0.0011046 W (29.57 dB)
+ SP saved in /opt/topspin3.6.5/exp/stan/nmr/lists/wave/user/2D.wt.pulses.pp_sp44.wv
+
+sp45(p45): 
+ spnam45: 2D.wt.pulses.pp_sp45.wv (500 steps, stepsize 11.8000 us, phi(max) = 0.00 deg)
+ p45: 5.9000000 ms
+ spw45: 0.0061065 W (22.14 dB), B1max = 659.7 Hz (ref: p90=10.47 us @ -9.03 dB)
+ B1rms = 280.6 Hz, 0.0011046 W (29.57 dB)
+ SP saved in /opt/topspin3.6.5/exp/stan/nmr/lists/wave/user/2D.wt.pulses.pp_sp45.wv
+
+sp46(p46): 
+ spnam46: 2D.wt.pulses.pp_sp46.wv (500 steps, stepsize 12.2000 us, phi(max) = 0.00 deg)
+ p46: 6.1000000 ms
+ spw46: 0.0143189 W (18.44 dB), B1max = 1010.2 Hz (ref: p90=10.47 us @ -9.03 dB)
+ B1rms = 289.4 Hz, 0.0011748 W (29.30 dB)
+ SP saved in /opt/topspin3.6.5/exp/stan/nmr/lists/wave/user/2D.wt.pulses.pp_sp46.wv
+
+sp47(p47): 
+ spnam47: 2D.wt.pulses.pp_sp47.wv (500 steps, stepsize 11.8000 us, phi(max) = 0.00 deg)
+ p47: 5.9000000 ms
+ spw47: 0.0061065 W (22.14 dB), B1max = 659.7 Hz (ref: p90=10.47 us @ -9.03 dB)
+ B1rms = 280.6 Hz, 0.0011046 W (29.57 dB)
+ SP saved in /opt/topspin3.6.5/exp/stan/nmr/lists/wave/user/2D.wt.pulses.pp_sp47.wv
+
+sp48(p48): 
+ spnam48: 2D.wt.pulses.pp_sp48.wv (500 steps, stepsize 11.8000 us, phi(max) = 0.00 deg)
+ p48: 5.9000000 ms
+ spw48: 0.0061065 W (22.14 dB), B1max = 659.7 Hz (ref: p90=10.47 us @ -9.03 dB)
+ B1rms = 280.6 Hz, 0.0011046 W (29.57 dB)
+ SP saved in /opt/topspin3.6.5/exp/stan/nmr/lists/wave/user/2D.wt.pulses.pp_sp48.wv
+
+Experiment Setup:
+
+ spnam54 = 2D.wt.pulses.pp_sp54.wv 
+ p54 = 1073.1000 us 
+ spw54 = 0.184537 W (3626.52 Hz)
+ spnam55 = 2D.wt.pulses.pp_sp55.wv 
+ p55 = 1073.1000 us 
+ spw55 = 0.184537 W (3626.52 Hz)
+ spnam56 = 2D.wt.pulses.pp_sp56.wv 
+ p56 = 1108.8000 us 
+ spw56 = 0.433352 W (5557.36 Hz)
+ spnam57 = 2D.wt.pulses.pp_sp57.wv 
+ p57 = 1073.1000 us 
+ spw57 = 0.184537 W (3626.52 Hz)
+ spnam58 = 2D.wt.pulses.pp_sp58.wv 
+ p58 = 1073.1000 us 
+ spw58 = 0.184537 W (3626.52 Hz)
+ spnam44 = 2D.wt.pulses.pp_sp44.wv 
+ p44 = 5900.0000 us 
+ spw44 = 0.0061065 W (659.70 Hz)
+ spnam45 = 2D.wt.pulses.pp_sp45.wv 
+ p45 = 5900.0000 us 
+ spw45 = 0.0061065 W (659.70 Hz)
+ spnam46 = 2D.wt.pulses.pp_sp46.wv 
+ p46 = 6100.0000 us 
+ spw46 = 0.0143189 W (1010.19 Hz)
+ spnam47 = 2D.wt.pulses.pp_sp47.wv 
+ p47 = 5900.0000 us 
+ spw47 = 0.0061065 W (659.70 Hz)
+ spnam48 = 2D.wt.pulses.pp_sp48.wv 
+ p48 = 5900.0000 us 
+ spw48 = 0.0061065 W (659.70 Hz)
+wvm WARNING: spoff54 set in the pulse program - the WaveMaker ofs ignored 
+wvm WARNING: spoff55 set in the pulse program - the WaveMaker ofs ignored 
+wvm WARNING: spoff56 set in the pulse program - the WaveMaker ofs ignored 
+wvm WARNING: spoff57 set in the pulse program - the WaveMaker ofs ignored 
+wvm WARNING: spoff58 set in the pulse program - the WaveMaker ofs ignored 
+wvm WARNING: spoff44 set in the pulse program - the WaveMaker ofs ignored 
+wvm WARNING: spoff45 set in the pulse program - the WaveMaker ofs ignored 
+wvm WARNING: spoff46 set in the pulse program - the WaveMaker ofs ignored 
+wvm WARNING: spoff47 set in the pulse program - the WaveMaker ofs ignored 
+wvm WARNING: spoff48 set in the pulse program - the WaveMaker ofs ignored 
+
+Wavemaker auto-setup completed
+

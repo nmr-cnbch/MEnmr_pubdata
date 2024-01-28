@@ -1,0 +1,28 @@
+##TITLE= Parameter file, TopSpin 3.6.5
+##JCAMPDX= 5.0
+##DATATYPE= Parameter Values
+##NPOINTS= 1	$$ modification sequence number
+##ORIGIN= Bruker BioSpin GmbH
+##OWNER= nmrsu
+$$ 2024-01-24 03:30:39.099 +0100  nmrsu@CZC603BPWK
+$$ /reference/MENMR/ubiCN/25/2D_NHSQC_SHAPED/650/pdata/1/clevels
+$$ process /opt/topspin3.6.5/prog/mod/dirdata
+##$LEVELS= (0..255)
+-2566885.539168 -1426047.52176 -792248.6232 -440138.124 -244521.18 -135845.1
+-75469.5 -41927.5 41927.5 75469.5 135845.1 244521.18 440138.124 792248.6232
+1426047.52176 2566885.539168 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0
+##$LEVSIGN= 3
+##$MAXLEV= 8
+##$METHOD= 0
+##$NEGBASE= -41927.5
+##$NEGINCR= 1.8
+##$POSBASE= 41927.5
+##$POSINCR= 1.8
+##END=
